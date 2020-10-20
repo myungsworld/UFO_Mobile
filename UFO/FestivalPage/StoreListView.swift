@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-struct BoothView: View {
+struct StoreListView: View {
     
-    @EnvironmentObject var boothTask: BoothTask
+    @EnvironmentObject var storeTask: StoreTask
        
        var body: some View {
     
@@ -20,15 +20,15 @@ struct BoothView: View {
 
                    HStack(spacing: 25) {
                        
-                       ForEach(self.boothTask.grid, id: \.self) { i in
+                       ForEach(self.storeTask.grid, id: \.self) { i in
                            
                            VStack(spacing: 15) {
                                
                                ForEach((i...i+1), id: \.self) { j in
-                                   
+                            
                                    VStack {
-                                       if j != self.boothTask.data.count {
-                                           BoothItemView(data: self.boothTask.data[j])
+                                       if j != self.storeTask.data.count {
+                                           StoreListItem(data: self.storeTask.data[j])
                                        }
                                    }
                                }
@@ -49,8 +49,8 @@ struct BoothView: View {
        }
 }
 
-struct BoothView_Previews: PreviewProvider {
+struct StoreListView_Previews: PreviewProvider {
     static var previews: some View {
-        BoothView()
+        StoreListView()
     }
 }

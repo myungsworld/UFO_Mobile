@@ -16,7 +16,6 @@ struct MainView: View {
         
         TabView(selection: $selected) {
             
-            
             // Home
             NavigationView {
                 HomeView()

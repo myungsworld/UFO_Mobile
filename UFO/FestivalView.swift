@@ -14,10 +14,10 @@ struct FestivalView: View {
         
         VStack {
             // Boothes
-            BoothView()
+            StoreListView()
             
             VStack {
-                MapView()
+                URLImage(url: "http://155.230.249.129:8080")
                 
                 .background(Color(red: 242, green: 242, blue: 242))
                 .cornerRadius(15)

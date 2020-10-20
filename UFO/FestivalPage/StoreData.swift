@@ -6,7 +6,7 @@
 //  Copyright © 2020 Sanghyun Byun. All rights reserved.
 //
 
-struct BoothData {
+struct StoreData {
     
     var name: String
     var icon: String

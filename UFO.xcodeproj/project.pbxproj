@@ -19,10 +19,10 @@
 		DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A54253DE5F900A9ECF0 /* MainView.swift */; };
 		DC195A57253DE61300A9ECF0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A56253DE61300A9ECF0 /* HomeView.swift */; };
 		DC195A59253DE62C00A9ECF0 /* FestivalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A58253DE62C00A9ECF0 /* FestivalView.swift */; };
-		DC195A5E253DE67F00A9ECF0 /* BoothView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A5D253DE67F00A9ECF0 /* BoothView.swift */; };
-		DC195A60253DE69B00A9ECF0 /* BoothItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A5F253DE69B00A9ECF0 /* BoothItemView.swift */; };
-		DC195A62253DE6BA00A9ECF0 /* BoothTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A61253DE6BA00A9ECF0 /* BoothTask.swift */; };
-		DC195A64253DE6D300A9ECF0 /* BodthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A63253DE6D300A9ECF0 /* BodthData.swift */; };
+		DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A5D253DE67F00A9ECF0 /* StoreListView.swift */; };
+		DC195A60253DE69B00A9ECF0 /* StoreListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A5F253DE69B00A9ECF0 /* StoreListItem.swift */; };
+		DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */; };
+		DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A63253DE6D300A9ECF0 /* StoreData.swift */; };
 		DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A65253DE6F900A9ECF0 /* MapView.swift */; };
 		DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A67253DE73900A9ECF0 /* MyPageView.swift */; };
 		DC195A6B253DE77100A9ECF0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A6A253DE77100A9ECF0 /* LoginView.swift */; };
@@ -31,6 +31,8 @@
 		DC195A71253DE7DB00A9ECF0 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A70253DE7DB00A9ECF0 /* SignupView.swift */; };
 		DC195A73253DE80500A9ECF0 /* SignupTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A72253DE80500A9ECF0 /* SignupTask.swift */; };
 		DC195A75253DE82900A9ECF0 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A74253DE82900A9ECF0 /* SignupData.swift */; };
+		DC195A7F253E818900A9ECF0 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A7E253E818900A9ECF0 /* URLImage.swift */; };
+		DC195A81253E838A00A9ECF0 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A80253E838A00A9ECF0 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +71,10 @@
 		DC195A54253DE5F900A9ECF0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DC195A56253DE61300A9ECF0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DC195A58253DE62C00A9ECF0 /* FestivalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalView.swift; sourceTree = "<group>"; };
-		DC195A5D253DE67F00A9ECF0 /* BoothView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoothView.swift; sourceTree = "<group>"; };
-		DC195A5F253DE69B00A9ECF0 /* BoothItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoothItemView.swift; sourceTree = "<group>"; };
-		DC195A61253DE6BA00A9ECF0 /* BoothTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoothTask.swift; sourceTree = "<group>"; };
-		DC195A63253DE6D300A9ECF0 /* BodthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodthData.swift; sourceTree = "<group>"; };
+		DC195A5D253DE67F00A9ECF0 /* StoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListView.swift; sourceTree = "<group>"; };
+		DC195A5F253DE69B00A9ECF0 /* StoreListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListItem.swift; sourceTree = "<group>"; };
+		DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTask.swift; sourceTree = "<group>"; };
+		DC195A63253DE6D300A9ECF0 /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
 		DC195A65253DE6F900A9ECF0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DC195A67253DE73900A9ECF0 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		DC195A6A253DE77100A9ECF0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		DC195A70253DE7DB00A9ECF0 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		DC195A72253DE80500A9ECF0 /* SignupTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTask.swift; sourceTree = "<group>"; };
 		DC195A74253DE82900A9ECF0 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
+		DC195A7E253E818900A9ECF0 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		DC195A80253E838A00A9ECF0 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 				DC195A5A253DE64C00A9ECF0 /* FestivalPage */,
 				DC195A67253DE73900A9ECF0 /* MyPageView.swift */,
 				DC195A69253DE75F00A9ECF0 /* MyPage */,
+				DC195A7E253E818900A9ECF0 /* URLImage.swift */,
+				DC195A80253E838A00A9ECF0 /* ImageLoader.swift */,
 			);
 			path = UFO;
 			sourceTree = "<group>";
@@ -178,10 +184,10 @@
 		DC195A5A253DE64C00A9ECF0 /* FestivalPage */ = {
 			isa = PBXGroup;
 			children = (
-				DC195A5D253DE67F00A9ECF0 /* BoothView.swift */,
-				DC195A5F253DE69B00A9ECF0 /* BoothItemView.swift */,
-				DC195A61253DE6BA00A9ECF0 /* BoothTask.swift */,
-				DC195A63253DE6D300A9ECF0 /* BodthData.swift */,
+				DC195A5D253DE67F00A9ECF0 /* StoreListView.swift */,
+				DC195A5F253DE69B00A9ECF0 /* StoreListItem.swift */,
+				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
+				DC195A63253DE6D300A9ECF0 /* StoreData.swift */,
 				DC195A65253DE6F900A9ECF0 /* MapView.swift */,
 			);
 			path = FestivalPage;
@@ -334,8 +340,9 @@
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
-				DC195A5E253DE67F00A9ECF0 /* BoothView.swift in Sources */,
-				DC195A60253DE69B00A9ECF0 /* BoothItemView.swift in Sources */,
+				DC195A7F253E818900A9ECF0 /* URLImage.swift in Sources */,
+				DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */,
+				DC195A60253DE69B00A9ECF0 /* StoreListItem.swift in Sources */,
 				DC195A71253DE7DB00A9ECF0 /* SignupView.swift in Sources */,
 				DC195A73253DE80500A9ECF0 /* SignupTask.swift in Sources */,
 				DC195A59253DE62C00A9ECF0 /* FestivalView.swift in Sources */,
@@ -344,12 +351,13 @@
 				DC195A25253DE53300A9ECF0 /* SceneDelegate.swift in Sources */,
 				DC195A75253DE82900A9ECF0 /* SignupData.swift in Sources */,
 				DC195A6B253DE77100A9ECF0 /* LoginView.swift in Sources */,
+				DC195A81253E838A00A9ECF0 /* ImageLoader.swift in Sources */,
 				DC195A57253DE61300A9ECF0 /* HomeView.swift in Sources */,
 				DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */,
 				DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */,
 				DC195A6F253DE7BF00A9ECF0 /* LoginData.swift in Sources */,
-				DC195A62253DE6BA00A9ECF0 /* BoothTask.swift in Sources */,
-				DC195A64253DE6D300A9ECF0 /* BodthData.swift in Sources */,
+				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
+				DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import SwiftUI
 struct SplashView: View {
     
     @State var isActice:Bool = false
-    @EnvironmentObject var boothTask: BoothTask
+    @EnvironmentObject var storeTask: StoreTask
     
     var body: some View {
         
@@ -29,9 +29,9 @@ struct SplashView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 
                 // Load Boothes
-                for i in stride(from: 0, to: self.boothTask.data.count, by: 2){
-                    if i != self.boothTask.data.count{
-                        self.boothTask.grid.append(i)
+                for i in stride(from: 0, to: self.storeTask.data.count, by: 2){
+                    if i != self.storeTask.data.count{
+                        self.storeTask.grid.append(i)
                     }
                 }
             

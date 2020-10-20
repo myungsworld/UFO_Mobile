@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let splashView = SplashView()
                 .environmentObject(LoginTask())
                 .environmentObject(SignupTask())
-                .environmentObject(BoothTask())
+                .environmentObject(StoreTask())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

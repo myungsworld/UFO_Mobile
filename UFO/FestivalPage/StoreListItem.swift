@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-struct BoothItemView: View {
+struct StoreListItem: View {
     
-    var data: BoothData
+    var data: StoreData
     
     var body: some View {
         
