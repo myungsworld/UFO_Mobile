@@ -11,42 +11,38 @@ import SwiftUI
 struct StoreListView: View {
     
     @EnvironmentObject var storeTask: StoreTask
-       
-       var body: some View {
     
-           VStack {
-
-               ScrollView(.horizontal, showsIndicators: false) {
-
-                   HStack(spacing: 25) {
-                       
-                       ForEach(self.storeTask.grid, id: \.self) { i in
-                           
-                           VStack(spacing: 15) {
-                               
-                               ForEach((i...i+1), id: \.self) { j in
-                            
-                                   VStack {
-                                       if j != self.storeTask.data.count {
-                                           StoreListItem(data: self.storeTask.data[j])
-                                       }
-                                   }
-                               }
-                               
-                           }
-                       }
-                       
-                   }
-                   .padding()
-               }
-               .background(Color(red: 242, green: 242, blue: 242))
-               .cornerRadius(15)
-               .padding(15)
-               .shadow(radius: 5)
-               
-               
-           }
-       }
+    var body: some View {
+        
+        VStack {
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                
+                HStack(spacing: 25) {
+                    ForEach(self.storeTask.grid, id: \.self) { i in
+                        
+                        VStack(spacing: 15) {
+                            ForEach((i...i+1), id: \.self) { j in
+                                
+                                VStack {
+                                    if j != self.storeTask.data.count {
+                                        StoreListItem(data: self.storeTask.data[j])
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .padding()
+            }
+            .background(Color(red: 242, green: 242, blue: 242))
+            .cornerRadius(15)
+            .padding(15)
+            .shadow(radius: 5)
+            
+            
+        }
+    }
 }
 
 struct StoreListView_Previews: PreviewProvider {

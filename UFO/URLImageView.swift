@@ -14,6 +14,7 @@ struct URLImageView: View {
 
     init(urlString: String?) {
         urlImageModel = URLImageModel(urlString: urlString)
+        urlImageModel.loadImage()
     }
     
     var body: some View {
@@ -25,11 +26,11 @@ struct URLImageView: View {
         
     }
     
-    static var defaultImage = UIImage(systemName: "a")
+    static var defaultImage = UIImage(systemName: "lock")
 }
 
-//struct URLImageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        URLImageView(urlString: "")
-//    }
-//}
+struct URLImageView_Previews: PreviewProvider {
+    static var previews: some View {
+        URLImageView(urlString: "")
+    }
+}

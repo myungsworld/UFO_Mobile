@@ -18,7 +18,7 @@ class URLImageModel: ObservableObject {
     
     init(urlString: String?) {
         self.urlString = urlString
-        loadImage()
+//        loadImage()
     }
     
     func loadImage() {

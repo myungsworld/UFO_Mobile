@@ -16,7 +16,7 @@ struct FestivalView: View {
             // Boothes
             StoreListView()
             
-            URLImageView(urlString: "http://192.168.0.103:8080/1")
+//            URLImageView(urlString: "http://172.30.1.31:8080/2")
             
             MapView()
                 .background(Color(red: 242, green: 242, blue: 242))
