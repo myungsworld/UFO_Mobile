@@ -16,9 +16,9 @@ struct FestivalView: View {
             // Boothes
             StoreListView()
             
-            VStack {
-                URLImage(url: "http://155.230.249.129:8080")
-                
+            URLImageView(urlString: "http://192.168.0.103:8080/1")
+            
+            MapView()
                 .background(Color(red: 242, green: 242, blue: 242))
                 .cornerRadius(15)
                 .padding(.bottom, 15)
@@ -26,7 +26,7 @@ struct FestivalView: View {
                 .padding(.trailing, 15)
                 .shadow(radius: 5)
                 
-            }
+            
         }
     }
 }
