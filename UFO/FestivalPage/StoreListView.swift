@@ -39,8 +39,6 @@ struct StoreListView: View {
             .cornerRadius(15)
             .padding(15)
             .shadow(radius: 5)
-            
-            
         }
     }
 }

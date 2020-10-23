@@ -6,7 +6,7 @@
 //  Copyright © 2020 Sanghyun Byun. All rights reserved.
 //
 
-struct StoreMenuData {
+struct StoreMenuData: Codable {
     
     var name: String
     var price: Int

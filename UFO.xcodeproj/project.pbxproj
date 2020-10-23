@@ -35,6 +35,7 @@
 		DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */; };
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
 		DC68D78625407FB100B35E56 /* StoreMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78525407FB100B35E56 /* StoreMenuData.swift */; };
+		DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78725433A8300B35E56 /* KakaoLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		DC68D78525407FB100B35E56 /* StoreMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenuData.swift; sourceTree = "<group>"; };
+		DC68D78725433A8300B35E56 /* KakaoLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				DC195A30253DE53800A9ECF0 /* Info.plist */,
 				DC195A2A253DE53800A9ECF0 /* Preview Content */,
 				DC195A52253DE5D200A9ECF0 /* SplashView.swift */,
+				DC68D78725433A8300B35E56 /* KakaoLoginView.swift */,
 				DC195A54253DE5F900A9ECF0 /* MainView.swift */,
 				DC195A56253DE61300A9ECF0 /* HomeView.swift */,
 				DC195A58253DE62C00A9ECF0 /* FestivalView.swift */,
@@ -345,6 +348,7 @@
 			files = (
 				DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
+				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
 				DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */,

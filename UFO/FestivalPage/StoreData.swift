@@ -6,7 +6,7 @@
 //  Copyright © 2020 Sanghyun Byun. All rights reserved.
 //
 
-struct StoreData {
+struct StoreData: Codable {
     
     var name: String
     var url: String

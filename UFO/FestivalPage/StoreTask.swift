@@ -11,65 +11,7 @@ import Combine
 
 class StoreTask: ObservableObject {
     
-    var data: [StoreData] = [
-        StoreData(name: "booth1", url: "boothic1", menu: [StoreMenuData(name: "menu1", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu2", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu3", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu6", price: 10000, url: "boothic1"),]),
-        
-        StoreData(name: "booth2", url: "boothic1", menu: [StoreMenuData(name: "menu1", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu2", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu3", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu4", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu4", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu5", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu6", price: 10000, url: "boothic1"),]),
-        
-        StoreData(name: "booth3", url: "boothic1", menu: [StoreMenuData(name: "menu1", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu2", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu3", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu4", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu5", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu6", price: 10000, url: "boothic1"),]),
-        
-        StoreData(name: "booth4", url: "boothic1", menu: [StoreMenuData(name: "menu1", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu2", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu5", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu6", price: 10000, url: "boothic1"),]),
-        
-        StoreData(name: "booth5", url: "boothic1", menu: [StoreMenuData(name: "menu1", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu2", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu3", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu4", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu5", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu6", price: 10000, url: "boothic1"),]),
-        
-        StoreData(name: "booth6", url: "boothic1", menu: [StoreMenuData(name: "menu1", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu4", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu5", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu6", price: 10000, url: "boothic1"),]),
-        
-        StoreData(name: "booth7", url: "boothic1", menu: [StoreMenuData(name: "menu1", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu2", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu3", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu4", price: 10000, url: "boothic1")]),
-        
-        StoreData(name: "booth8", url: "boothic1", menu: [StoreMenuData(name: "menu1", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu2", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu3", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu6", price: 10000, url: "boothic1")]),
-        
-        StoreData(name: "booth9", url: "boothic1", menu: [StoreMenuData(name: "menu1", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu2", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu3", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu4", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu5", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu6", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu4", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu5", price: 10000, url: "boothic1"),
-                                                          StoreMenuData(name: "menu6", price: 10000, url: "boothic1")]),
-        
-        ] {
+    var data: [StoreData] = [] {
         
         didSet {
             objectWillChange.send()
@@ -79,6 +21,72 @@ class StoreTask: ObservableObject {
     var grid: [Int] = [] {
         didSet {
             objectWillChange.send()
+        }
+    }
+    
+    func getStoreInfo() {
+        
+        do {
+            
+            guard let url = URL(string: "http://192.168.0.103:8080/store") else { return }
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                
+                guard error == nil else {
+                    print("Error: \(error!)")
+                    return
+                }
+                
+                guard let data = data else {
+                    print("No data Found")
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    
+                    do {
+                        
+                        let stores = try! JSONSerialization.jsonObject(with: data, options: []) as! [Any]
+                        
+                        for store in stores {
+                        
+                            let store = store as! Dictionary<String, Any>
+                            let store_menu = store["menu"] as! Array<Any>
+                        
+                            let store_name = store["name"] as! String
+                            let store_url = store["url"] as! String
+                            
+                            var menuList: [StoreMenuData] = []
+                            
+                            for menu in store_menu {
+                                
+                                let menu = menu as! Dictionary<String, Any>
+                                
+                                let menu_name = menu["name"] as! String
+                                let menu_price = menu["price"] as! Int
+                                let menu_url = menu["url"] as! String
+                                
+                                menuList.append(StoreMenuData(name: menu_name, price: menu_price, url: menu_url))
+                            }
+                            
+                            self.data.append(StoreData(name: store_name, url: store_url, menu: menuList))
+                            
+                        }
+                    }
+                    
+                    for i in stride(from: 0, to: self.data.count, by: 2) {
+                        if i != self.data.count {
+                            self.grid.append(i)
+                        }
+                    }
+                    
+                }
+            }
+            
+            task.resume()
         }
     }
     

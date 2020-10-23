@@ -62,16 +62,10 @@ class LoginTask: ObservableObject {
                     print(jsonData)
 
 //                    self.result = true
-
-
                 }
-
-            
-                
             }
                 
             task.resume()
-        
             
         } catch {
             return
