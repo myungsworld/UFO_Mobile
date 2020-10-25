@@ -24,11 +24,11 @@ class StoreTask: ObservableObject {
         }
     }
     
-    func getStoreInfo() {
+    func getStoreInfo(f_id: Int) {
         
         do {
             
-            guard let url = URL(string: "http://192.168.0.103:8080/store") else { return }
+            guard let url = URL(string: "http://192.168.0.103:8080/festival/\(f_id)") else { return }
             
             var request = URLRequest(url: url)
             request.httpMethod = "GET"

@@ -29,5 +29,4 @@ extension ImageCache {
     static func getImageCache() -> ImageCache {
         return imageCache
     }
-    
 }

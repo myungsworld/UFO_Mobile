@@ -39,7 +39,7 @@ struct MainView: View {
             // MyPage
             NavigationView {
         
-                MyPageView()
+                KakaoLoginView()
                 .navigationBarTitle("MyPage", displayMode: .inline)
         
                 

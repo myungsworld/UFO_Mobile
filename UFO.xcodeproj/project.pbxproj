@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */; };
+		C56B7B30D42BA848FFE4DFA3 /* Pods_UFOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */; };
+		DBA05FFAE3D3559783C26326 /* Pods_UFO_UFOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */; };
 		DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A22253DE53300A9ECF0 /* AppDelegate.swift */; };
 		DC195A25253DE53300A9ECF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A24253DE53300A9ECF0 /* SceneDelegate.swift */; };
 		DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A26253DE53300A9ECF0 /* ContentView.swift */; };
@@ -36,6 +39,8 @@
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
 		DC68D78625407FB100B35E56 /* StoreMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78525407FB100B35E56 /* StoreMenuData.swift */; };
 		DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78725433A8300B35E56 /* KakaoLoginView.swift */; };
+		DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94D25448D6500486610 /* FestivalIdCache.swift */; };
+		DCB4E950254532BB00486610 /* FileManagerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94F254532BB00486610 /* FileManagerHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		050A0A658F43735F3F58F0EC /* Pods-UFOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFOTests.debug.xcconfig"; path = "Target Support Files/Pods-UFOTests/Pods-UFOTests.debug.xcconfig"; sourceTree = "<group>"; };
+		37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F8492D964045D920133F78 /* Pods-UFO-UFOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO-UFOUITests.release.xcconfig"; path = "Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests.release.xcconfig"; sourceTree = "<group>"; };
+		817245CE098FEF074E713224 /* Pods-UFO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO.release.xcconfig"; path = "Target Support Files/Pods-UFO/Pods-UFO.release.xcconfig"; sourceTree = "<group>"; };
+		9BC2BBF87B1178351FA6B020 /* Pods-UFO-UFOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO-UFOUITests.debug.xcconfig"; path = "Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0CA2F12606C0B753325FBCE /* Pods-UFO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO.debug.xcconfig"; path = "Target Support Files/Pods-UFO/Pods-UFO.debug.xcconfig"; sourceTree = "<group>"; };
+		BDB7A1AF2FCFA514C696C64B /* Pods-UFOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFOTests.release.xcconfig"; path = "Target Support Files/Pods-UFOTests/Pods-UFOTests.release.xcconfig"; sourceTree = "<group>"; };
+		C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC195A1F253DE53300A9ECF0 /* UFO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UFO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC195A22253DE53300A9ECF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC195A24253DE53300A9ECF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +104,9 @@
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		DC68D78525407FB100B35E56 /* StoreMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenuData.swift; sourceTree = "<group>"; };
 		DC68D78725433A8300B35E56 /* KakaoLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginView.swift; sourceTree = "<group>"; };
+		DCB4E94D25448D6500486610 /* FestivalIdCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIdCache.swift; sourceTree = "<group>"; };
+		DCB4E94F254532BB00486610 /* FileManagerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHandler.swift; sourceTree = "<group>"; };
+		EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO_UFOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56B7B30D42BA848FFE4DFA3 /* Pods_UFOTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,12 +130,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA05FFAE3D3559783C26326 /* Pods_UFO_UFOUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52FEC702A136B819B625D4D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */,
+				EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */,
+				C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7764A222C599336CE82E9848 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0CA2F12606C0B753325FBCE /* Pods-UFO.debug.xcconfig */,
+				817245CE098FEF074E713224 /* Pods-UFO.release.xcconfig */,
+				9BC2BBF87B1178351FA6B020 /* Pods-UFO-UFOUITests.debug.xcconfig */,
+				56F8492D964045D920133F78 /* Pods-UFO-UFOUITests.release.xcconfig */,
+				050A0A658F43735F3F58F0EC /* Pods-UFOTests.debug.xcconfig */,
+				BDB7A1AF2FCFA514C696C64B /* Pods-UFOTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DC195A16253DE53300A9ECF0 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +167,8 @@
 				DC195A38253DE53800A9ECF0 /* UFOTests */,
 				DC195A43253DE53800A9ECF0 /* UFOUITests */,
 				DC195A20253DE53300A9ECF0 /* Products */,
+				7764A222C599336CE82E9848 /* Pods */,
+				52FEC702A136B819B625D4D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,16 +193,18 @@
 				DC195A30253DE53800A9ECF0 /* Info.plist */,
 				DC195A2A253DE53800A9ECF0 /* Preview Content */,
 				DC195A52253DE5D200A9ECF0 /* SplashView.swift */,
-				DC68D78725433A8300B35E56 /* KakaoLoginView.swift */,
 				DC195A54253DE5F900A9ECF0 /* MainView.swift */,
 				DC195A56253DE61300A9ECF0 /* HomeView.swift */,
 				DC195A58253DE62C00A9ECF0 /* FestivalView.swift */,
 				DC195A5A253DE64C00A9ECF0 /* FestivalPage */,
+				DC68D78725433A8300B35E56 /* KakaoLoginView.swift */,
 				DC195A67253DE73900A9ECF0 /* MyPageView.swift */,
 				DC195A69253DE75F00A9ECF0 /* MyPage */,
 				DC68D77B253F3B4800B35E56 /* URLImageView.swift */,
 				DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */,
 				DC68D77F253F42A800B35E56 /* ImageCache.swift */,
+				DCB4E94D25448D6500486610 /* FestivalIdCache.swift */,
+				DCB4E94F254532BB00486610 /* FileManagerHandler.swift */,
 			);
 			path = UFO;
 			sourceTree = "<group>";
@@ -222,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC195A49253DE53900A9ECF0 /* Build configuration list for PBXNativeTarget "UFO" */;
 			buildPhases = (
+				09FA1DA7A0DD2A62F3A7F8C8 /* [CP] Check Pods Manifest.lock */,
 				DC195A1B253DE53300A9ECF0 /* Sources */,
 				DC195A1C253DE53300A9ECF0 /* Frameworks */,
 				DC195A1D253DE53300A9ECF0 /* Resources */,
+				29447938340201BEAE9BDCAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC195A4C253DE53900A9ECF0 /* Build configuration list for PBXNativeTarget "UFOTests" */;
 			buildPhases = (
+				61C78267D083CF36A3B386CE /* [CP] Check Pods Manifest.lock */,
 				DC195A31253DE53800A9ECF0 /* Sources */,
 				DC195A32253DE53800A9ECF0 /* Frameworks */,
 				DC195A33253DE53800A9ECF0 /* Resources */,
@@ -257,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC195A4F253DE53900A9ECF0 /* Build configuration list for PBXNativeTarget "UFOUITests" */;
 			buildPhases = (
+				1650949008C0CDE62F73669E /* [CP] Check Pods Manifest.lock */,
 				DC195A3C253DE53800A9ECF0 /* Sources */,
 				DC195A3D253DE53800A9ECF0 /* Frameworks */,
 				DC195A3E253DE53800A9ECF0 /* Resources */,
+				D873030BDD30C3EE338729FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,6 +392,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09FA1DA7A0DD2A62F3A7F8C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UFO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1650949008C0CDE62F73669E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UFO-UFOUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29447938340201BEAE9BDCAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UFO/Pods-UFO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UFO/Pods-UFO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UFO/Pods-UFO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61C78267D083CF36A3B386CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UFOTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D873030BDD30C3EE338729FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC195A1B253DE53300A9ECF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -348,6 +502,7 @@
 			files = (
 				DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
+				DCB4E950254532BB00486610 /* FileManagerHandler.swift in Sources */,
 				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
@@ -367,6 +522,7 @@
 				DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */,
 				DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */,
 				DC195A6F253DE7BF00A9ECF0 /* LoginData.swift in Sources */,
+				DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */,
 				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
 				DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */,
 				DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */,
@@ -532,6 +688,7 @@
 		};
 		DC195A4A253DE53900A9ECF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0CA2F12606C0B753325FBCE /* Pods-UFO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +709,7 @@
 		};
 		DC195A4B253DE53900A9ECF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 817245CE098FEF074E713224 /* Pods-UFO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -572,6 +730,7 @@
 		};
 		DC195A4D253DE53900A9ECF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 050A0A658F43735F3F58F0EC /* Pods-UFOTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -594,6 +753,7 @@
 		};
 		DC195A4E253DE53900A9ECF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDB7A1AF2FCFA514C696C64B /* Pods-UFOTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -616,6 +776,7 @@
 		};
 		DC195A50253DE53900A9ECF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC2BBF87B1178351FA6B020 /* Pods-UFO-UFOUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -636,6 +797,7 @@
 		};
 		DC195A51253DE53900A9ECF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56F8492D964045D920133F78 /* Pods-UFO-UFOUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
