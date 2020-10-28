@@ -11,13 +11,91 @@ import Foundation
 class FestivalIdCache {
     
     var cache = NSCache<NSString, NSNumber>()
+    var fileManager: FileManager
+    var cachePath: URL
+    var filePath: URL
     
-    func get(forKey: String) -> NSNumber? {
+    init() {
+        self.fileManager = FileManager.default
+        self.cachePath = fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        self.filePath = cachePath.appendingPathComponent("festival_id")
+    }
+    
+    func getFestivalId() -> Int {
+        
+        // When can't hit by "festival_id"
+        guard let festival_id = self.getCache(forKey: "festival_id") else {
+            
+            print("festival_id: getCache() Cache Miss")
+            
+            // Check if exist "festival_id" in file
+            // file doesn't exist
+            if !self.fileExist() {
+                print("festival_id: fileExist() no festival_id file")
+                
+                // show pop up menu
+                return -1
+            } else {
+            // file exist
+                let festival_id = self.getFile()
+                self.setCache(forKey: "festival_id", value: festival_id)
+                return festival_id
+            }
+        }
+        // When success to hit
+        // type: NSNumber
+        return Int(festival_id)
+    }
+    
+    func setFetivalId(festival_id: Int) {
+        
+        self.setCache(forKey: "festival_id", value: festival_id)
+        self.setFile(value: String(festival_id))
+        
+    }
+    
+    func getCache(forKey: String) -> NSNumber? {
         return cache.object(forKey: NSString(string:forKey))
     }
     
-    func set(forKey: String, id: Int) {
-        cache.setObject(NSNumber(value: id), forKey: NSString(string: forKey))
+    func setCache(forKey: String, value: Int) {
+        cache.setObject(NSNumber(value: value), forKey: NSString(string: forKey))
+    }
+    
+    func getFile() -> Int {
+        
+        do {
+            let result = try String(contentsOf: self.filePath, encoding: .utf8)
+            
+            return Int(result)!
+        } catch let e {
+            print("festival_id: getFile()", e.localizedDescription)
+            
+            return -1
+        }
+    }
+    
+    func setFile(value: String) {
+        
+        do {
+            let text = NSString(string: value)
+            
+            try text.write(to: self.filePath, atomically: true, encoding: String.Encoding.utf8.rawValue)
+        } catch let e {
+            print("festival_id: setFile()", e.localizedDescription)
+        }
+    }
+    
+    func removeFile() {
+        do {
+            try self.fileManager.removeItem(at: self.filePath)
+        } catch let e {
+            print("festival_id: removeFile()", e.localizedDescription)
+        }
+    }
+    
+    func fileExist() -> Bool {
+        return self.fileManager.fileExists(atPath: self.filePath.path)
     }
 }
 

@@ -29,54 +29,24 @@ struct SplashView: View {
                         .font(Font.largeTitle)
                     
                     Text("Univ Festival in One")
-                    
                 }
                 
             }.onAppear {
                 
-                // Cache hit 못할 떄
-                guard let f_id = self.festivalIdCache.get(forKey: "f_id") else {
-                    print("Cache miss")
-                    
-                    let fileManagerHandler = FileManagerHandler(filename: "f_id")
-            
-                    // File에 없을 때
-                    if !fileManagerHandler.fileExists() {
-                        print("none")
-                        
-                        // Pop up 띄우기
-                        withAnimation {
-                            self.show = true
-                        }
-                        
-                        return
-                        
-                    } else {
-                    // File에 있을 때
-                        let f_id = fileManagerHandler.getFileText()
-                        self.festivalIdCache.set(forKey: "f_id", id: Int(f_id)!)
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                            
-                            withAnimation {
-                                // Load Stores info
-                                self.storeTask.getStoreInfo(f_id: Int(f_id)!)
-                                
-                                self.isActice.toggle()
-                            }
-                        }
-                        
-                        return
+                let festival_id = self.festivalIdCache.getFestivalId()
+                
+                if festival_id == -1 {
+                    withAnimation {
+                        self.show = true
                     }
                     
+                    return
                 }
                 
-                // Cache hit 했을 때
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                    
                     withAnimation {
                         // Load Stores info
-                        self.storeTask.getStoreInfo(f_id: Int(f_id))
+                        self.storeTask.getStoreInfo(f_id: festival_id)
                         
                         self.isActice.toggle()
                     }
@@ -113,7 +83,7 @@ struct FestivalList: View {
             
             Button(action: {
                 
-                self.cacheFestivalId(f_id: 1)
+                self.setFestivalId(festival_id: 1)
                 
             }) {
                 Text("1")
@@ -123,7 +93,7 @@ struct FestivalList: View {
             
             Button(action: {
                 
-                self.cacheFestivalId(f_id: 2)
+                self.setFestivalId(festival_id: 2)
                 
             }) {
                 Text("2")
@@ -133,7 +103,7 @@ struct FestivalList: View {
             
             Button(action: {
                 
-                self.cacheFestivalId(f_id: 3)
+                self.setFestivalId(festival_id: 3)
                 
             }) {
                 Text("3")
@@ -145,12 +115,8 @@ struct FestivalList: View {
             .cornerRadius(15)
     }
     
-    func cacheFestivalId(f_id: Int) {
-        // Cache에도 없고 File에도 없고
-        self.festivalIdCache.set(forKey: "f_id", id: f_id)
-        
-        let fileManagerHandler = FileManagerHandler(filename: "f_id")
-        fileManagerHandler.setFileText(str: String(f_id))
+    func setFestivalId(festival_id: Int) {
+        self.festivalIdCache.setFetivalId(festival_id: festival_id)
         
         withAnimation {
             self.show = false
@@ -160,7 +126,7 @@ struct FestivalList: View {
             
             withAnimation {
                 // Load Stores info
-                self.storeTask.getStoreInfo(f_id: f_id)
+                self.storeTask.getStoreInfo(f_id: festival_id)
                 
                 self.isActive.toggle()
             }

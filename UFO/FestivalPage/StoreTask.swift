@@ -28,7 +28,7 @@ class StoreTask: ObservableObject {
         
         do {
             
-            guard let url = URL(string: "http://192.168.0.103:8080/festival/\(f_id)") else { return }
+            guard let url = URL(string: "http://172.30.1.30:8080/festival/\(f_id)") else { return }
             
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
