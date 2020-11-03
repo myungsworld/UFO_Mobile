@@ -73,7 +73,7 @@ struct KakaoLoginView: View {
                         print("me() success")
                         
                         //do something
-                        print(user)
+                        print(user!)
                     }
                 }
             }) {

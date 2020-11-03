@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State var selected = 1
+    @State var selected = 0
     
     var body: some View {
         
@@ -20,6 +20,7 @@ struct MainView: View {
             NavigationView {
                 HomeView()
                     .navigationBarTitle("Home", displayMode: .inline)
+
             }.tabItem({
                 Text("Home")
             }).tag(0)
@@ -39,7 +40,7 @@ struct MainView: View {
             // MyPage
             NavigationView {
         
-                KakaoLoginView()
+                MyPageView()
                 .navigationBarTitle("MyPage", displayMode: .inline)
         
                 

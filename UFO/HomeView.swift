@@ -7,10 +7,33 @@
 //
 
 import SwiftUI
+//import CodeScanner
 
 struct HomeView: View {
+
     var body: some View {
-        Text("Hello, Home!")
+        ZStack(alignment: .top) {
+            
+            CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
+            SlideOverView {
+                VStack {
+                    Text("Slid Over View")
+                    Spacer()
+                }
+            }
+        }
+    }
+    
+    func handleScan(result: Result<String, CodeScannerView.ScanError>) {
+
+        switch result {
+        case .success(let code):
+            print(code)
+//            Alert(title: Text("important message"), message: Text("Wear sun"), dismissButton: .default(Text("asd")))
+                    
+        case .failure(let error):
+            print("Scanning failed", error)
+        }
     }
 }
 

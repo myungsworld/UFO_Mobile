@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,17 +28,15 @@
 		DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A63253DE6D300A9ECF0 /* StoreData.swift */; };
 		DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A65253DE6F900A9ECF0 /* MapView.swift */; };
 		DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A67253DE73900A9ECF0 /* MyPageView.swift */; };
-		DC195A6B253DE77100A9ECF0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A6A253DE77100A9ECF0 /* LoginView.swift */; };
-		DC195A6D253DE79D00A9ECF0 /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A6C253DE79D00A9ECF0 /* LoginTask.swift */; };
-		DC195A6F253DE7BF00A9ECF0 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A6E253DE7BF00A9ECF0 /* LoginData.swift */; };
-		DC195A71253DE7DB00A9ECF0 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A70253DE7DB00A9ECF0 /* SignupView.swift */; };
-		DC195A73253DE80500A9ECF0 /* SignupTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A72253DE80500A9ECF0 /* SignupTask.swift */; };
-		DC195A75253DE82900A9ECF0 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A74253DE82900A9ECF0 /* SignupData.swift */; };
 		DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77B253F3B4800B35E56 /* URLImageView.swift */; };
 		DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */; };
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
 		DC68D78625407FB100B35E56 /* StoreMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78525407FB100B35E56 /* StoreMenuData.swift */; };
 		DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78725433A8300B35E56 /* KakaoLoginView.swift */; };
+		DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */; };
+		DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */; };
+		DC7B3E9F254935120094FD51 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DC7B3E9E254935120094FD51 /* CodeScanner */; };
+		DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */; };
 		DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94D25448D6500486610 /* FestivalIdCache.swift */; };
 		DCB4E950254532BB00486610 /* FileManagerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94F254532BB00486610 /* FileManagerHandler.swift */; };
 /* End PBXBuildFile section */
@@ -93,17 +91,14 @@
 		DC195A63253DE6D300A9ECF0 /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
 		DC195A65253DE6F900A9ECF0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DC195A67253DE73900A9ECF0 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
-		DC195A6A253DE77100A9ECF0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		DC195A6C253DE79D00A9ECF0 /* LoginTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
-		DC195A6E253DE7BF00A9ECF0 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
-		DC195A70253DE7DB00A9ECF0 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
-		DC195A72253DE80500A9ECF0 /* SignupTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTask.swift; sourceTree = "<group>"; };
-		DC195A74253DE82900A9ECF0 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
 		DC68D77B253F3B4800B35E56 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		DC68D78525407FB100B35E56 /* StoreMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenuData.swift; sourceTree = "<group>"; };
 		DC68D78725433A8300B35E56 /* KakaoLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginView.swift; sourceTree = "<group>"; };
+		DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalListPopUpView.swift; sourceTree = "<group>"; };
+		DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverView.swift; sourceTree = "<group>"; };
+		DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		DCB4E94D25448D6500486610 /* FestivalIdCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIdCache.swift; sourceTree = "<group>"; };
 		DCB4E94F254532BB00486610 /* FileManagerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHandler.swift; sourceTree = "<group>"; };
 		EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO_UFOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7B3E9F254935120094FD51 /* CodeScanner in Frameworks */,
 				5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,11 +189,11 @@
 				DC195A30253DE53800A9ECF0 /* Info.plist */,
 				DC195A2A253DE53800A9ECF0 /* Preview Content */,
 				DC195A52253DE5D200A9ECF0 /* SplashView.swift */,
+				DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */,
 				DC195A54253DE5F900A9ECF0 /* MainView.swift */,
 				DC195A56253DE61300A9ECF0 /* HomeView.swift */,
 				DC195A58253DE62C00A9ECF0 /* FestivalView.swift */,
 				DC195A5A253DE64C00A9ECF0 /* FestivalPage */,
-				DC68D78725433A8300B35E56 /* KakaoLoginView.swift */,
 				DC195A67253DE73900A9ECF0 /* MyPageView.swift */,
 				DC195A69253DE75F00A9ECF0 /* MyPage */,
 				DC68D77B253F3B4800B35E56 /* URLImageView.swift */,
@@ -205,6 +201,8 @@
 				DC68D77F253F42A800B35E56 /* ImageCache.swift */,
 				DCB4E94D25448D6500486610 /* FestivalIdCache.swift */,
 				DCB4E94F254532BB00486610 /* FileManagerHandler.swift */,
+				DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */,
+				DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */,
 			);
 			path = UFO;
 			sourceTree = "<group>";
@@ -239,11 +237,11 @@
 			isa = PBXGroup;
 			children = (
 				DC195A5D253DE67F00A9ECF0 /* StoreListView.swift */,
+				DC195A65253DE6F900A9ECF0 /* MapView.swift */,
 				DC195A5F253DE69B00A9ECF0 /* StoreListItem.swift */,
 				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
 				DC195A63253DE6D300A9ECF0 /* StoreData.swift */,
 				DC68D78525407FB100B35E56 /* StoreMenuData.swift */,
-				DC195A65253DE6F900A9ECF0 /* MapView.swift */,
 			);
 			path = FestivalPage;
 			sourceTree = "<group>";
@@ -251,12 +249,7 @@
 		DC195A69253DE75F00A9ECF0 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				DC195A6A253DE77100A9ECF0 /* LoginView.swift */,
-				DC195A6C253DE79D00A9ECF0 /* LoginTask.swift */,
-				DC195A6E253DE7BF00A9ECF0 /* LoginData.swift */,
-				DC195A70253DE7DB00A9ECF0 /* SignupView.swift */,
-				DC195A72253DE80500A9ECF0 /* SignupTask.swift */,
-				DC195A74253DE82900A9ECF0 /* SignupData.swift */,
+				DC68D78725433A8300B35E56 /* KakaoLoginView.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -279,6 +272,9 @@
 			dependencies = (
 			);
 			name = UFO;
+			packageProductDependencies = (
+				DC7B3E9E254935120094FD51 /* CodeScanner */,
+			);
 			productName = UFO;
 			productReference = DC195A1F253DE53300A9ECF0 /* UFO.app */;
 			productType = "com.apple.product-type.application";
@@ -354,6 +350,9 @@
 				Base,
 			);
 			mainGroup = DC195A16253DE53300A9ECF0;
+			packageReferences = (
+				DC7B3E9D254935120094FD51 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = DC195A20253DE53300A9ECF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -501,6 +500,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */,
+				DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */,
+				DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */,
+				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
 				DCB4E950254532BB00486610 /* FileManagerHandler.swift in Sources */,
 				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
@@ -508,20 +510,14 @@
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
 				DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */,
 				DC195A60253DE69B00A9ECF0 /* StoreListItem.swift in Sources */,
-				DC195A71253DE7DB00A9ECF0 /* SignupView.swift in Sources */,
-				DC195A73253DE80500A9ECF0 /* SignupTask.swift in Sources */,
 				DC195A59253DE62C00A9ECF0 /* FestivalView.swift in Sources */,
-				DC195A6D253DE79D00A9ECF0 /* LoginTask.swift in Sources */,
 				DC195A53253DE5D200A9ECF0 /* SplashView.swift in Sources */,
 				DC68D78625407FB100B35E56 /* StoreMenuData.swift in Sources */,
 				DC195A25253DE53300A9ECF0 /* SceneDelegate.swift in Sources */,
-				DC195A75253DE82900A9ECF0 /* SignupData.swift in Sources */,
-				DC195A6B253DE77100A9ECF0 /* LoginView.swift in Sources */,
 				DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */,
 				DC195A57253DE61300A9ECF0 /* HomeView.swift in Sources */,
 				DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */,
 				DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */,
-				DC195A6F253DE7BF00A9ECF0 /* LoginData.swift in Sources */,
 				DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */,
 				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
 				DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */,
@@ -856,6 +852,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC7B3E9D254935120094FD51 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC7B3E9E254935120094FD51 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC7B3E9D254935120094FD51 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC195A17253DE53300A9ECF0 /* Project object */;
 }
