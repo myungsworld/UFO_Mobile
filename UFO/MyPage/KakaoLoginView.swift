@@ -12,80 +12,55 @@ import KakaoSDKUser
 
 struct KakaoLoginView: View {
     
+    @EnvironmentObject var loginTask: LoginTask
+    
     var body: some View {
         
-        VStack {
+        VStack(alignment: .leading, spacing: 20) {
             
-            Button(action: {
-                if (AuthApi.isKakaoTalkLoginAvailable()) {
-                    AuthApi.shared.loginWithKakaoTalk { (oauthToken, error) in
-                        
-                        if let error = error {
-                            print(error)
-                        } else {
-                            print("loginWithKakaoTalk() success.")
-                            
-                            //do something
-                            if let token = oauthToken {
-                                print(token.accessToken)
-                            }
-                        }
+            if (!self.loginTask.isLogin) {
+                VStack(alignment: .center , spacing: 20) {
+                    
+                    Text("ASD")
+                    
+                    Button(action: {
+                        self.loginTask.loginWithKakaoTalk()
+                    }) {
+                        Text("로그인")
+                            .frame(width: 150, height: 50)
+                            .background(Color.blue)
+                            .foregroundColor(Color.black)
                     }
                 }
-            }) {
-                Text("Login")
-            }
-            
-            Button(action: {
-                UserApi.shared.accessTokenInfo { (accessTokenInfo, error) in
-                    if let error = error {
-                        print(error)
-                    } else {
-                        print("accessTokenInfo() success.")
-                        
-                        //do something
-                        if let token = accessTokenInfo {
-                            print(token)
-                        }
+            } else {
+                
+                let username = self.loginTask.id
+                
+                HStack(spacing: 20) {
+                    Image("boothic1")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)
+                        .padding(.leading, 20)
+                    
+                    Text(username)
+                    
+                    Button(action: {
+                        self.loginTask.logout()
+                    }) {
+                        Text("로그아웃")
                     }
                 }
-            }) {
-                Text("AccessTokenInfo")
             }
             
-            Button(action: {
-                UserApi.shared.logout { (error) in
-                    if let error = error {
-                        print(error)
-                    } else {
-                        print("logout() success")
-                    }
-                }
-            }) {
-                Text("Logout")
-            }
-            
-            Button(action: {
-                UserApi.shared.me() { (user, error) in
-                    if let error = error {
-                        print(error)
-                    } else {
-                        print("me() success")
-                        
-                        //do something
-                        print(user!)
-                    }
-                }
-            }) {
-                Text("me")
-            }
+            Divider()
         }
         
     }
 }
 
-struct KakaoLoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        KakaoLoginView()
-    }
-}
+//struct KakaoLoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        KakaoLoginView()
+//    }
+//}
