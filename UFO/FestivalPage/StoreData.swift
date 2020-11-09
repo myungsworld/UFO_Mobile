@@ -8,7 +8,11 @@
 
 struct StoreData: Codable {
     
+    var id: String
     var name: String
     var url: String
-    var menu: [StoreMenuData]
+    var desc: String
+    var latitude: String
+    var longitude: String
+    
 }

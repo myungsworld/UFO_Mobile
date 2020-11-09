@@ -25,8 +25,8 @@ struct StoreListView: View {
                             ForEach((i...i+1), id: \.self) { j in
                                 
                                 VStack {
-                                    if j != self.storeTask.data.count {
-                                        StoreListItem(data: self.storeTask.data[j])
+                                    if j != self.storeTask.store_data.count {
+                                        StoreListItem(store_data: self.storeTask.store_data[j])
                                     }
                                 }
                             }
