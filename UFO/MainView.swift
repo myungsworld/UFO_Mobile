@@ -11,7 +11,11 @@ import SwiftUI
 struct MainView: View {
     
     @State var selected = 0
-    
+    @State private var sender : String = "song"
+    @State private var receiver : String = "min"
+    @State private var amount : String = "100"
+    @State private var org : String = "CustomerOrg"
+
     var body: some View {
         
         TabView(selection: $selected) {
