@@ -21,7 +21,7 @@ class HttpAuth: ObservableObject {
     }
     
     func transferMoney(sender: String, receiver: String, amount : String , org: String) {
-        guard let url = URL(string: "http://localhost:8080/api/transferMoney") else { return }
+        guard let url = URL(string: "https://68fe4bbcfc5c.ngrok.io/api/transferMoney") else { return }
         
         let body : [String: String] = [sender: "myung", receiver : "min", amount : "100", org : "SalesOrg"]
         
@@ -60,9 +60,9 @@ struct HomeView: View {
     
     var http = HttpAuth()
     
-    @State private var name  = "송동명"
-    @State private var email = "myungsworld@gmail.com"
-    
+    @State private var name  = ""
+    @State private var email = ""
+    @State private var money = ""
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
     
@@ -84,15 +84,15 @@ struct HomeView: View {
             CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
             SlideOverView {
                 VStack {
-                    TextField("Name", text: $name)
+                    TextField("이름", text: $name)
                         .textContentType(.name)
                         .font(.title)
                         .padding(.horizontal)
-                    TextField("Email address", text: $email)
-                        .textContentType(.emailAddress)
+                    TextField("보낼 금액", text: $money)
+                        
                         .font(.title)
                         .padding([.horizontal, .bottom])
-                    Image(uiImage: generateQRcode(from: "\(name)\n\(email)"))
+                    Image(uiImage: generateQRcode(from: "\(name)\n\(money)"))
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
