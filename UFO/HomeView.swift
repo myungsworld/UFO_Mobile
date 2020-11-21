@@ -7,17 +7,95 @@
 //
 
 import SwiftUI
-//import CodeScanner
+import CodeScanner
+import Combine
+import CoreImage.CIFilterBuiltins
+
+class HttpAuth: ObservableObject {
+    var didChange = PassthroughSubject<HttpAuth, Never>()
+    
+    var authenticated = false {
+        didSet {
+            didChange.send(self)
+        }
+    }
+    
+    func transferMoney(sender: String, receiver: String, amount : String , org: String) {
+        guard let url = URL(string: "https://68fe4bbcfc5c.ngrok.io/api/transferMoney") else { return }
+        
+        let body : [String: String] = [sender: "myung", receiver : "min", amount : "100", org : "SalesOrg"]
+        
+        let finalBody = try! JSONSerialization.data(withJSONObject: body)
+        
+        var request = URLRequest(url:url)
+        request.httpMethod = "POST"
+        request.httpBody = finalBody
+        request.setValue("text/html", forHTTPHeaderField: "Contect-Type")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error{
+                print(error);
+                return;
+            }
+    
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                print(data)
+            }
+            
+        }.resume()
+    }
+}
 
 struct HomeView: View {
-
+    
+    @State private var sender : String = "myung"
+    @State private var receiver : String = "min"
+    @State private var amount : String = "100"
+    @State private var org : String = "CustomerOrg"
+    
+    var http = HttpAuth()
+    
+    @State private var name  = ""
+    @State private var email = ""
+    @State private var money = ""
+    let context = CIContext()
+    let filter = CIFilter.qrCodeGenerator()
+    
+    func generateQRcode(from string: String) ->UIImage {
+        let data = Data(string.utf8)
+        filter.setValue(data, forKey: "inputMessage")
+        
+        if let outputImage = filter.outputImage {
+            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+                return UIImage(cgImage: cgimg)
+            }
+        }
+        return UIImage(systemName: "xmark.circle") ?? UIImage()
+    }
+    
     var body: some View {
         ZStack(alignment: .top) {
             
             CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
             SlideOverView {
                 VStack {
-                    Text("Slid Over View")
+                    TextField("이름", text: $name)
+                        .textContentType(.name)
+                        .font(.title)
+                        .padding(.horizontal)
+                    TextField("보낼 금액", text: $money)
+                        
+                        .font(.title)
+                        .padding([.horizontal, .bottom])
+                    Image(uiImage: generateQRcode(from: "\(name)\n\(money)"))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
                     Spacer()
                 }
             }
@@ -29,7 +107,7 @@ struct HomeView: View {
         switch result {
         case .success(let code):
             print(code)
-//            Alert(title: Text("important message"), message: Text("Wear sun"), dismissButton: .default(Text("asd")))
+            self.http.transferMoney(sender: "myung", receiver: "min", amount: "100", org: "SalesOrg")
                     
         case .failure(let error):
             print("Scanning failed", error)
