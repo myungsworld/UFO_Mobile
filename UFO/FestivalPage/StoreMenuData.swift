@@ -8,7 +8,8 @@
 
 struct StoreMenuData: Codable {
     
+    var id: String
     var name: String
-    var price: Int
+    var price: String
     var url: String
 }
