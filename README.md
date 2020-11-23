@@ -50,6 +50,10 @@ SwiftUI를 이용한 구현
     * ~~SlideOver 구현~~
     * ~~QR코드를 인식하여 HTTP 통신~~
     * ~~유저정보를 바탕으로 QR코드 생성~~
+    * 충전기능
+    * SlideOverMenu
+    * 최초 결제 비밀번호
+    * 결제시 결제 비밀번호
 * Festival
     * ~~부스 이미지, 이름을 ScrollView 이용해 Button으로 띄우기~~
     * ~~부스 이미지 클릭시, 해당 부스의 정보 및 메뉴 띄우기~~
