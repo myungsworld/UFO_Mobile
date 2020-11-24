@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 class StoreTask: ObservableObject {
     
@@ -33,11 +34,13 @@ class StoreTask: ObservableObject {
     func getStoreInfo(festival_id: Int) {
         
         do {
-            
-            guard let url = URL(string: "http://155.230.248.141:8080/store/get/\(festival_id)") else { return }
+            let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
+            guard let url = URL(string: baseURL + "/store/get/\(festival_id)") else { return }
             
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
+            request.cachePolicy = .reloadIgnoringCacheData
+            
             
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 
@@ -51,40 +54,47 @@ class StoreTask: ObservableObject {
                     return
                 }
                 
+                guard let res = response as? HTTPURLResponse else {
+                    print("No response")
+                    return
+                }
+                
                 DispatchQueue.main.async {
-                    
-                    do {
-                        
-                        let stores = try! JSONSerialization.jsonObject(with: data, options: []) as! [Any]
-                        
-                        for store in stores {
-                        
-                            let store = store as! Dictionary<String, Any>
-                            
-                            let store_id = store["id"] as! NSNumber
-                            let store_id_str = store_id.stringValue
-                            
-                            let store_name = store["name"] as! String
-                            let store_url = store["img_url"] as! String
-                            let store_desc = store["desc"] as! String
-                            
-                            let store_latitude = store["latitude"] as! NSNumber
-                            let store_longitude = store["longitude"] as! NSNumber
-                            let store_latitude_str = store_longitude.stringValue
-                            let store_longitude_str = store_longitude.stringValue
-                            
-                            self.store_data.append(StoreData(id: store_id_str, name: store_name, url: store_url, desc: store_desc, latitude: store_latitude_str, longitude: store_longitude_str))
-                            
-                            self.getMenuInfo(store_id: store_id_str)
-                            
-                        }
-                    }
-                    
-                    for i in stride(from: 0, to: self.store_data.count, by: 2) {
-                        if i != self.store_data.count {
-                            self.grid.append(i)
-                        }
-                    }
+                
+                    print(res.statusCode)
+                    print(res.headers)
+//                    do {
+//
+//                        let stores = try! JSONSerialization.jsonObject(with: data, options: []) as! [Any]
+//
+//                        for store in stores {
+//
+//                            let store = store as! Dictionary<String, Any>
+//
+//                            let store_id = store["id"] as! NSNumber
+//                            let store_id_str = store_id.stringValue
+//
+//                            let store_name = store["name"] as! String
+//                            let store_url = store["img_url"] as! String
+//                            let store_desc = store["desc"] as! String
+//
+//                            let store_latitude = store["latitude"] as! NSNumber
+//                            let store_longitude = store["longitude"] as! NSNumber
+//                            let store_latitude_str = store_longitude.stringValue
+//                            let store_longitude_str = store_longitude.stringValue
+//
+//                            self.store_data.append(StoreData(id: store_id_str, name: store_name, url: store_url, desc: store_desc, latitude: store_latitude_str, longitude: store_longitude_str))
+//
+//                            self.getMenuInfo(store_id: store_id_str)
+//
+//                        }
+//                    }
+//
+//                    for i in stride(from: 0, to: self.store_data.count, by: 2) {
+//                        if i != self.store_data.count {
+//                            self.grid.append(i)
+//                        }
+//                    }
                     
                 }
             }
@@ -96,8 +106,8 @@ class StoreTask: ObservableObject {
     func getMenuInfo(store_id: String) {
         
         do {
-            
-             guard let url = URL(string: "http://155.230.248.141:8080/menu/get/\(store_id)") else { return }
+            let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
+             guard let url = URL(string: "\(baseURL)/menu/get/\(store_id)") else { return }
             
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
