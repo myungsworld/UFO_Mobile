@@ -40,6 +40,7 @@ struct StoreListView: View {
             .padding(15)
             .shadow(radius: 5)
         }.onAppear {
+            
             self.storeTask.getStoreInfo(festival_id: 2)
         }
     }
