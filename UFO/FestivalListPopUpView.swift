@@ -8,49 +8,58 @@
 
 import SwiftUI
 
+struct FestivalList: View {
+    
+    var festivalListData: FestivalListData
+    var festivalIdCache = FestivalIdCache.getFestivalIdCache()
+    @EnvironmentObject var festivalTask: FestivalTask
+    @EnvironmentObject var splashTask: SplashTask
+    
+    var body: some View {
+    
+        Button(action: {
+            var selected_festival_id = Int(festivalListData.festival_id)!
+            
+            self.festivalIdCache.setFetivalId(festival_id: selected_festival_id)
+            
+            print(self.festivalIdCache.getFestivalId())
+            
+            withAnimation {
+                self.splashTask.show.toggle()
+            }
+            
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//
+//                self.splashTask.isActive.toggle()
+//            }
+            
+        }) {
+            HStack {
+                Text(festivalListData.name)
+                Image("boothic1")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            }.padding()
+        }
+    }
+    
+}
+
 struct FestivalListPopUpView: View {
     
     @Binding var isActive: Bool
     @Binding var show: Bool
-    
-    @EnvironmentObject var storeTask: StoreTask
+    @EnvironmentObject var festivalTask: FestivalTask
     var festivalIdCache = FestivalIdCache.getFestivalIdCache()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             
-            Button(action: {
-                
-                self.setFestivalId(festival_id: 1)
-                
-            }) {
-                Text("1")
-                    .frame(width: 38, height: 28)
-                    .foregroundColor(.black)
+            List(self.festivalTask.festival_list) { item in
+                FestivalList(festivalListData: item)
             }
             
-            Button(action: {
-                
-                self.setFestivalId(festival_id: 2)
-                
-            }) {
-                Text("2")
-                    .frame(width: 38, height: 28)
-                    .foregroundColor(.black)
-            }
-            
-            Button(action: {
-                
-                self.setFestivalId(festival_id: 3)
-                
-            }) {
-                Text("3")
-                    .frame(width: 38, height: 28)
-                    .foregroundColor(.black)
-            }
-        }.padding()
-            .background(Color.gray)
-            .cornerRadius(15)
+        }
     }
     
     func setFestivalId(festival_id: Int) {
@@ -64,7 +73,7 @@ struct FestivalListPopUpView: View {
             
             withAnimation {
                 // Load Stores info
-                self.storeTask.getStoreInfo(festival_id: festival_id)
+//                self.storeTask.getStoreInfo(festival_id: festival_id)
                 self.isActive.toggle()
             }
         }

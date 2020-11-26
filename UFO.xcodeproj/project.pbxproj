@@ -28,6 +28,11 @@
 		DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A63253DE6D300A9ECF0 /* StoreData.swift */; };
 		DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A65253DE6F900A9ECF0 /* MapView.swift */; };
 		DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A67253DE73900A9ECF0 /* MyPageView.swift */; };
+		DC197DF3256E953F00988BA5 /* FestivalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197DF2256E953F00988BA5 /* FestivalData.swift */; };
+		DC197DF8256E961200988BA5 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197DF7256E961200988BA5 /* MenuData.swift */; };
+		DC197DFD256E968200988BA5 /* FestivalTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197DFC256E968200988BA5 /* FestivalTask.swift */; };
+		DC197E02256E9B4C00988BA5 /* FestivalListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E01256E9B4C00988BA5 /* FestivalListData.swift */; };
+		DC197E0A256F725E00988BA5 /* SplashTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E09256F725E00988BA5 /* SplashTask.swift */; };
 		DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77B253F3B4800B35E56 /* URLImageView.swift */; };
 		DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */; };
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
@@ -92,6 +97,11 @@
 		DC195A63253DE6D300A9ECF0 /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
 		DC195A65253DE6F900A9ECF0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DC195A67253DE73900A9ECF0 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		DC197DF2256E953F00988BA5 /* FestivalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalData.swift; sourceTree = "<group>"; };
+		DC197DF7256E961200988BA5 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		DC197DFC256E968200988BA5 /* FestivalTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalTask.swift; sourceTree = "<group>"; };
+		DC197E01256E9B4C00988BA5 /* FestivalListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalListData.swift; sourceTree = "<group>"; };
+		DC197E09256F725E00988BA5 /* SplashTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTask.swift; sourceTree = "<group>"; };
 		DC68D77B253F3B4800B35E56 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -191,6 +201,7 @@
 				DC195A30253DE53800A9ECF0 /* Info.plist */,
 				DC195A2A253DE53800A9ECF0 /* Preview Content */,
 				DC195A52253DE5D200A9ECF0 /* SplashView.swift */,
+				DC197E09256F725E00988BA5 /* SplashTask.swift */,
 				DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */,
 				DC195A54253DE5F900A9ECF0 /* MainView.swift */,
 				DC195A56253DE61300A9ECF0 /* HomeView.swift */,
@@ -244,6 +255,10 @@
 				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
 				DC195A63253DE6D300A9ECF0 /* StoreData.swift */,
 				DC68D78525407FB100B35E56 /* StoreMenuData.swift */,
+				DC197DF2256E953F00988BA5 /* FestivalData.swift */,
+				DC197DF7256E961200988BA5 /* MenuData.swift */,
+				DC197DFC256E968200988BA5 /* FestivalTask.swift */,
+				DC197E01256E9B4C00988BA5 /* FestivalListData.swift */,
 			);
 			path = FestivalPage;
 			sourceTree = "<group>";
@@ -502,7 +517,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC197DF8256E961200988BA5 /* MenuData.swift in Sources */,
 				DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */,
+				DC197E0A256F725E00988BA5 /* SplashTask.swift in Sources */,
+				DC197DFD256E968200988BA5 /* FestivalTask.swift in Sources */,
 				DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */,
 				DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */,
 				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
@@ -522,8 +540,10 @@
 				DC195A57253DE61300A9ECF0 /* HomeView.swift in Sources */,
 				DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */,
 				DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */,
+				DC197DF3256E953F00988BA5 /* FestivalData.swift in Sources */,
 				DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */,
 				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
+				DC197E02256E9B4C00988BA5 /* FestivalListData.swift in Sources */,
 				DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */,
 				DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */,
 			);

@@ -32,16 +32,16 @@ struct StoreListItem: View {
                 
 //                self.showModal = true
             }) {
-                VStack {
-                    Image(self.store_data.url)
-                        .renderingMode(.original)
-                        .resizable()
-                        .frame(width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)
-                        .cornerRadius(50)
-                    
-                    Text(self.store_data.name)
-                        .foregroundColor(Color.black)
-                }
+//                VStack {
+//                    Image(self.store_data.url)
+//                        .renderingMode(.original)
+//                        .resizable()
+//                        .frame(width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)
+//                        .cornerRadius(50)
+//                    
+//                    Text(self.store_data.name)
+//                        .foregroundColor(Color.black)
+//                }
             }
 //            .sheet(isPresented: self.$showModal) {
 //                ModalView(data: self.data, grid: self.grid)

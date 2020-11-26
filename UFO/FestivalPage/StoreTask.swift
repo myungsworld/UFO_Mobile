@@ -15,6 +15,7 @@ class StoreTask: ObservableObject {
     var store_data: [StoreData] = [] {
         
         didSet {
+            
             objectWillChange.send()
         }
     }
@@ -40,6 +41,7 @@ class StoreTask: ObservableObject {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             request.cachePolicy = .useProtocolCachePolicy
+            request.setValue("private, max-age=30", forHTTPHeaderField: "Cache-Control")
             
 
             AF.request(request).responseJSON { response in
@@ -48,6 +50,8 @@ class StoreTask: ObservableObject {
                 print(response.response?.statusCode)
 
             }
+            
+            
         }
     }
     

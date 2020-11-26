@@ -51,18 +51,27 @@ class FestivalIdCache {
         
         self.setCache(forKey: "festival_id", value: festival_id)
         self.setFile(value: String(festival_id))
-        
     }
     
-    func getCache(forKey: String) -> NSNumber? {
+    // should add removeCache
+    
+    func removeFile() {
+        do {
+            try self.fileManager.removeItem(at: self.filePath)
+        } catch let e {
+            print("festival_id: removeFile()", e.localizedDescription)
+        }
+    }
+    
+    private func getCache(forKey: String) -> NSNumber? {
         return cache.object(forKey: NSString(string:forKey))
     }
     
-    func setCache(forKey: String, value: Int) {
+    private func setCache(forKey: String, value: Int) {
         cache.setObject(NSNumber(value: value), forKey: NSString(string: forKey))
     }
     
-    func getFile() -> Int {
+    private func getFile() -> Int {
         
         do {
             let result = try String(contentsOf: self.filePath, encoding: .utf8)
@@ -75,7 +84,7 @@ class FestivalIdCache {
         }
     }
     
-    func setFile(value: String) {
+    private func setFile(value: String) {
         
         do {
             let text = NSString(string: value)
@@ -86,15 +95,9 @@ class FestivalIdCache {
         }
     }
     
-    func removeFile() {
-        do {
-            try self.fileManager.removeItem(at: self.filePath)
-        } catch let e {
-            print("festival_id: removeFile()", e.localizedDescription)
-        }
-    }
     
-    func fileExist() -> Bool {
+    
+    private func fileExist() -> Bool {
         return self.fileManager.fileExists(atPath: self.filePath.path)
     }
 }

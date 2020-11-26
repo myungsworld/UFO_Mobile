@@ -10,9 +10,11 @@ struct StoreData: Codable {
     
     var id: String
     var name: String
-    var url: String
-    var desc: String
+    var img_url: String
+    var start_time: String
+    var end_time: String
     var latitude: String
     var longitude: String
-    
+    var desc: String
+    var festival_id: String
 }
