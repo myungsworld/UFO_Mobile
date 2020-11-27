@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FestivalData: Codable, Identifiable {
+class FestivalData: Identifiable {
     
     var id = UUID()
     var festival_id: String
@@ -19,6 +19,19 @@ struct FestivalData: Codable, Identifiable {
     var latitude: String
     var longitude: String
     var desc: String
+    
+    init(festival_id: String, name: String, img_url: String, start_date: String, end_date: String, latitude: String, longitude: String, desc: String) {
+        
+        self.festival_id = festival_id
+        self.name = name
+        self.img_url = img_url
+        self.start_date = start_date
+        self.end_date = end_date
+        self.latitude = latitude
+        self.longitude = longitude
+        self.desc = desc
+    }
+
     
     
 }

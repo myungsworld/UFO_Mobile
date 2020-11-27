@@ -33,6 +33,7 @@
 		DC197DFD256E968200988BA5 /* FestivalTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197DFC256E968200988BA5 /* FestivalTask.swift */; };
 		DC197E02256E9B4C00988BA5 /* FestivalListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E01256E9B4C00988BA5 /* FestivalListData.swift */; };
 		DC197E0A256F725E00988BA5 /* SplashTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E09256F725E00988BA5 /* SplashTask.swift */; };
+		DC197E1A256FEC5400988BA5 /* FestivalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E19256FEC5400988BA5 /* FestivalCache.swift */; };
 		DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77B253F3B4800B35E56 /* URLImageView.swift */; };
 		DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */; };
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
@@ -102,6 +103,7 @@
 		DC197DFC256E968200988BA5 /* FestivalTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalTask.swift; sourceTree = "<group>"; };
 		DC197E01256E9B4C00988BA5 /* FestivalListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalListData.swift; sourceTree = "<group>"; };
 		DC197E09256F725E00988BA5 /* SplashTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTask.swift; sourceTree = "<group>"; };
+		DC197E19256FEC5400988BA5 /* FestivalCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalCache.swift; sourceTree = "<group>"; };
 		DC68D77B253F3B4800B35E56 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				DCB4E94F254532BB00486610 /* FileManagerHandler.swift */,
 				DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */,
 				DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */,
+				DC197E19256FEC5400988BA5 /* FestivalCache.swift */,
 			);
 			path = UFO;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */,
 				DC195A57253DE61300A9ECF0 /* HomeView.swift in Sources */,
 				DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */,
+				DC197E1A256FEC5400988BA5 /* FestivalCache.swift in Sources */,
 				DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */,
 				DC197DF3256E953F00988BA5 /* FestivalData.swift in Sources */,
 				DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */,

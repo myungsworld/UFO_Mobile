@@ -34,9 +34,8 @@ struct SplashView: View {
                 
             }.onAppear {
 
-                self.festivalIdCache.removeFile()
+//                self.festivalIdCache.removeFile()
                 var festival_id = self.festivalIdCache.getFestivalId()
-                print(festival_id)
                 
                 if festival_id == -1 {
 
@@ -50,9 +49,12 @@ struct SplashView: View {
                 }
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                    //Festival 정보 가져오기
+                
                     festival_id = self.festivalIdCache.getFestivalId()
-                    print(festival_id)
+                    self.festivalTask.getFestival(festival_id: festival_id)
+                    
+                    
+                    //Festival 정보 가져오기
                     
                 }
                 

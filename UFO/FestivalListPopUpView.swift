@@ -18,7 +18,7 @@ struct FestivalList: View {
     var body: some View {
     
         Button(action: {
-            var selected_festival_id = Int(festivalListData.festival_id)!
+            let selected_festival_id = Int(festivalListData.festival_id)!
             
             self.festivalIdCache.setFetivalId(festival_id: selected_festival_id)
             
@@ -50,6 +50,7 @@ struct FestivalListPopUpView: View {
     @Binding var isActive: Bool
     @Binding var show: Bool
     @EnvironmentObject var festivalTask: FestivalTask
+    
     var festivalIdCache = FestivalIdCache.getFestivalIdCache()
     
     var body: some View {
