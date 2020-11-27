@@ -46,8 +46,8 @@ class StoreTask: ObservableObject {
 
             AF.request(request).responseJSON { response in
                 
-                print(response.response?.headers)
-                print(response.response?.statusCode)
+//                print(response.response?.headers)
+//                print(response.response?.statusCode)
 
             }
             

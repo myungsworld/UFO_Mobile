@@ -89,7 +89,6 @@ class FestivalTask: ObservableObject {
                         let data = FestivalData(festival_id: id, name: name, img_url: img_url, start_date: start_time, end_date: end_time, latitude: latitude, longitude: longitude, desc: desc)
                         
                         self.festivalCache.setFestival(festivalData: data)
-                        
                     }
                     
                 case .failure(let error):

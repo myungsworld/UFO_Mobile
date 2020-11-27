@@ -10,10 +10,10 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @EnvironmentObject var storeTask: StoreTask
     @EnvironmentObject var festivalTask: FestivalTask
     @EnvironmentObject var splashTask: SplashTask
     let festivalIdCache = FestivalIdCache.getFestivalIdCache()
+    let festivalCache = FestivalCache.getFesticalCache()
     
     @State var isActive: Bool = false
     @State var show: Bool = false
@@ -34,8 +34,9 @@ struct SplashView: View {
                 
             }.onAppear {
 
-//                self.festivalIdCache.removeFile()
+                self.festivalIdCache.removeFile()
                 var festival_id = self.festivalIdCache.getFestivalId()
+//                self.festivalCache.removeFromFile(forKey: String(festival_id))
                 
                 if festival_id == -1 {
 
@@ -46,36 +47,31 @@ struct SplashView: View {
                     }
                     
                     return
+                } else {
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    
+                        festival_id = self.festivalIdCache.getFestivalId()
+                        
+                        //Festival 정보 가져오기
+                        // 먼저 Cache와 File에 있는지 확인
+                        let festival = self.festivalCache.getFestival(forKey: String(festival_id))
+                        
+                        if festival == nil {
+                            // Cache 및 File에 없을때
+                            self.festivalTask.getFestival(festival_id: festival_id)
+                        }
+                        
+                        self.splashTask.isActive.toggle()
+                    }
                 }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                
-                    festival_id = self.festivalIdCache.getFestivalId()
-                    self.festivalTask.getFestival(festival_id: festival_id)
-                    
-                    
-                    //Festival 정보 가져오기
-                    
-                }
-                
-                
-                
-                
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-//                    withAnimation {
-//                        // Load Stores info
-//                        self.storeTask.getStoreInfo(festival_id: festival_id)
-//
-//                        self.isActice.toggle()
-//                    }
-//                }
             }
             
             if self.splashTask.show {
 
                 GeometryReader{ gp in
 
-                    FestivalListPopUpView(isActive: self.$splashTask.isActive, show: self.$splashTask.show)
+                    FestivalListPopUpView()
                 }
                 .padding()
                 .background(Color.gray)

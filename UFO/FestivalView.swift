@@ -10,6 +10,9 @@ import SwiftUI
 
 struct FestivalView: View {
     
+    var festivalIdCache = FestivalIdCache.getFestivalIdCache()
+    var festivalCache = FestivalCache.getFesticalCache()
+    
     var body: some View {
         
         VStack {
@@ -25,6 +28,13 @@ struct FestivalView: View {
                 .shadow(radius: 5)
                 
             
+        }
+        .onAppear {
+            let id = self.festivalIdCache.getFestivalId()
+            print(id)
+            
+            let data = self.festivalCache.getFestival(forKey: String(id))
+            print(data)
         }
     }
 }

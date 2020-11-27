@@ -12,27 +12,15 @@ struct FestivalList: View {
     
     var festivalListData: FestivalListData
     var festivalIdCache = FestivalIdCache.getFestivalIdCache()
+    var festivalCache = FestivalCache.getFesticalCache()
+    
     @EnvironmentObject var festivalTask: FestivalTask
     @EnvironmentObject var splashTask: SplashTask
     
     var body: some View {
     
         Button(action: {
-            let selected_festival_id = Int(festivalListData.festival_id)!
-            
-            self.festivalIdCache.setFetivalId(festival_id: selected_festival_id)
-            
-            print(self.festivalIdCache.getFestivalId())
-            
-            withAnimation {
-                self.splashTask.show.toggle()
-            }
-            
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//
-//                self.splashTask.isActive.toggle()
-//            }
-            
+            test()
         }) {
             HStack {
                 Text(festivalListData.name)
@@ -43,39 +31,43 @@ struct FestivalList: View {
         }
     }
     
+    func test() {
+        
+        let selected_festival_id = Int(festivalListData.festival_id)!
+        
+        self.festivalIdCache.setFetivalId(festival_id: selected_festival_id)
+        
+        withAnimation {
+            self.splashTask.show.toggle()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+        
+            var festival_id = self.festivalIdCache.getFestivalId()
+            
+            //Festival 정보 가져오기
+            // 먼저 Cache와 File에 있는지 확인
+            let festival = self.festivalCache.getFestival(forKey: String(festival_id))
+            
+            if festival == nil {
+                // Cache 및 File에 없을때
+                self.festivalTask.getFestival(festival_id: festival_id)
+            }
+            
+            self.splashTask.isActive.toggle()
+        }
+    }
 }
 
 struct FestivalListPopUpView: View {
-    
-    @Binding var isActive: Bool
-    @Binding var show: Bool
+
     @EnvironmentObject var festivalTask: FestivalTask
-    
-    var festivalIdCache = FestivalIdCache.getFestivalIdCache()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             
             List(self.festivalTask.festival_list) { item in
                 FestivalList(festivalListData: item)
-            }
-            
-        }
-    }
-    
-    func setFestivalId(festival_id: Int) {
-        self.festivalIdCache.setFetivalId(festival_id: festival_id)
-        
-        withAnimation {
-            self.show = false
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            
-            withAnimation {
-                // Load Stores info
-//                self.storeTask.getStoreInfo(festival_id: festival_id)
-                self.isActive.toggle()
             }
         }
     }
