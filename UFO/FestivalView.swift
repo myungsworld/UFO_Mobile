@@ -30,8 +30,7 @@ struct FestivalView: View {
             }
         }
         .onAppear {
-            let festival_id = self.festivalIdCache.getFestivalId()
-            self.festivalTask.getFestivalWithURL(festival_id: festival_id)
+            self.festivalTask.getFestival()
         }
     }
 }

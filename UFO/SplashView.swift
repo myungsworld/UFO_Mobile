@@ -33,7 +33,9 @@ struct SplashView: View {
 
 //                self.festivalIdCache.removeFile()
                 let festival_id = self.festivalIdCache.getFestivalId()
-                self.festivalCache.removeFromFile(forKey: String(festival_id))
+
+//                self.festivalCache.removeFromFile(forKey: String(festival_id))
+
                 
                 if festival_id == -1 {
 

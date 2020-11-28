@@ -68,70 +68,71 @@ class FestivalTask: ObservableObject {
     }
 
     func getFestival() {
-        // get id
-        // check check and file
-        // if not go get with url
-        
         let festival_id = self.festivalIdCache.getFestivalId()
-        
-        let festivalData = self.festivalCache.getFestival(forKey: String(festival_id))
-        
-        if !(festivalData == nil) {
-            self.festivalData = festivalData
-            
-            return
-        } else {
-            getFestivalWithURL(festival_id: festival_id)
-        }
+        let data = self.festivalCache.getFestival(forKey: String(festival_id))
 
+        if data == nil {
+            getFestivalWithURL(festival_id: festival_id, etag: "")
+        } else {
+            getFestivalWithURL(festival_id: festival_id, etag: data!.etag)
+        }
     }
     
-    func getFestivalWithURL(festival_id: Int) {
+    
+    
+    private func getFestivalWithURL(festival_id: Int, etag: String) {
         
         do {
             let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
-            let etagId = "festival\(festival_id)"
             guard let url = URL(string: baseURL + "/festival/\(festival_id)") else { return }
-            
+
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             request.setValue("private, max-age=900", forHTTPHeaderField: "Cache-Control")
-            request.setValue(self.etagCache.getEtag(forKey: etagId), forHTTPHeaderField: "If-None-Match")
-            
+            request.setValue(etag, forHTTPHeaderField: "If-None-Match")
+
             AF.request(request).responseJSON { response in
 
                 let res = response.response
-                
+
                 let etag = res!.headers["Etag"]! as String
-                self.etagCache.setETag(forKey: etagId, value: etag)
                 
-                print(res!.statusCode)
-                print(response.result)
-//                switch response.result {
-//                case .success(let value):
-//
-//                    if let festival = value as? Dictionary<String, String> {
-//
-//                        let id = festival["id"]!
-//                        let name = festival["name"]!
-//                        let img_url = festival["img_url"]!
-//                        let start_time = festival["start_time"]!
-//                        let end_time = festival["end_time"]!
-//                        let latitude = festival["latitude"]!
-//                        let longitude = festival["longitude"]!
-//                        let desc = festival["desc"]!
-//
-//                        let data = FestivalData(festival_id: id, name: name, img_url: img_url, start_date: start_time, end_date: end_time, latitude: latitude, longitude: longitude, desc: desc)
-//
-//                        self.festivalCache.setFestival(festivalData: data)
-//                        self.festivalData = data
-//                    }
-//
-//                case .failure(let error):
-//                    print("error: \(String(describing: error.errorDescription))")
-//                }
+                switch response.result {
+                case .success(let value):
+
+                    if let festival = value as? Dictionary<String, String> {
+
+                        let id = festival["id"]!
+                        let name = festival["name"]!
+                        let img_url = festival["img_url"]!
+                        let start_time = festival["start_time"]!
+                        let end_time = festival["end_time"]!
+                        let latitude = festival["latitude"]!
+                        let longitude = festival["longitude"]!
+                        let desc = festival["desc"]!
+
+                        let data = FestivalData(festival_id: id, name: name, img_url: img_url, start_date: start_time, end_date: end_time, latitude: latitude, longitude: longitude, desc: desc, etag: etag)
+                        
+                        self.festivalCache.setFestival(festivalData: data)
+                        self.festivalData = data
+                    }
+
+                case .failure(let error):
+                    
+                    switch res!.statusCode {
+                    case 304:
+                        
+                        let data = self.festivalCache.getFestival(forKey: String(festival_id))
+                        self.festivalData = data
+                        
+                        print("Not Modified")
+                    default:
+                        print("error: \(String(describing: error.errorDescription))")
+                    }
+                }
             }
+            
         }
     }
 }

@@ -89,8 +89,9 @@ class FestivalCache {
             let latitude = dict_data["latitude"]!
             let longitude = dict_data["longitude"]!
             let desc = dict_data["desc"]!
+            let etag = dict_data["etag"]!
             
-            let data = FestivalData(festival_id: id, name: name, img_url: img_url, start_date: start_time, end_date: end_time, latitude: latitude, longitude: longitude, desc: desc)
+            let data = FestivalData(festival_id: id, name: name, img_url: img_url, start_date: start_time, end_date: end_time, latitude: latitude, longitude: longitude, desc: desc, etag: etag)
             
             return data
         } catch let e {
@@ -113,7 +114,8 @@ class FestivalCache {
             "end_time": value.end_date,
             "latitude": value.latitude,
             "longitude": value.longitude,
-            "desc": value.desc
+            "desc": value.desc,
+            "etag": value.etag
         ]
         
         do {

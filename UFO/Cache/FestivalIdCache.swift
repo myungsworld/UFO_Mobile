@@ -26,8 +26,6 @@ class FestivalIdCache {
         // When can't hit by "festival_id"
         guard let festival_id = self.getCache(forKey: "festival_id") else {
             
-            print("festival_id: getCache() Cache Miss")
-            
             // Check if exist "festival_id" in file
             // file doesn't exist
             if !self.fileExist() {
@@ -55,7 +53,18 @@ class FestivalIdCache {
     }
     
     private func getCache(forKey: String) -> NSNumber? {
-        return cache.object(forKey: NSString(string:forKey))
+        
+        let value =  cache.object(forKey: NSString(string:forKey))
+        
+        if value == nil {
+            let log = String(describing: self) + "." + #function + " : Cache Miss"
+            NSLog(log)
+        } else {
+            let log = String(describing: self) + "." + #function + " : Cache Hit"
+            NSLog(log)
+        }
+        
+        return value
     }
     
     private func setCache(forKey: String, value: Int) {
