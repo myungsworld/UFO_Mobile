@@ -30,11 +30,16 @@ class FestivalCache {
                 return nil
             } else {
                 let festivalData = self.getFile(forKey: forKey)
+                
+                print("festivalData: getFile(): In the File")
+                
                 self.setCache(forKey: forKey, value: festivalData!)
                 
                 return festivalData
             }
         }
+        
+        print("festivalData: getCache(): Hit!")
         
         return festivalData
     }

@@ -10,31 +10,28 @@ import SwiftUI
 
 struct FestivalView: View {
     
-    var festivalIdCache = FestivalIdCache.getFestivalIdCache()
-    var festivalCache = FestivalCache.getFesticalCache()
+    @EnvironmentObject var festivalTask: FestivalTask
+    let festivalIdCache = FestivalIdCache.getFestivalIdCache()
     
     var body: some View {
         
         VStack {
-            // Boothes
-            StoreListView()
             
-            MapView()
-                .background(Color(red: 242, green: 242, blue: 242))
-                .cornerRadius(15)
-                .padding(.bottom, 15)
-                .padding(.leading, 15)
-                .padding(.trailing, 15)
-                .shadow(radius: 5)
+            switch self.festivalTask.festivalView_mode {
+            
+            case 0:
+                FestivallnfoVIew()
                 
-            
+            case 1:
+                FestivalStoresView()
+                
+            default:
+                FestivallnfoVIew()
+            }
         }
         .onAppear {
-            let id = self.festivalIdCache.getFestivalId()
-            print(id)
-            
-            let data = self.festivalCache.getFestival(forKey: String(id))
-            print(data)
+            let festival_id = self.festivalIdCache.getFestivalId()
+            self.festivalTask.getFestivalWithURL(festival_id: festival_id)
         }
     }
 }

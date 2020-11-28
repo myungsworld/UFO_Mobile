@@ -15,9 +15,6 @@ struct SplashView: View {
     let festivalIdCache = FestivalIdCache.getFestivalIdCache()
     let festivalCache = FestivalCache.getFesticalCache()
     
-    @State var isActive: Bool = false
-    @State var show: Bool = false
-    
     var body: some View {
         
         ZStack {
@@ -34,9 +31,9 @@ struct SplashView: View {
                 
             }.onAppear {
 
-                self.festivalIdCache.removeFile()
-                var festival_id = self.festivalIdCache.getFestivalId()
-//                self.festivalCache.removeFromFile(forKey: String(festival_id))
+//                self.festivalIdCache.removeFile()
+                let festival_id = self.festivalIdCache.getFestivalId()
+                self.festivalCache.removeFromFile(forKey: String(festival_id))
                 
                 if festival_id == -1 {
 
@@ -47,20 +44,14 @@ struct SplashView: View {
                     }
                     
                     return
+                    
                 } else {
                     
+                    // FestivalCache Task 합치기
+                    // http 통신 전 확인하기
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                    
-                        festival_id = self.festivalIdCache.getFestivalId()
-                        
                         //Festival 정보 가져오기
-                        // 먼저 Cache와 File에 있는지 확인
-                        let festival = self.festivalCache.getFestival(forKey: String(festival_id))
-                        
-                        if festival == nil {
-                            // Cache 및 File에 없을때
-                            self.festivalTask.getFestival(festival_id: festival_id)
-                        }
+                        self.festivalTask.getFestival()
                         
                         self.splashTask.isActive.toggle()
                     }

@@ -51,7 +51,7 @@ struct FestivalList: View {
             
             if festival == nil {
                 // Cache 및 File에 없을때
-                self.festivalTask.getFestival(festival_id: festival_id)
+                self.festivalTask.getFestival()
             }
             
             self.splashTask.isActive.toggle()
