@@ -29,8 +29,6 @@ class FestivalIdCache {
             // Check if exist "festival_id" in file
             // file doesn't exist
             if !self.fileExist() {
-                print("festival_id: fileExist() no festival_id file")
-                
                 // show pop up menu
                 return -1
             } else {
@@ -104,7 +102,19 @@ class FestivalIdCache {
     }
     
     func fileExist() -> Bool {
-        return self.fileManager.fileExists(atPath: self.filePath.path)
+        
+        let isExisted = self.fileManager.fileExists(atPath: self.filePath.path)
+        
+        if isExisted {
+            let log = String(describing: self) + "." + #function + " : FileCache Exists"
+            NSLog(log)
+        } else {
+            let log = String(describing: self) + "." + #function + " : FileCache doesn't exists"
+            NSLog(log)
+        }
+        
+        
+        return isExisted
     }
 }
 

@@ -14,7 +14,6 @@ class FestivalTask: ObservableObject {
     
     let festivalIdCache = FestivalIdCache.getFestivalIdCache()
     let festivalCache = FestivalCache.getFesticalCache()
-    let etagCache = ETagCache.getEtagCache()
     
     var festival_list: [FestivalListData] = [] {
         didSet {
@@ -71,16 +70,13 @@ class FestivalTask: ObservableObject {
         let festival_id = self.festivalIdCache.getFestivalId()
         let data = self.festivalCache.getFestival(forKey: String(festival_id))
 
-        if data == nil {
-            getFestivalWithURL(festival_id: festival_id, etag: "")
-        } else {
-            getFestivalWithURL(festival_id: festival_id, etag: data!.etag)
-        }
+        self.getFestivalWithURL(festival_id: festival_id, etag: data?.etag ?? "")
     }
     
     
     
     private func getFestivalWithURL(festival_id: Int, etag: String) {
+        print("ASD")
         
         do {
             let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String

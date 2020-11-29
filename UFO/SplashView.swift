@@ -33,10 +33,8 @@ struct SplashView: View {
 
 //                self.festivalIdCache.removeFile()
                 let festival_id = self.festivalIdCache.getFestivalId()
-
 //                self.festivalCache.removeFromFile(forKey: String(festival_id))
 
-                
                 if festival_id == -1 {
 
                     self.festivalTask.getFestivalList()
@@ -54,7 +52,6 @@ struct SplashView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                         //Festival 정보 가져오기
                         self.festivalTask.getFestival()
-                        
                         self.splashTask.isActive.toggle()
                     }
                 }

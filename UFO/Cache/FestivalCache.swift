@@ -21,25 +21,20 @@ class FestivalCache {
     func getFestival(forKey: String) -> FestivalData? {
         
         guard let festivalData = self.getCache(forKey: forKey) else {
-            print("festivalData: getCache(): Cache Miss")
             
             if !self.fileExist(forKey: forKey) {
-                print("festivalData: fileExist(): no festivalData file")
-                
                 
                 return nil
             } else {
                 let festivalData = self.getFile(forKey: forKey)
                 
-                print("festivalData: getFile(): In the File")
+        
                 
                 self.setCache(forKey: forKey, value: festivalData!)
                 
                 return festivalData
             }
         }
-        
-        print("festivalData: getCache(): Hit!")
         
         return festivalData
     }
@@ -64,7 +59,18 @@ class FestivalCache {
     }
     
     private func getCache(forKey: String) -> FestivalData! {
-        return cache.object(forKey: NSString(string: forKey))
+        
+        let value = cache.object(forKey: NSString(string: forKey))
+        
+        if value == nil {
+            let log = String(describing: self) + "." + #function + " : Cache Miss"
+            NSLog(log)
+        } else {
+            let log = String(describing: self) + "." + #function + " : Cache Hit"
+            NSLog(log)
+        }
+        
+        return value
     }
     
     private func setCache(forKey: String, value: FestivalData) {
@@ -137,7 +143,18 @@ class FestivalCache {
         let cachePath = fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         let filePath = cachePath.appendingPathComponent(forKey)
         
-        return self.fileManager.fileExists(atPath: filePath.path)
+        let isExisted = self.fileManager.fileExists(atPath: filePath.path)
+        
+        if isExisted {
+            let log = String(describing: self) + "." + #function + " : FileCache Exists"
+            NSLog(log)
+        } else {
+            let log = String(describing: self) + "." + #function + " : FileCache doesn't exists"
+            NSLog(log)
+        }
+        
+        
+        return isExisted
     }
  
     
