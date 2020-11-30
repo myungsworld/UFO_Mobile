@@ -24,7 +24,10 @@ struct MainView: View {
             NavigationView {
                 HomeView()
                     .navigationBarTitle("Home", displayMode: .inline)
-
+                    .navigationBarItems(trailing:
+                                            NavigationLink(destination : ChargeView()){
+                                                Text("충전")
+                                            })
             }.tabItem({
                 Text("Home")
             }).tag(0)

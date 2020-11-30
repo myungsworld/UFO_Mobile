@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14768110256BC56E006129FA /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476810F256BC56E006129FA /* QRView.swift */; };
+		141B96192574FC970083C175 /* HomeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B96182574FC970083C175 /* HomeTask.swift */; };
+		141B96212574FF340083C175 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B96202574FF340083C175 /* QRView.swift */; };
+		14429CF725750C290081394D /* HttpAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14429CF625750C290081394D /* HttpAuth.swift */; };
+		14768110256BC56E006129FA /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476810F256BC56E006129FA /* ChargeView.swift */; };
 		5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */; };
 		C56B7B30D42BA848FFE4DFA3 /* Pods_UFOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */; };
 		DBA05FFAE3D3559783C26326 /* Pods_UFO_UFOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */; };
@@ -62,7 +65,10 @@
 
 /* Begin PBXFileReference section */
 		050A0A658F43735F3F58F0EC /* Pods-UFOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFOTests.debug.xcconfig"; path = "Target Support Files/Pods-UFOTests/Pods-UFOTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1476810F256BC56E006129FA /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		141B96182574FC970083C175 /* HomeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTask.swift; sourceTree = "<group>"; };
+		141B96202574FF340083C175 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		14429CF625750C290081394D /* HttpAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpAuth.swift; sourceTree = "<group>"; };
+		1476810F256BC56E006129FA /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
 		37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F8492D964045D920133F78 /* Pods-UFO-UFOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO-UFOUITests.release.xcconfig"; path = "Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		817245CE098FEF074E713224 /* Pods-UFO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO.release.xcconfig"; path = "Target Support Files/Pods-UFO/Pods-UFO.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,7 +202,8 @@
 				DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */,
 				DC195A54253DE5F900A9ECF0 /* MainView.swift */,
 				DC195A56253DE61300A9ECF0 /* HomeView.swift */,
-				1476810F256BC56E006129FA /* QRView.swift */,
+				141B96202574FF340083C175 /* QRView.swift */,
+				1476810F256BC56E006129FA /* ChargeView.swift */,
 				DC195A58253DE62C00A9ECF0 /* FestivalView.swift */,
 				DC195A5A253DE64C00A9ECF0 /* FestivalPage */,
 				DC195A67253DE73900A9ECF0 /* MyPageView.swift */,
@@ -208,6 +215,8 @@
 				DCB4E94F254532BB00486610 /* FileManagerHandler.swift */,
 				DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */,
 				DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */,
+				141B96182574FC970083C175 /* HomeTask.swift */,
+				14429CF625750C290081394D /* HttpAuth.swift */,
 			);
 			path = UFO;
 			sourceTree = "<group>";
@@ -506,7 +515,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */,
-				14768110256BC56E006129FA /* QRView.swift in Sources */,
+				141B96192574FC970083C175 /* HomeTask.swift in Sources */,
+				14768110256BC56E006129FA /* ChargeView.swift in Sources */,
 				DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */,
 				DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */,
 				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
@@ -517,6 +527,8 @@
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
 				DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */,
+				141B96212574FF340083C175 /* QRView.swift in Sources */,
+				14429CF725750C290081394D /* HttpAuth.swift in Sources */,
 				DC195A60253DE69B00A9ECF0 /* StoreListItem.swift in Sources */,
 				DC195A59253DE62C00A9ECF0 /* FestivalView.swift in Sources */,
 				DC195A53253DE5D200A9ECF0 /* SplashView.swift in Sources */,
