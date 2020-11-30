@@ -7,6 +7,8 @@
 //
 
 import SwiftUI
+import UIKit
+import AVFoundation
 import CodeScanner
 import Combine
 import CoreImage.CIFilterBuiltins
@@ -60,9 +62,9 @@ struct HomeView: View {
     
     var http = HttpAuth()
     
-    @State private var name  = ""
-    @State private var email = ""
-    @State private var money = ""
+    @State private var name  = "송동명"
+    @State private var email = "myungsworld@gmail.com"
+    @State private var money = "1000"
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
     
@@ -78,37 +80,49 @@ struct HomeView: View {
         return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
     
+    @State private var isPresentingScanner = false
+    @State private var scannedCode: String?
     var body: some View {
-        ZStack(alignment: .top) {
-            
-            CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
-            SlideOverView {
-                VStack {
-                    TextField("이름", text: $name)
-                        .textContentType(.name)
-                        .font(.title)
-                        .padding(.horizontal)
-                    TextField("보낼 금액", text: $money)
-                        
-                        .font(.title)
-                        .padding([.horizontal, .bottom])
-                    Image(uiImage: generateQRcode(from: "\(name)\n\(money)"))
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                    Spacer()
+        NavigationView{
+            ZStack(alignment: .top) {
+                CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
+
+                SlideOverView {
+                    VStack {
+    //                    TextField("이름", text: $name)
+    //                        .textContentType(.name)
+    //                        .font(.title)
+    //                        .padding(.horizontal)
+    //                    TextField("보낼 금액", text: $money)
+    //
+    //                        .font(.title)
+    //                        .padding([.horizontal, .bottom])
+                        Image(uiImage: generateQRcode(from: "\(name)\n\(money)"))
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                        Spacer()
+                    }
                 }
-            }
+            }//Zstack
         }
     }
+    
+//    func fetchView() -> some View {
+//        return QRView()
+//    }
     
     func handleScan(result: Result<String, CodeScannerView.ScanError>) {
 
         switch result {
         case .success(let code):
             print(code)
-            self.http.transferMoney(sender: "myung", receiver: "min", amount: "100", org: "SalesOrg")
-                    
+            func fetchView() -> some View {
+                return QRView()
+            }
+            //self.http.transferMoney(sender: "myung", receiver: "min", amount: "100", org: "SalesOrg")
+
         case .failure(let error):
             print("Scanning failed", error)
         }
