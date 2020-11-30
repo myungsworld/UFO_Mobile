@@ -82,7 +82,7 @@ class FestivalIdCache {
         }
     }
     
-    func setFile(value: String) {
+    private func setFile(value: String) {
         
         do {
             let text = NSString(string: value)

@@ -263,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				DC68D78725433A8300B35E56 /* KakaoLoginView.swift */,
-				DC8C897C2558DD7500D524F8 /* LoginTask.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -286,6 +285,7 @@
 				DC197E09256F725E00988BA5 /* SplashTask.swift */,
 				DC197DFC256E968200988BA5 /* FestivalTask.swift */,
 				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
+				DC8C897C2558DD7500D524F8 /* LoginTask.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
