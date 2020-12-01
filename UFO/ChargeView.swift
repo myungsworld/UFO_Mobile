@@ -1,16 +1,36 @@
-//
-//  QRView.swift
-//  UFO
-//
-//  Created by myungsworld on 2020/11/23.
-//  Copyright © 2020 Sanghyun Byun. All rights reserved.
-//
 
 import SwiftUI
+import UIKit
+import AVFoundation
+
+import Combine
+import CoreImage.CIFilterBuiltins
 
 struct ChargeView: View {
+    
+    @State private var money = ""
+    @EnvironmentObject var http : HttpAuth
+    @State private var isPresented = false
+    @State private var isActive : Bool = false
+    @State private var selection : Int? = nil
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack {
+                NavigationLink(destination: HomeView(), tag: 1, selection: self.$selection){
+                    Text("")
+                }
+                
+                TextField("충전 금액", text : $money)
+                Button("충전하기") {
+                    self.http.chargeMoney(id: "myung", org: "SalesOrg", amount: money)
+                    self.selection = 1
+                }
+                
+            }
+            .navigationBarTitle("Processing")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+        }
     }
 }
 

@@ -11,6 +11,7 @@
 		141B96212574FF340083C175 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B96202574FF340083C175 /* QRView.swift */; };
 		14429CF725750C290081394D /* HttpAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14429CF625750C290081394D /* HttpAuth.swift */; };
 		14768110256BC56E006129FA /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476810F256BC56E006129FA /* ChargeView.swift */; };
+		14791C1A2575D7CB0000A16D /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14791C192575D7CB0000A16D /* temp.swift */; };
 		5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */; };
 		C56B7B30D42BA848FFE4DFA3 /* Pods_UFOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */; };
 		DBA05FFAE3D3559783C26326 /* Pods_UFO_UFOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */; };
@@ -69,6 +70,7 @@
 		141B96202574FF340083C175 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		14429CF625750C290081394D /* HttpAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpAuth.swift; sourceTree = "<group>"; };
 		1476810F256BC56E006129FA /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
+		14791C192575D7CB0000A16D /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
 		37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F8492D964045D920133F78 /* Pods-UFO-UFOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO-UFOUITests.release.xcconfig"; path = "Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		817245CE098FEF074E713224 /* Pods-UFO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO.release.xcconfig"; path = "Target Support Files/Pods-UFO/Pods-UFO.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				141B96202574FF340083C175 /* QRView.swift */,
 				1476810F256BC56E006129FA /* ChargeView.swift */,
 				DC195A58253DE62C00A9ECF0 /* FestivalView.swift */,
+				14791C192575D7CB0000A16D /* temp.swift */,
 				DC195A5A253DE64C00A9ECF0 /* FestivalPage */,
 				DC195A67253DE73900A9ECF0 /* MyPageView.swift */,
 				DC195A69253DE75F00A9ECF0 /* MyPage */,
@@ -541,6 +544,7 @@
 				DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */,
 				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
 				DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */,
+				14791C1A2575D7CB0000A16D /* temp.swift in Sources */,
 				DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

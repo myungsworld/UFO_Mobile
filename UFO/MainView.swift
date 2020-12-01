@@ -28,6 +28,8 @@ struct MainView: View {
                                             NavigationLink(destination : ChargeView()){
                                                 Text("충전")
                                             })
+                    
+                    .navigationBarBackButtonHidden(true)
             }.tabItem({
                 Text("Home")
             }).tag(0)

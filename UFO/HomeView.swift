@@ -1,10 +1,3 @@
-//
-//  HomeView.swift
-//  UFO
-//
-//  Created by Sanghyun Byun on 2020/10/20.
-//  Copyright © 2020 Sanghyun Byun. All rights reserved.
-//
 
 import SwiftUI
 import UIKit
@@ -91,10 +84,10 @@ struct HomeView: View {
 
                 SlideOverView {
                     VStack {
-                        TextField("보낼 금액", text: $money)
-    
-                            .font(.title)
-                            .padding([.horizontal, .bottom])
+//                        TextField("보낼 금액", text: $money)
+//
+//                            .font(.title)
+//                            .padding([.horizontal, .bottom])
                         Image(uiImage: generateQRcode(from: "\(name)\n\(money)"))
                             .interpolation(.none)
                             .resizable()
@@ -111,10 +104,11 @@ struct HomeView: View {
                     Button(action: {
                         
                         self.http.transferMoney(sender: "myung", receiver: "min", amount: money, org: "SalesOrg")
-                        
+                        self.hometask.click.toggle()
+                        //print(hometask.click)
                         
                     }){
-                        NavigationLink(destination:QRView()){
+                        NavigationLink(destination:HomeView()){
                             Text("송금")
                         }
                     }

@@ -19,7 +19,7 @@ class HttpAuth: ObservableObject {
     }
     
     func transferMoney(sender: String, receiver: String, amount : String , org: String) {
-        guard let url = URL(string: "https://68fe4bbcfc5c.ngrok.io/api/transferMoney") else { return }
+        guard let url = URL(string: "https://102f89fdf272.ngrok.io/api/transferMoney") else { return }
         
         let body : [String: String] = [sender: "myung", receiver : "min", amount : "100", org : "SalesOrg"]
         
@@ -32,6 +32,35 @@ class HttpAuth: ObservableObject {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
+            if let error = error{
+                print(error);
+                return;
+            }
+    
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                print(data)
+            }
+            
+        }.resume()
+    }
+    
+    func chargeMoney(id: String, org: String, amount: String){
+        guard let url = URL(string: "https://102f89fdf272.ngrok.io/api/chargeMoney") else { return }
+        
+        let body : [String: String] = [id : "myung", org : "SalesOrg" , amount : "100"]
+        
+        let finalBody = try! JSONSerialization.data(withJSONObject: body)
+        
+        var request = URLRequest(url:url)
+        request.httpMethod = "POST"
+        request.httpBody = finalBody
+        request.setValue("text/html", forHTTPHeaderField: "Contect-Type")
+        
+        URLSession.shared.dataTask(with: request) { (data,response, error) in
             if let error = error{
                 print(error);
                 return;
