@@ -5,10 +5,11 @@
 //  Created by Sanghyun Byun on 2020/10/20.
 //  Copyright © 2020 Sanghyun Byun. All rights reserved.
 //
-
-struct StoreData: Codable {
+import Foundation
+struct StoreData: Codable, Identifiable {
     
-    var id: String
+    var id = UUID()
+    var store_id: String
     var name: String
     var img_url: String
     var start_time: String

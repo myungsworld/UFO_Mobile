@@ -22,12 +22,6 @@ class StoreTask: ObservableObject {
             objectWillChange.send()
         }
     }
-    var menu_data: [StoreMenuData] = [] {
-        
-        didSet {
-            objectWillChange.send()
-        }
-    }
     
     var grid: [Int] = [] {
         didSet {
@@ -66,7 +60,7 @@ class StoreTask: ObservableObject {
                         var newData: [StoreData] = []
                         
                         for store in stores {
-                            let id = store["id"]!
+                            let store_id = store["id"]!
                             let name = store["name"]!
                             let img_url = store["img_url"]!
                             let start_time = store["start_time"]!
@@ -76,7 +70,7 @@ class StoreTask: ObservableObject {
                             let desc = store["desc"]!
                             let festival_id = store["festival_id"]!
 
-                            let data = StoreData(id: id, name: name, img_url: img_url, start_time: start_time, end_time: end_time, latitude: latitude, longitude: longitude, desc: desc, festival_id: festival_id, etag: etag)
+                            let data = StoreData(store_id: store_id, name: name, img_url: img_url, start_time: start_time, end_time: end_time, latitude: latitude, longitude: longitude, desc: desc, festival_id: festival_id, etag: etag)
                             
                             newData.append(data)
                         }

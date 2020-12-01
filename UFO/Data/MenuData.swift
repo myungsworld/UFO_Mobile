@@ -7,12 +7,13 @@
 //
 
 import Foundation
-
-struct MenuData: Codable {
+struct MenuData: Codable, Identifiable {
     
-    var id: String
+    var id = UUID()
+    var menu_id: String
     var name: String
     var price: String
     var img_url: String
     var store_id: String
+    var etag: String
 }

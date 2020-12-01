@@ -26,6 +26,7 @@ struct FestivalList: View {
                 Text(festivalListData.name)
                 Image("boothic1")
                     .resizable()
+                    .renderingMode(.original)
                     .frame(width: 100, height: 100)
             }.padding()
         }

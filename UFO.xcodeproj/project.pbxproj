@@ -39,7 +39,6 @@
 		DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77B253F3B4800B35E56 /* URLImageView.swift */; };
 		DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */; };
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
-		DC68D78625407FB100B35E56 /* StoreMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78525407FB100B35E56 /* StoreMenuData.swift */; };
 		DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78725433A8300B35E56 /* KakaoLoginView.swift */; };
 		DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */; };
 		DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */; };
@@ -48,6 +47,9 @@
 		DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C897C2558DD7500D524F8 /* LoginTask.swift */; };
 		DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94D25448D6500486610 /* FestivalIdCache.swift */; };
 		DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75E62576482D0018F68B /* StoreCache.swift */; };
+		DCBD75EC25765B9D0018F68B /* MenuTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75EB25765B9D0018F68B /* MenuTask.swift */; };
+		DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75F025765BAB0018F68B /* MenuCache.swift */; };
+		DCBD75F9257673090018F68B /* StoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75F8257673090018F68B /* StoreInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +113,6 @@
 		DC68D77B253F3B4800B35E56 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		DC68D78525407FB100B35E56 /* StoreMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenuData.swift; sourceTree = "<group>"; };
 		DC68D78725433A8300B35E56 /* KakaoLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginView.swift; sourceTree = "<group>"; };
 		DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalListPopUpView.swift; sourceTree = "<group>"; };
 		DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverView.swift; sourceTree = "<group>"; };
@@ -119,6 +120,9 @@
 		DC8C897C2558DD7500D524F8 /* LoginTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
 		DCB4E94D25448D6500486610 /* FestivalIdCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIdCache.swift; sourceTree = "<group>"; };
 		DCBD75E62576482D0018F68B /* StoreCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCache.swift; sourceTree = "<group>"; };
+		DCBD75EB25765B9D0018F68B /* MenuTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTask.swift; sourceTree = "<group>"; };
+		DCBD75F025765BAB0018F68B /* MenuCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCache.swift; sourceTree = "<group>"; };
+		DCBD75F8257673090018F68B /* StoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoView.swift; sourceTree = "<group>"; };
 		EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO_UFOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -257,6 +261,7 @@
 				DC195A5F253DE69B00A9ECF0 /* StoreListItem.swift */,
 				DC197E262570ED3200988BA5 /* FestivallnfoVIew.swift */,
 				DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */,
+				DCBD75F8257673090018F68B /* StoreInfoView.swift */,
 			);
 			path = FestivalPage;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				DC68D77B253F3B4800B35E56 /* URLImageView.swift */,
 				DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */,
 				DCBD75E62576482D0018F68B /* StoreCache.swift */,
+				DCBD75F025765BAB0018F68B /* MenuCache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				DC197DFC256E968200988BA5 /* FestivalTask.swift */,
 				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
 				DC8C897C2558DD7500D524F8 /* LoginTask.swift */,
+				DCBD75EB25765B9D0018F68B /* MenuTask.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -300,7 +307,6 @@
 				DC197DF2256E953F00988BA5 /* FestivalData.swift */,
 				DC195A63253DE6D300A9ECF0 /* StoreData.swift */,
 				DC197DF7256E961200988BA5 /* MenuData.swift */,
-				DC68D78525407FB100B35E56 /* StoreMenuData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -552,6 +558,7 @@
 			files = (
 				DC197DF8256E961200988BA5 /* MenuData.swift in Sources */,
 				DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */,
+				DCBD75F9257673090018F68B /* StoreInfoView.swift in Sources */,
 				DC197E0A256F725E00988BA5 /* SplashTask.swift in Sources */,
 				DC197DFD256E968200988BA5 /* FestivalTask.swift in Sources */,
 				DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */,
@@ -561,14 +568,15 @@
 				DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */,
 				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
+				DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */,
 				DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */,
 				DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */,
+				DCBD75EC25765B9D0018F68B /* MenuTask.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
 				DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */,
 				DC195A60253DE69B00A9ECF0 /* StoreListItem.swift in Sources */,
 				DC195A59253DE62C00A9ECF0 /* FestivalView.swift in Sources */,
 				DC195A53253DE5D200A9ECF0 /* SplashView.swift in Sources */,
-				DC68D78625407FB100B35E56 /* StoreMenuData.swift in Sources */,
 				DC195A25253DE53300A9ECF0 /* SceneDelegate.swift in Sources */,
 				DC197E272570ED3200988BA5 /* FestivallnfoVIew.swift in Sources */,
 				DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  StoreCache.swift
+//  MenuCache.swift
 //  UFO
 //
 //  Created by Sanghyun Byun on 2020/12/01.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StoreCache {
+class MenuCache {
     
     var cache = NSCache<NSString, NSArray>()
     var fileManager: FileManager
@@ -17,39 +17,38 @@ class StoreCache {
         self.fileManager = FileManager.default
     }
     
-    func getStores(forKey: String) -> [StoreData]? {
+    func getMenu(forKey: String) -> [MenuData]? {
+        let key = "m_\(forKey)"
         
-        let key = "s_\(forKey)"
-        
-        guard let storesData = self.getCache(forKey: key) else {
+        guard let menuData = self.getCache(forKey: key) else {
             
             if !self.fileExist(forKey: key) {
                 return nil
             } else {
-                let storesData = self.getFile(forKey: key)
+                let menuData = self.getFile(forKey: key)
                 
-                self.setCache(forKey: key, value: storesData!)
+                self.setCache(forKey: key, value: menuData!)
                 
-                return storesData
+                return menuData
             }
         }
         
-        return storesData
+        return menuData
     }
     
-    func setStores(storesData: [StoreData]) {
+    func setMenu(menuData: [MenuData]) {
+        let key = "m_\(menuData[0].store_id)"
         
-        let key = "s_\(storesData[0].festival_id)"
-        
-        self.setCache(forKey: key, value: storesData)
-        self.setFile(forKey: key, value: storesData)
+        self.setCache(forKey: key, value: menuData)
+        self.setFile(forKey: key, value: menuData)
     }
     
     func removeFromFile() {
+        
     }
     
-    private func getCache(forKey: String) -> [StoreData]! {
-        let value =  cache.object(forKey: NSString(string: forKey)) as? [StoreData]
+    private func getCache(forKey: String) -> [MenuData]! {
+        let value = cache.object(forKey: NSString(string: forKey)) as? [MenuData]
         
         if value == nil {
             let log = String(describing: self) + "." + #function + " : Cache Miss"
@@ -60,14 +59,15 @@ class StoreCache {
         }
         
         return value
+
     }
     
-    private func setCache(forKey: String, value: [StoreData]) {
+    private func setCache(forKey: String, value: [MenuData]) {
         let newVal = value as NSArray
         cache.setObject(newVal, forKey: NSString(string: forKey))
     }
     
-    private func getFile(forKey: String) -> [StoreData]? {
+    private func getFile(forKey: String) -> [MenuData]? {
         
         let cachePath = fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         let filePath = cachePath.appendingPathComponent(forKey)
@@ -77,22 +77,18 @@ class StoreCache {
             let str_data = Data(str.utf8)
             let jsonArr = try JSONSerialization.jsonObject(with: str_data, options: []) as! [Dictionary<String, String>]
             
-            var newVal: [StoreData] = []
+            var newVal: [MenuData] = []
             
             for json in jsonArr {
                 
-                let store_id = json["id"]!
+                let menu_id = json["menu_id"]!
                 let name = json["name"]!
                 let img_url = json["img_url"]!
-                let start_time = json["start_time"]!
-                let end_time = json["end_time"]!
-                let latitude = json["latitude"]!
-                let longitude = json["longitude"]!
-                let desc = json["desc"]!
-                let festival_id = json["festival_id"]!
+                let store_id = json["store_id"]!
+                let price = json["price"]!
                 let etag = json["etag"]!
                 
-                let data = StoreData(store_id: store_id, name: name, img_url: img_url, start_time: start_time, end_time: end_time, latitude: latitude, longitude: longitude, desc: desc, festival_id: festival_id, etag: etag)
+                let data = MenuData(menu_id: menu_id, name: name, price: price, img_url: img_url, store_id: store_id, etag: etag)
                 
                 newVal.append(data)
             }
@@ -105,24 +101,20 @@ class StoreCache {
         }
     }
     
-    private func setFile(forKey: String, value: [StoreData]) {
+    private func setFile(forKey: String, value: [MenuData]) {
         
         let cachePath = fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         let filePath = cachePath.appendingPathComponent(forKey)
         
         var newVal: [Dictionary<String, String>] = []
-        for store in value {
+        for menu in value {
             let dicType: Dictionary<String, String> = [
-                "id": store.store_id,
-                "name": store.name,
-                "img_url": store.img_url,
-                "start_time": store.start_time,
-                "end_time": store.end_time,
-                "latitude": store.latitude,
-                "longitude": store.longitude,
-                "desc": store.desc,
-                "festival_id": store.festival_id,
-                "etag": store.etag
+                "id": menu.menu_id,
+                "name": menu.name,
+                "img_url": menu.img_url,
+                "price": menu.price,
+                "store_id": menu.store_id,
+                "etag": menu.etag,
             ]
             
             newVal.append(dicType)
@@ -158,9 +150,9 @@ class StoreCache {
     }
 }
 
-extension StoreCache {
-    private static var storeCache = StoreCache()
-    static func getStoreCache() -> StoreCache {
-        return storeCache
+extension MenuCache {
+    private static var menuCache = MenuCache()
+    static func getMenuCache() -> MenuCache {
+        return menuCache
     }
 }

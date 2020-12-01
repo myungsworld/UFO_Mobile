@@ -8,18 +8,56 @@
 
 import SwiftUI
 
-struct FestivalStoresView: View {
-        
+struct Store: View {
+    
+    let storeData: StoreData
+    @EnvironmentObject var menuTask: MenuTask
+    
     var body: some View {
-        VStack {
-            StoreListView()
-            MapView()
-                .background(Color(red: 242, green: 242, blue: 242))
-                .cornerRadius(15)
-                .padding(.bottom, 15)
-                .padding(.leading, 15)
-                .padding(.trailing, 15)
-                .shadow(radius: 5)
+        
+        NavigationLink(destination: StoreInfoView()) {
+            
+            HStack {
+                
+                Image("boothic1")
+                    .resizable()
+                    .renderingMode(.original)
+                    .aspectRatio(contentMode: .fit)
+                
+                Divider()
+                
+                VStack {
+                    Text(storeData.name)
+                        .font(.headline)
+                    Text(storeData.desc)
+                        .font(.title)
+                }
+                
+                .padding()
+            }
+            .cornerRadius(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.5), lineWidth: 1))
+            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.3)
+            .onAppear {
+                self.menuTask.getMenu(store_id: self.storeData.store_id)
+            }
+        }
+        
+    }
+}
+
+struct FestivalStoresView: View {
+    
+    @EnvironmentObject var storeTask: StoreTask
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 15) {
+            
+            List(self.storeTask.store_data) { item in
+                Store(storeData: item)
+            }
         }
     }
 }
