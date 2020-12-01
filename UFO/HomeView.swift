@@ -81,7 +81,23 @@ struct HomeView: View {
         
             ZStack(alignment: .top) {
                 CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
-
+                    .sheet(isPresented: self.$hometask.pay) {
+                        TextField("보낼 금액", text: $money)
+                            .keyboardType(.numberPad)
+                            .font(.title)
+                            .padding([.horizontal, .bottom])
+                        Button(action: {
+                            
+                            self.http.transferMoney(sender: "myung", receiver: "min", amount: money, org: "SalesOrg")
+                            self.hometask.click.toggle()
+                            //print(hometask.click)
+                            
+                        }){
+                                Text("송금")
+                        }
+                            
+                        
+                    }
                 SlideOverView {
                     VStack {
 //                        TextField("보낼 금액", text: $money)
@@ -96,25 +112,7 @@ struct HomeView: View {
                         Spacer()
                     }
                 }
-                .sheet(isPresented: self.$hometask.pay) {
-                    TextField("보낼 금액", text: $money)
-                        .keyboardType(.numberPad)
-                        .font(.title)
-                        .padding([.horizontal, .bottom])
-                    Button(action: {
-                        
-                        self.http.transferMoney(sender: "myung", receiver: "min", amount: money, org: "SalesOrg")
-                        self.hometask.click.toggle()
-                        //print(hometask.click)
-                        
-                    }){
-                        NavigationLink(destination:HomeView()){
-                            Text("송금")
-                        }
-                    }
-                        
-                    
-                }
+
             }//Zstack
     }
     
