@@ -17,4 +17,5 @@ struct StoreData: Codable {
     var longitude: String
     var desc: String
     var festival_id: String
+    var etag: String
 }

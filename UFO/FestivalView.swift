@@ -17,17 +17,8 @@ struct FestivalView: View {
         
         VStack {
             
-            switch self.festivalTask.festivalView_mode {
+            FestivallnfoVIew()
             
-            case 0:
-                FestivallnfoVIew()
-                
-            case 1:
-                FestivalStoresView()
-                
-            default:
-                FestivallnfoVIew()
-            }
         }
         .onAppear {
             self.festivalTask.getFestival()

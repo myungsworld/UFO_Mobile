@@ -13,11 +13,11 @@ struct StoreListItem: View {
     var store_data: StoreData
     var grid: [Int] = []
     
-    @State private var showModal = false
+//    @State private var showModal = false
     
     init(store_data: StoreData) {
         self.store_data = store_data
-        
+
 //        for i in stride(from: 0, to: self.data.menu.count, by:2) {
 //            if i != self.data.menu.count {
 //                self.grid.append(i)
@@ -32,16 +32,16 @@ struct StoreListItem: View {
                 
 //                self.showModal = true
             }) {
-//                VStack {
-//                    Image(self.store_data.url)
-//                        .renderingMode(.original)
-//                        .resizable()
-//                        .frame(width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)
-//                        .cornerRadius(50)
-//                    
-//                    Text(self.store_data.name)
-//                        .foregroundColor(Color.black)
-//                }
+                VStack {
+                    Image("boothic1")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)
+                        .cornerRadius(50)
+                    
+                    Text(self.store_data.name)
+                        .foregroundColor(Color.black)
+                }
             }
 //            .sheet(isPresented: self.$showModal) {
 //                ModalView(data: self.data, grid: self.grid)

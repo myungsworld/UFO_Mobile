@@ -27,12 +27,6 @@ class FestivalTask: ObservableObject {
         }
     }
     
-    var festivalView_mode: Int = 0 {
-        didSet {
-            objectWillChange.send()
-        }
-    }
-    
     func getFestivalList() {
         do {
             let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
@@ -76,7 +70,6 @@ class FestivalTask: ObservableObject {
     
     
     private func getFestivalWithURL(festival_id: Int, etag: String) {
-        print("ASD")
         
         do {
             let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
@@ -91,7 +84,6 @@ class FestivalTask: ObservableObject {
             AF.request(request).responseJSON { response in
 
                 let res = response.response
-
                 let etag = res!.headers["Etag"]! as String
                 
                 switch response.result {

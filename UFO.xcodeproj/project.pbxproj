@@ -47,6 +47,7 @@
 		DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */; };
 		DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C897C2558DD7500D524F8 /* LoginTask.swift */; };
 		DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94D25448D6500486610 /* FestivalIdCache.swift */; };
+		DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75E62576482D0018F68B /* StoreCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		DC8C897C2558DD7500D524F8 /* LoginTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
 		DCB4E94D25448D6500486610 /* FestivalIdCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIdCache.swift; sourceTree = "<group>"; };
+		DCBD75E62576482D0018F68B /* StoreCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCache.swift; sourceTree = "<group>"; };
 		EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO_UFOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -275,6 +277,7 @@
 				DC68D77F253F42A800B35E56 /* ImageCache.swift */,
 				DC68D77B253F3B4800B35E56 /* URLImageView.swift */,
 				DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */,
+				DCBD75E62576482D0018F68B /* StoreCache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
 				DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */,
+				DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
 				DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */,
 				DC195A60253DE69B00A9ECF0 /* StoreListItem.swift in Sources */,

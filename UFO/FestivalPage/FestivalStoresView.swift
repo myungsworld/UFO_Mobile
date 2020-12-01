@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct FestivalStoresView: View {
+        
     var body: some View {
         VStack {
             StoreListView()

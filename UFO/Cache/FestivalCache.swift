@@ -28,8 +28,6 @@ class FestivalCache {
             } else {
                 let festivalData = self.getFile(forKey: forKey)
                 
-        
-                
                 self.setCache(forKey: forKey, value: festivalData!)
                 
                 return festivalData
