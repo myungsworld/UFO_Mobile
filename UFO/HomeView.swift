@@ -81,7 +81,7 @@ struct HomeView: View {
         
             ZStack(alignment: .top) {
                 CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
-                    .sheet(isPresented: self.$hometask.pay) {
+                    .sheet(isPresented: self.$hometask.click) {
                         TextField("보낼 금액", text: $money)
                             .keyboardType(.numberPad)
                             .font(.title)
@@ -112,8 +112,14 @@ struct HomeView: View {
                         Spacer()
                     }
                 }
+                
+                
+                
 
             }//Zstack
+        
+        
+        
     }
     
 
@@ -124,11 +130,10 @@ struct HomeView: View {
         case .success(let code):
             
             withAnimation {
-                self.hometask.pay.toggle()
+                self.hometask.click.toggle()
             }
             print(code)
             
-            //self.http.transferMoney(sender: "myung", receiver: "min", amount: "100", org: "SalesOrg")
         case .failure(let error):
             print("Scanning failed", error)
         }

@@ -13,7 +13,10 @@ struct MainView: View {
     
     @State var selected = 0
     @State var isPresented = false
+    @State var isPresented2 = false
     @State private var money = ""
+    @State private var password = ""
+    
     @EnvironmentObject var http : HttpAuth
     
     var body: some View {
@@ -47,8 +50,9 @@ struct MainView: View {
                                 .padding([.horizontal, .bottom])
                             Button(action: {
                                 withAnimation{
-                                    self.http.chargeMoney(id: "myung", org: "SalesOrg", amount: money)
+                                    //self.http.chargeMoney(id: "myung", org: "SalesOrg", amount: money)
                                     self.isPresented.toggle()
+                                    self.isPresented2.toggle()
                                 }
                             }, label : {
                                 Text("충전")
@@ -67,12 +71,55 @@ struct MainView: View {
                         Spacer()
                     }
 
-                }
+                }//ZStack
                 
                 .background(Color.white)
                     .edgesIgnoringSafeArea(.all)
                 .offset(x: 0 , y: self.isPresented ? 0 : UIApplication.shared.keyWindow?.frame.height ?? 0)
-            }
+                
+                
+                ZStack {
+                    HStack{
+                        Spacer()
+                        VStack {
+                            Spacer()
+                            TextField("비밀 번호 ", text : $password)
+                                .keyboardType(.numberPad)
+                                .font(.title)
+                                .padding([.horizontal, .bottom])
+                            Button(action: {
+                                withAnimation{
+                                    self.http.chargeMoney(id: "myung", org: "SalesOrg", amount: money)
+                                    print(money, password)
+                                    self.isPresented2.toggle()
+                                    money = ""
+                                    password = ""
+                                }
+                            }, label : {
+                                Text("입력")
+                            })
+                            Button(action: {
+                                withAnimation{
+                                    
+                                    self.isPresented2.toggle()
+                                }
+                            }, label: {
+                                    Text("취소")
+                                })
+                            .offset(x: 150 ,y : -400)
+                            Spacer()
+                        }
+                        Spacer()
+                    }
+
+                }//ZStack
+                
+                .background(Color.yellow)
+                    .edgesIgnoringSafeArea(.all)
+                .offset(x: 0 , y: self.isPresented2 ? 0 : UIApplication.shared.keyWindow?.frame.height ?? 0)
+                
+                
+            }//ZStack
             .gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
             .tabItem({
                 Text("Home")
