@@ -93,7 +93,8 @@ struct MainView: View {
                             Button(action: {
                                 withAnimation{
                                     self.http.chargeMoney(id: "myung", org: "SalesOrg", amount: chargeMoney)
-                                    
+                                    print(chargeMoney)
+                                    print(password)
                                     self.isPresented2.toggle()
                                     chargeMoney = ""
                                     password = ""
