@@ -59,6 +59,7 @@ struct HomeView: View {
     @State private var name  = "송동명"
     @State private var email = "myungsworld@gmail.com"
     @State private var money = ""
+    @State private var password = ""
     
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
@@ -90,6 +91,7 @@ struct HomeView: View {
                             
                             self.http.transferMoney(sender: "myung", receiver: "min", amount: money, org: "SalesOrg")
                             self.hometask.click.toggle()
+                            
                             //print(hometask.click)
                             
                         }){
@@ -113,13 +115,9 @@ struct HomeView: View {
                     }
                 }
                 
-                
-                
-
             }//Zstack
         
-        
-        
+
     }
     
 
