@@ -22,4 +22,12 @@ class HomeTask : ObservableObject {
             objectWillChange.send()
         }
     }
+    
+    var isPresented3 : Bool = false {
+        didSet {
+            objectWillChange.send()
+        }
+    }
+    
+    var sendMoney  = ""
 }

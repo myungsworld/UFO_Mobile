@@ -9,15 +9,18 @@
 import SwiftUI
 import Combine
 
+
 struct MainView: View {
     
     @State var selected = 0
     @State var isPresented = false
     @State var isPresented2 = false
-    @State private var money = ""
+    @State private var chargeMoney = ""
+    @State private var sendMoney = ""
     @State private var password = ""
     
     @EnvironmentObject var http : HttpAuth
+    @EnvironmentObject var hometask : HomeTask
     
     var body: some View {
         
@@ -44,7 +47,7 @@ struct MainView: View {
                         Spacer()
                         VStack {
                             Spacer()
-                            TextField("충전 금액", text : $money)
+                            TextField("충전 금액", text : $chargeMoney)
                                 .keyboardType(.numberPad)
                                 .font(.title)
                                 .padding([.horizontal, .bottom])
@@ -89,10 +92,10 @@ struct MainView: View {
                                 .padding([.horizontal, .bottom])
                             Button(action: {
                                 withAnimation{
-                                    self.http.chargeMoney(id: "myung", org: "SalesOrg", amount: money)
-                                    print(money, password)
+                                    self.http.chargeMoney(id: "myung", org: "SalesOrg", amount: chargeMoney)
+                                    
                                     self.isPresented2.toggle()
-                                    money = ""
+                                    chargeMoney = ""
                                     password = ""
                                 }
                             }, label : {
@@ -117,6 +120,46 @@ struct MainView: View {
                 .background(Color.yellow)
                     .edgesIgnoringSafeArea(.all)
                 .offset(x: 0 , y: self.isPresented2 ? 0 : UIApplication.shared.keyWindow?.frame.height ?? 0)
+                
+                
+                ZStack {
+                    HStack{
+                        Spacer()
+                        VStack {
+                            Spacer()
+                            TextField("비밀 번호 ", text : $password)
+                                .keyboardType(.numberPad)
+                                .font(.title)
+                                .padding([.horizontal, .bottom])
+                            Button(action: {
+                                withAnimation{
+                                    self.http.transferMoney(sender: "myung", receiver: "min", amount: hometask.sendMoney, org: "SalesOrg")
+                                    self.hometask.isPresented3.toggle()
+                                    hometask.sendMoney = ""
+                                    password = ""
+                                }
+                            }, label : {
+                                Text("입력")
+                            })
+                            Button(action: {
+                                withAnimation{
+                                    
+                                    self.hometask.isPresented3.toggle()
+                                }
+                            }, label: {
+                                    Text("취소")
+                                })
+                            .offset(x: 150 ,y : -400)
+                            Spacer()
+                        }
+                        Spacer()
+                    }
+
+                }//ZStack
+                
+                .background(Color.white)
+                    .edgesIgnoringSafeArea(.all)
+                .offset(x: 0 , y: self.hometask.isPresented3 ? 0 : UIApplication.shared.keyWindow?.frame.height ?? 0)
                 
                 
             }//ZStack
@@ -147,7 +190,15 @@ struct MainView: View {
             }.tabItem({
                 Text("MyPage")
             }).tag(2)
+            
+            
+            
+            
+            
         }
+        
+        
+        
         
     }
 }
