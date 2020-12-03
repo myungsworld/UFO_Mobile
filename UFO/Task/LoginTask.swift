@@ -62,7 +62,8 @@ class LoginTask: ObservableObject {
                 self.id = String(user.id)
                 
                 do {
-                    guard let url = URL(string: "http://155.230.248.141:8080/signup") else { return }
+                    let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
+                    guard let url = URL(string: baseURL + "/signup") else { return }
                     
                     let json: [String: String] = ["id": self.id]
                     let jsonData = try? JSONSerialization.data(withJSONObject: json)

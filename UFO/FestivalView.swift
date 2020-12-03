@@ -10,21 +10,18 @@ import SwiftUI
 
 struct FestivalView: View {
     
+    @EnvironmentObject var festivalTask: FestivalTask
+    let festivalIdCache = FestivalIdCache.getFestivalIdCache()
+    
     var body: some View {
         
         VStack {
-            // Boothes
-            StoreListView()
             
-            MapView()
-                .background(Color(red: 242, green: 242, blue: 242))
-                .cornerRadius(15)
-                .padding(.bottom, 15)
-                .padding(.leading, 15)
-                .padding(.trailing, 15)
-                .shadow(radius: 5)
-                
+            FestivallnfoVIew()
             
+        }
+        .onAppear {
+            self.festivalTask.getFestival()
         }
     }
 }
