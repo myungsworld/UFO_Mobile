@@ -18,6 +18,7 @@
 		14AA8B49257A4B6300D8787A /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B48257A4B6300D8787A /* PasswordChangeView.swift */; };
 		14AA8B51257A545C00D8787A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B50257A545C00D8787A /* Data.swift */; };
 		14AA8B56257A566100D8787A /* ChargeRecordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B55257A566100D8787A /* ChargeRecordData.swift */; };
+		14AC02A9257A670300EFC409 /* ChargeRecordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC02A8257A670300EFC409 /* ChargeRecordTask.swift */; };
 		5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */; };
 		C56B7B30D42BA848FFE4DFA3 /* Pods_UFOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */; };
 		DBA05FFAE3D3559783C26326 /* Pods_UFO_UFOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */; };
@@ -97,6 +98,7 @@
 		14AA8B48257A4B6300D8787A /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
 		14AA8B50257A545C00D8787A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		14AA8B55257A566100D8787A /* ChargeRecordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeRecordData.swift; sourceTree = "<group>"; };
+		14AC02A8257A670300EFC409 /* ChargeRecordTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeRecordTask.swift; sourceTree = "<group>"; };
 		37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F8492D964045D920133F78 /* Pods-UFO-UFOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO-UFOUITests.release.xcconfig"; path = "Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		817245CE098FEF074E713224 /* Pods-UFO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO.release.xcconfig"; path = "Target Support Files/Pods-UFO/Pods-UFO.release.xcconfig"; sourceTree = "<group>"; };
@@ -304,7 +306,6 @@
 				DC68D78725433A8300B35E56 /* KakaoLoginView.swift */,
 				143C993D257A430B001BF272 /* ProfileView.swift */,
 				143C9942257A4395001BF272 /* ChargeRecordView.swift */,
-				14AA8B55257A566100D8787A /* ChargeRecordData.swift */,
 				14AA8B43257A4B0800D8787A /* PayRecordView.swift */,
 				14AA8B48257A4B6300D8787A /* PasswordChangeView.swift */,
 				14AA8B50257A545C00D8787A /* Data.swift */,
@@ -349,6 +350,7 @@
 				DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */,
 				DC906A56257A2BE900F17063 /* ChargeTask.swift */,
 				14AA8B3E257A46B100D8787A /* ProfileTask.swift */,
+				14AC02A8257A670300EFC409 /* ChargeRecordTask.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -360,6 +362,7 @@
 				DC197DF2256E953F00988BA5 /* FestivalData.swift */,
 				DC195A63253DE6D300A9ECF0 /* StoreData.swift */,
 				DC197DF7256E961200988BA5 /* MenuData.swift */,
+				14AA8B55257A566100D8787A /* ChargeRecordData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				143C993E257A430B001BF272 /* ProfileView.swift in Sources */,
 				DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */,
 				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
+				14AC02A9257A670300EFC409 /* ChargeRecordTask.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
 				DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */,
 				DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */,
