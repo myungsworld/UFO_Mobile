@@ -72,6 +72,14 @@ struct SplashView: View {
     }
 }
 
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
+
 //struct SplashView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        FestivalList()
