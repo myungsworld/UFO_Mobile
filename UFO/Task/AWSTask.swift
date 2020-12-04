@@ -14,8 +14,7 @@ import UIKit
 class AWSTask {
     
     let imageCache = ImageCache.getImageCache()
-    
-    let s3 = S3(accessKeyId: "AKIA4CH2SWRA7THUO25O", secretAccessKey: "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",  region: Region(rawValue: "ap-northeast-2"))
+
     
     func getBucketList() {
         let futureOutput = s3.listBuckets()

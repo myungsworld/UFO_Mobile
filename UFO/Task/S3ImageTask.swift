@@ -15,7 +15,7 @@ class S3ImageTask: ObservableObject {
     
     let imageCache = ImageCache.getImageCache()
     
-    private let s3 = S3(accessKeyId: "AKIA4CH2SWRA7THUO25O", secretAccessKey: "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",  region: Region(rawValue: "ap-northeast-2"))
+    
     
     var image: UIImage? = nil {
         didSet {
