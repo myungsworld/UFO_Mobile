@@ -22,7 +22,7 @@ struct QRView: View {
             .font(.title)
             .padding([.horizontal, .bottom])
         Button(action: {
-            self.task.click.toggle()
+            self.task.showTransferModal.toggle()
             //self.http.transferMoney(sender: "myung", receiver: "min", amount: money, org: "SalesOrg")
             
         }){

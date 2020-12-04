@@ -11,7 +11,6 @@
 		141B96212574FF340083C175 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B96202574FF340083C175 /* QRView.swift */; };
 		14429CF725750C290081394D /* HttpAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14429CF625750C290081394D /* HttpAuth.swift */; };
 		14768110256BC56E006129FA /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476810F256BC56E006129FA /* ChargeView.swift */; };
-		14791C1A2575D7CB0000A16D /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14791C192575D7CB0000A16D /* temp.swift */; };
 		5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */; };
 		C56B7B30D42BA848FFE4DFA3 /* Pods_UFOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */; };
 		DBA05FFAE3D3559783C26326 /* Pods_UFO_UFOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */; };
@@ -41,6 +40,8 @@
 		DC197E1A256FEC5400988BA5 /* FestivalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E19256FEC5400988BA5 /* FestivalCache.swift */; };
 		DC197E272570ED3200988BA5 /* FestivallnfoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E262570ED3200988BA5 /* FestivallnfoVIew.swift */; };
 		DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */; };
+		DC4DAE75257A09D000FD7C0C /* SendMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */; };
+		DC4DAE7D257A0BC200FD7C0C /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */; };
 		DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77B253F3B4800B35E56 /* URLImageView.swift */; };
 		DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */; };
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
@@ -50,11 +51,13 @@
 		DC7B3E9F254935120094FD51 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DC7B3E9E254935120094FD51 /* CodeScanner */; };
 		DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */; };
 		DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C897C2558DD7500D524F8 /* LoginTask.swift */; };
+		DC906A57257A2BE900F17063 /* ChargeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC906A56257A2BE900F17063 /* ChargeTask.swift */; };
 		DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94D25448D6500486610 /* FestivalIdCache.swift */; };
 		DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75E62576482D0018F68B /* StoreCache.swift */; };
 		DCBD75EC25765B9D0018F68B /* MenuTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75EB25765B9D0018F68B /* MenuTask.swift */; };
 		DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75F025765BAB0018F68B /* MenuCache.swift */; };
 		DCBD75F9257673090018F68B /* StoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75F8257673090018F68B /* StoreInfoView.swift */; };
+		DCCCE37A257A1CAA00205226 /* SendMoneyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +83,6 @@
 		141B96202574FF340083C175 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		14429CF625750C290081394D /* HttpAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpAuth.swift; sourceTree = "<group>"; };
 		1476810F256BC56E006129FA /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
-		14791C192575D7CB0000A16D /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
 		37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F8492D964045D920133F78 /* Pods-UFO-UFOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO-UFOUITests.release.xcconfig"; path = "Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		817245CE098FEF074E713224 /* Pods-UFO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO.release.xcconfig"; path = "Target Support Files/Pods-UFO/Pods-UFO.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,8 @@
 		DC197E19256FEC5400988BA5 /* FestivalCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalCache.swift; sourceTree = "<group>"; };
 		DC197E262570ED3200988BA5 /* FestivallnfoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivallnfoVIew.swift; sourceTree = "<group>"; };
 		DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalStoresView.swift; sourceTree = "<group>"; };
+		DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyView.swift; sourceTree = "<group>"; };
+		DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		DC68D77B253F3B4800B35E56 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -128,11 +132,13 @@
 		DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverView.swift; sourceTree = "<group>"; };
 		DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		DC8C897C2558DD7500D524F8 /* LoginTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
+		DC906A56257A2BE900F17063 /* ChargeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeTask.swift; sourceTree = "<group>"; };
 		DCB4E94D25448D6500486610 /* FestivalIdCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIdCache.swift; sourceTree = "<group>"; };
 		DCBD75E62576482D0018F68B /* StoreCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCache.swift; sourceTree = "<group>"; };
 		DCBD75EB25765B9D0018F68B /* MenuTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTask.swift; sourceTree = "<group>"; };
 		DCBD75F025765BAB0018F68B /* MenuCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCache.swift; sourceTree = "<group>"; };
 		DCBD75F8257673090018F68B /* StoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoView.swift; sourceTree = "<group>"; };
+		DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyTask.swift; sourceTree = "<group>"; };
 		EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO_UFOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -224,12 +230,9 @@
 				DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */,
 				DC195A54253DE5F900A9ECF0 /* MainView.swift */,
 				DC195A56253DE61300A9ECF0 /* HomeView.swift */,
-				141B96202574FF340083C175 /* QRView.swift */,
-				1476810F256BC56E006129FA /* ChargeView.swift */,
 				DC195A58253DE62C00A9ECF0 /* FestivalView.swift */,
-				14791C192575D7CB0000A16D /* temp.swift */,
-				DC195A5A253DE64C00A9ECF0 /* FestivalPage */,
 				DC195A67253DE73900A9ECF0 /* MyPageView.swift */,
+				DC4DAE6B257A01F900FD7C0C /* HomePage */,
 				DC195A5A253DE64C00A9ECF0 /* FestivalPage */,
 				DC195A69253DE75F00A9ECF0 /* MyPage */,
 				DCCD81042572B04800D586AA /* Cache */,
@@ -237,7 +240,6 @@
 				DCCD81162572B11300D586AA /* Task */,
 				DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */,
 				DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */,
-				141B96182574FC970083C175 /* HomeTask.swift */,
 				14429CF625750C290081394D /* HttpAuth.swift */,
 			);
 			path = UFO;
@@ -290,6 +292,17 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		DC4DAE6B257A01F900FD7C0C /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				141B96202574FF340083C175 /* QRView.swift */,
+				1476810F256BC56E006129FA /* ChargeView.swift */,
+				DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */,
+				DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
 		DCCD81042572B04800D586AA /* Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,11 +320,14 @@
 		DCCD81162572B11300D586AA /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				141B96182574FC970083C175 /* HomeTask.swift */,
 				DC197E09256F725E00988BA5 /* SplashTask.swift */,
 				DC197DFC256E968200988BA5 /* FestivalTask.swift */,
 				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
 				DC8C897C2558DD7500D524F8 /* LoginTask.swift */,
 				DCBD75EB25765B9D0018F68B /* MenuTask.swift */,
+				DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */,
+				DC906A56257A2BE900F17063 /* ChargeTask.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -575,11 +591,13 @@
 				DC197DF8256E961200988BA5 /* MenuData.swift in Sources */,
 				DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */,
 				141B96192574FC970083C175 /* HomeTask.swift in Sources */,
+				DC4DAE75257A09D000FD7C0C /* SendMoneyView.swift in Sources */,
 				14768110256BC56E006129FA /* ChargeView.swift in Sources */,
 				DCBD75F9257673090018F68B /* StoreInfoView.swift in Sources */,
 				DC197E0A256F725E00988BA5 /* SplashTask.swift in Sources */,
 				DC197DFD256E968200988BA5 /* FestivalTask.swift in Sources */,
 				DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */,
+				DCCCE37A257A1CAA00205226 /* SendMoneyTask.swift in Sources */,
 				DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */,
 				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
@@ -606,10 +624,11 @@
 				DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */,
 				DC197DF3256E953F00988BA5 /* FestivalData.swift in Sources */,
 				DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */,
+				DC4DAE7D257A0BC200FD7C0C /* PasswordView.swift in Sources */,
 				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
 				DC197E02256E9B4C00988BA5 /* FestivalListData.swift in Sources */,
 				DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */,
-				14791C1A2575D7CB0000A16D /* temp.swift in Sources */,
+				DC906A57257A2BE900F17063 /* ChargeTask.swift in Sources */,
 				DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
