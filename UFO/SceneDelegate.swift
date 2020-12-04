@@ -26,10 +26,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environmentObject(LoginTask())
             .environmentObject(HomeTask())
             .environmentObject(HttpAuth())
-        
             .environmentObject(FestivalTask())
             .environmentObject(SplashTask())
             .environmentObject(MenuTask())
+            .environmentObject(SendMoneyTask())
+            .environmentObject(ChargeTask())
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

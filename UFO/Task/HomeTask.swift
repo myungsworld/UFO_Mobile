@@ -11,23 +11,13 @@ import Combine
 
 class HomeTask : ObservableObject {
     
-    var pay : Bool = false {
+    var showTransferModal : Bool = false {
         didSet {
             objectWillChange.send()
         }
     }
     
-    var click : Bool = false {
-        didSet {
-            objectWillChange.send()
-        }
-    }
     
-    var isPresented3 : Bool = false {
-        didSet {
-            objectWillChange.send()
-        }
-    }
     
-    var sendMoney  = ""
+    
 }
