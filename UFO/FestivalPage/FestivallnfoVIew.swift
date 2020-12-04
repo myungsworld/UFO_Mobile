@@ -33,13 +33,21 @@ struct FestivallnfoVIew: View {
                 
                 Divider()
                 
-                Image("boothic1")
-                    .renderingMode(.original)
-                    .resizable()
-                    .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.8)
+                S3ImageVIew(img_url: "5EFADC67-A4C8-43A8-BF19-CB621D8C8FF3.jpeg",
+                            width: UIScreen.main.bounds.width * 0.9,
+                            height: UIScreen.main.bounds.height * 0.8)
+                
+//                Image(uiImage: self.festivalTask.festival_image ?? UIImage(systemName: "lock")!)
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.8)
+                
+//                Image("boothic1")
+//                    .renderingMode(.original)
+//                    .resizable()
+//                    .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.8)
                 
                 Divider()
-                
                 
                 HStack {
                     

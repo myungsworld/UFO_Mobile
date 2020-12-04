@@ -9,11 +9,19 @@
 import Foundation
 //import Combine
 import Alamofire
+import UIKit
 
 class FestivalTask: ObservableObject {
     
     let festivalIdCache = FestivalIdCache.getFestivalIdCache()
     let festivalCache = FestivalCache.getFesticalCache()
+    let imageCache = ImageCache.getImageCache()
+    
+    var festival_image: UIImage? = nil {
+        didSet {
+            objectWillChange.send()
+        }
+    }
     
     var festival_list: [FestivalListData] = [] {
         didSet {
@@ -61,6 +69,9 @@ class FestivalTask: ObservableObject {
     }
 
     func getFestival() {
+        
+        self.festival_image = self.imageCache.get(forKey: "test")
+        
         let festival_id = self.festivalIdCache.getFestivalId()
         let data = self.festivalCache.getFestival(forKey: String(festival_id))
 

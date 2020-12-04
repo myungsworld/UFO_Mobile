@@ -14,6 +14,8 @@
 		5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */; };
 		C56B7B30D42BA848FFE4DFA3 /* Pods_UFOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */; };
 		DBA05FFAE3D3559783C26326 /* Pods_UFO_UFOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */; };
+		DC09114F257A4D2B000C5C86 /* S3 in Frameworks */ = {isa = PBXBuildFile; productRef = DC09114E257A4D2B000C5C86 /* S3 */; };
+		DC091154257A4D44000C5C86 /* AWSTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC091153257A4D44000C5C86 /* AWSTask.swift */; };
 		DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A22253DE53300A9ECF0 /* AppDelegate.swift */; };
 		DC195A25253DE53300A9ECF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A24253DE53300A9ECF0 /* SceneDelegate.swift */; };
 		DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A26253DE53300A9ECF0 /* ContentView.swift */; };
@@ -42,10 +44,10 @@
 		DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */; };
 		DC4DAE75257A09D000FD7C0C /* SendMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */; };
 		DC4DAE7D257A0BC200FD7C0C /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */; };
-		DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77B253F3B4800B35E56 /* URLImageView.swift */; };
-		DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */; };
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
 		DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78725433A8300B35E56 /* KakaoLoginView.swift */; };
+		DC6BDB26257A7537005751C7 /* S3ImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */; };
+		DC6BDB2B257A75B8005751C7 /* S3ImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */; };
 		DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */; };
 		DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */; };
 		DC7B3E9F254935120094FD51 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DC7B3E9E254935120094FD51 /* CodeScanner */; };
@@ -90,6 +92,7 @@
 		B0CA2F12606C0B753325FBCE /* Pods-UFO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO.debug.xcconfig"; path = "Target Support Files/Pods-UFO/Pods-UFO.debug.xcconfig"; sourceTree = "<group>"; };
 		BDB7A1AF2FCFA514C696C64B /* Pods-UFOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFOTests.release.xcconfig"; path = "Target Support Files/Pods-UFOTests/Pods-UFOTests.release.xcconfig"; sourceTree = "<group>"; };
 		C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC091153257A4D44000C5C86 /* AWSTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSTask.swift; sourceTree = "<group>"; };
 		DC195A1F253DE53300A9ECF0 /* UFO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UFO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC195A22253DE53300A9ECF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC195A24253DE53300A9ECF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,10 +127,10 @@
 		DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalStoresView.swift; sourceTree = "<group>"; };
 		DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyView.swift; sourceTree = "<group>"; };
 		DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
-		DC68D77B253F3B4800B35E56 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
-		DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		DC68D78725433A8300B35E56 /* KakaoLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginView.swift; sourceTree = "<group>"; };
+		DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3ImageVIew.swift; sourceTree = "<group>"; };
+		DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3ImageTask.swift; sourceTree = "<group>"; };
 		DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalListPopUpView.swift; sourceTree = "<group>"; };
 		DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverView.swift; sourceTree = "<group>"; };
 		DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC09114F257A4D2B000C5C86 /* S3 in Frameworks */,
 				DC7B3E9F254935120094FD51 /* CodeScanner in Frameworks */,
 				5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */,
 			);
@@ -241,6 +245,7 @@
 				DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */,
 				DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */,
 				14429CF625750C290081394D /* HttpAuth.swift */,
+				DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */,
 			);
 			path = UFO;
 			sourceTree = "<group>";
@@ -309,8 +314,6 @@
 				DCB4E94D25448D6500486610 /* FestivalIdCache.swift */,
 				DC197E19256FEC5400988BA5 /* FestivalCache.swift */,
 				DC68D77F253F42A800B35E56 /* ImageCache.swift */,
-				DC68D77B253F3B4800B35E56 /* URLImageView.swift */,
-				DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */,
 				DCBD75E62576482D0018F68B /* StoreCache.swift */,
 				DCBD75F025765BAB0018F68B /* MenuCache.swift */,
 			);
@@ -328,6 +331,8 @@
 				DCBD75EB25765B9D0018F68B /* MenuTask.swift */,
 				DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */,
 				DC906A56257A2BE900F17063 /* ChargeTask.swift */,
+				DC091153257A4D44000C5C86 /* AWSTask.swift */,
+				DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 			name = UFO;
 			packageProductDependencies = (
 				DC7B3E9E254935120094FD51 /* CodeScanner */,
+				DC09114E257A4D2B000C5C86 /* S3 */,
 			);
 			productName = UFO;
 			productReference = DC195A1F253DE53300A9ECF0 /* UFO.app */;
@@ -441,6 +447,7 @@
 			mainGroup = DC195A16253DE53300A9ECF0;
 			packageReferences = (
 				DC7B3E9D254935120094FD51 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				DC09114D257A4D2B000C5C86 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */,
 			);
 			productRefGroup = DC195A20253DE53300A9ECF0 /* Products */;
 			projectDirPath = "";
@@ -601,12 +608,14 @@
 				DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */,
 				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
+				DC091154257A4D44000C5C86 /* AWSTask.swift in Sources */,
 				DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */,
 				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
 				DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */,
 				DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */,
 				DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */,
+				DC6BDB2B257A75B8005751C7 /* S3ImageTask.swift in Sources */,
 				DCBD75EC25765B9D0018F68B /* MenuTask.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
 				DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */,
@@ -617,17 +626,16 @@
 				DC195A53253DE5D200A9ECF0 /* SplashView.swift in Sources */,
 				DC195A25253DE53300A9ECF0 /* SceneDelegate.swift in Sources */,
 				DC197E272570ED3200988BA5 /* FestivallnfoVIew.swift in Sources */,
-				DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */,
 				DC195A57253DE61300A9ECF0 /* HomeView.swift in Sources */,
 				DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */,
 				DC197E1A256FEC5400988BA5 /* FestivalCache.swift in Sources */,
 				DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */,
 				DC197DF3256E953F00988BA5 /* FestivalData.swift in Sources */,
+				DC6BDB26257A7537005751C7 /* S3ImageVIew.swift in Sources */,
 				DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */,
 				DC4DAE7D257A0BC200FD7C0C /* PasswordView.swift in Sources */,
 				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
 				DC197E02256E9B4C00988BA5 /* FestivalListData.swift in Sources */,
-				DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */,
 				DC906A57257A2BE900F17063 /* ChargeTask.swift in Sources */,
 				DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */,
 			);
@@ -963,6 +971,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DC09114D257A4D2B000C5C86 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-aws/aws-sdk-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.0;
+			};
+		};
 		DC7B3E9D254935120094FD51 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -974,6 +990,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC09114E257A4D2B000C5C86 /* S3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC09114D257A4D2B000C5C86 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = S3;
+		};
 		DC7B3E9E254935120094FD51 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DC7B3E9D254935120094FD51 /* XCRemoteSwiftPackageReference "CodeScanner" */;

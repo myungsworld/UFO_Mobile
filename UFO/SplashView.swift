@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct SplashView: View {
     
@@ -14,6 +15,7 @@ struct SplashView: View {
     @EnvironmentObject var splashTask: SplashTask
     let festivalIdCache = FestivalIdCache.getFestivalIdCache()
     let festivalCache = FestivalCache.getFesticalCache()
+    let aws = AWSTask()
     
     var body: some View {
         
@@ -30,6 +32,16 @@ struct SplashView: View {
                 }
                 
             }.onAppear {
+                
+//                aws.downloadImage()
+//                aws.getBucketList()
+//                guard let img = UIImage(named: "boothic2") else {
+//                    fatalError("Fail to load Image")
+//                }
+
+//                aws.uploadImage(img) { fileName in
+//                    print(fileName)
+//                }
 
 //                self.festivalIdCache.removeFile()
                 let festival_id = self.festivalIdCache.getFestivalId()
