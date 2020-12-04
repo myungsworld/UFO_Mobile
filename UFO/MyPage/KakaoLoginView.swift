@@ -36,24 +36,25 @@ struct KakaoLoginView: View {
                 
                 let username = self.loginTask.id
                 
-                HStack(spacing: 20) {
-                    Image("boothic1")
-                        .renderingMode(.original)
-                        .resizable()
-                        .frame(width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)
-                        .padding(.leading, 20)
-                    
-                    Text(username)
-                    
-                    Button(action: {
-                        self.loginTask.logout()
-                    }) {
-                        Text("로그아웃")
-                    }
-                }
+                ProfileView()
+//                HStack(spacing: 20) {
+//                    Image("boothic1")
+//                        .renderingMode(.original)
+//                        .resizable()
+//                        .frame(width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)
+//                        .padding(.leading, 20)
+//
+//                    Text(username)
+//
+//                    Button(action: {
+//                        self.loginTask.logout()
+//                    }) {
+//                        Text("로그아웃")
+//                    }
+//                }
             }
             
-            Divider()
+//            Divider()
         }
         
     }
