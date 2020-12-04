@@ -10,17 +10,16 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var isActice:Bool = false
-    @State var show = false
-    @EnvironmentObject var storeTask: StoreTask
-    
-    var festivalIdCache = FestivalIdCache.getFestivalIdCache()
+    @EnvironmentObject var festivalTask: FestivalTask
+    @EnvironmentObject var splashTask: SplashTask
+    let festivalIdCache = FestivalIdCache.getFestivalIdCache()
+    let festivalCache = FestivalCache.getFesticalCache()
     
     var body: some View {
         
         ZStack {
             VStack {
-                if self.isActice {
+                if self.splashTask.isActive {
                     MainView()
                     
                 } else {
@@ -31,38 +30,43 @@ struct SplashView: View {
                 }
                 
             }.onAppear {
-                
+
 //                self.festivalIdCache.removeFile()
                 let festival_id = self.festivalIdCache.getFestivalId()
-                
+//                self.festivalCache.removeFromFile(forKey: String(festival_id))
+
                 if festival_id == -1 {
+
+                    self.festivalTask.getFestivalList()
+
                     withAnimation {
-                        self.show = true
+                        self.splashTask.show.toggle()
                     }
                     
                     return
-                }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                    withAnimation {
-                        // Load Stores info
-                        self.storeTask.getStoreInfo(festival_id: festival_id)
-                        
-                        self.isActice.toggle()
+                    
+                } else {
+                    
+                    // FestivalCache Task 합치기
+                    // http 통신 전 확인하기
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                        //Festival 정보 가져오기
+                        self.festivalTask.getFestival()
+                        self.splashTask.isActive.toggle()
                     }
                 }
             }
             
-            if self.show {
-                
-                GeometryReader{ _ in
-                    
-                    FestivalListPopUpView(isActive: self.$isActice, show: self.$show)
-                }.background(
-                    Color.black.opacity(0.65)
-                        .edgesIgnoringSafeArea(.all)
-                    
-                )
+            if self.splashTask.show {
+
+                GeometryReader{ gp in
+
+                    FestivalListPopUpView()
+                }
+                .padding()
+                .background(Color.gray)
+                .cornerRadius(15)
+                .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.9)
             }
         }
     }
