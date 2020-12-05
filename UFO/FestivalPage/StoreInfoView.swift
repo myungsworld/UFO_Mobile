@@ -41,31 +41,30 @@ struct Menu: View {
 
 struct StoreInfoView: View {
     
+    @EnvironmentObject var storeTask: StoreTask
     @EnvironmentObject var menuTask: MenuTask
+    var storeId: String
+    
+    init(storeId: String) {
+        self.storeId = storeId
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
-            List(self.menuTask.menu_data) { item in
+            List(self.storeTask.menuList) { item in
                 Menu(menuData: item)
             }
-            
-            MapView()
-                .background(Color(red: 242, green: 242, blue: 242))
-                .cornerRadius(15)
-                .padding(.bottom, 15)
-                .padding(.leading, 15)
-                .padding(.trailing, 15)
-                .shadow(radius: 5)
+//
+//            MapView()
+//                .background(Color(red: 242, green: 242, blue: 242))
+//                .cornerRadius(15)
+//                .padding(.bottom, 15)
+//                .padding(.leading, 15)
+//                .padding(.trailing, 15)
+//                .shadow(radius: 5)
 
         }.onAppear {
-            print("ASD")
-            print(self.menuTask.menu_data)
+            self.storeTask.getStore(store_id: self.storeId)
         }
-    }
-}
-
-struct StoreInfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        StoreInfoView()
     }
 }

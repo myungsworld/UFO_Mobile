@@ -31,47 +31,34 @@ struct SplashView: View {
                 }
                 
             }.onAppear {
-                
-//                aws.downloadImage()
-//                aws.getBucketList()
-//                guard let img = UIImage(named: "boothic2") else {
-//                    fatalError("Fail to load Image")
-//                }
-
-//                aws.uploadImage(img) { fileName in
-//                    print(fileName)
-//                }
 
 //                self.festivalIdCache.removeFile()
                 let festival_id = self.festivalIdCache.getFestivalId()
-//                self.festivalCache.removeFromFile(forKey: String(festival_id))
-
+                
                 if festival_id == -1 {
-
+                    
                     self.festivalTask.getFestivalList()
-
+                    
                     withAnimation {
-                        self.splashTask.show.toggle()
+                        self.splashTask.showSelectFestivalModal.toggle()
                     }
                     
                     return
                     
-                } else {
-                    
-                    // FestivalCache Task 합치기
-                    // http 통신 전 확인하기
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                        //Festival 정보 가져오기
-                        self.festivalTask.getFestival()
-                        self.splashTask.isActive.toggle()
-                    }
                 }
+            
+//                self.festivalTask.getFestival()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    //Festival 정보 가져오기
+                    self.splashTask.isActive.toggle()
+                }
+                
             }
             
-            if self.splashTask.show {
-
+            if self.splashTask.showSelectFestivalModal {
+                
                 GeometryReader{ gp in
-
+                    
                     FestivalListPopUpView()
                 }
                 .padding()

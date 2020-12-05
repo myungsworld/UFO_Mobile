@@ -16,7 +16,7 @@ class MenuTask: ObservableObject {
     var menuCache = MenuCache.getMenuCache()
     var storeCache = StoreCache.getStoreCache()
     
-    var menu_data: [MenuData] = [] {
+    var menuList: [MenuData] = [] {
         didSet {
             objectWillChange.send()
         }
@@ -24,12 +24,12 @@ class MenuTask: ObservableObject {
     
     func getMenu(store_id: String) {
         
-        let festival_id = self.festivalIdCache.getFestivalId()
-        let store = self.storeCache.getStores(forKey: String(festival_id))
-        self.getMenuWithURL(store_id: store_id, etag: store![0].etag)
+//        let festival_id = self.festivalIdCache.getFestivalId()
+//        let store = self.storeCache.getCache(forKey: String(festival_id))
+//        self.getMenuFromURL(store_id: store_id, etag: store![0].etag)
     }
     
-    private func getMenuWithURL(store_id: String, etag: String) {
+    private func getMenuFromURL(store_id: String, etag: String) {
         do {
             let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
             guard let url = URL(string: baseURL + "/stores/\(store_id)/menu") else { return }
@@ -62,16 +62,16 @@ class MenuTask: ObservableObject {
                             newData.append(data)
                         }
                         
-                        self.menu_data = newData
-                        self.menuCache.setMenu(menuData: self.menu_data)
+                        self.menuList = newData
+                        self.menuCache.setCache(forKey: "m_\(store_id)", value: self.menuList)
 
                     }
                 case .failure(let e):
                     
                     switch res?.statusCode {
                     case 304:
-                        let data = self.menuCache.getMenu(forKey: String(store_id))
-                        self.menu_data = data!
+                        let data = self.menuCache.getCache(forKey: String(store_id))
+                        self.menuList = data!
                         
                         print("menuNotmodified")
                     default:

@@ -11,7 +11,6 @@ import SwiftUI
 struct FestivallnfoVIew: View {
     
     @EnvironmentObject var festivalTask: FestivalTask
-    @EnvironmentObject var storeTask: StoreTask
     
     let festivalCache = FestivalCache.getFesticalCache()
     
@@ -20,19 +19,19 @@ struct FestivallnfoVIew: View {
         ScrollView {
             VStack {
                 
-                Text("\(self.festivalTask.festivalData!.name)")
+                Text("\(self.festivalTask.festivalData?.name ?? "Loading")")
                     .font(.largeTitle)
                 
                 Divider()
                 
                 HStack {
-                    Text("\(self.festivalTask.festivalData!.start_date)")
+                    Text("\(self.festivalTask.festivalData?.start_date ?? "Loading")")
                     Text("-")
-                    Text("\(self.festivalTask.festivalData!.end_date)")
+                    Text("\(self.festivalTask.festivalData?.end_date ?? "Loading")")
                 }
                 
                 Divider()
-                
+        
                 S3ImageVIew(img_url: "5EFADC67-A4C8-43A8-BF19-CB621D8C8FF3.jpeg",
                             width: UIScreen.main.bounds.width * 0.9,
                             height: UIScreen.main.bounds.height * 0.8)
@@ -63,7 +62,7 @@ struct FestivallnfoVIew: View {
                     }
                 }
             }.onAppear {
-                self.storeTask.getStores()
+                self.festivalTask.getFestival()
             }
         }
     }

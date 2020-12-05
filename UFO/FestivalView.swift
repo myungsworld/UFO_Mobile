@@ -20,9 +20,6 @@ struct FestivalView: View {
             FestivallnfoVIew()
             
         }
-        .onAppear {
-            self.festivalTask.getFestival()
-        }
     }
 }
 

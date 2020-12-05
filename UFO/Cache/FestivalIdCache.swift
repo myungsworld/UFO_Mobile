@@ -40,7 +40,7 @@ class FestivalIdCache {
         }
         // When success to hit
         // type: NSNumber
-        return Int(festival_id)
+        return Int(truncating: festival_id)
     }
     
     func setFetivalId(festival_id: Int) {
