@@ -34,6 +34,12 @@ class StoreTask: ObservableObject {
         }
     }
     
+    var showMap: Bool = false {
+        didSet {
+            objectWillChange.send()
+        }
+    }
+    
     func getStoreList() {
         
         let festival_id = self.festivalIdCache.getFestivalId()
@@ -110,7 +116,7 @@ class StoreTask: ObservableObject {
                     let desc = store["desc"]!
                     let festival_id = store["festival_id"]!
                     
-                    let data = StoreData(store_id: store_id, name: name, img_url: img_url, start_time: start_time, end_time: end_time, latitude: latitude, longitude: longitude, desc: desc, festival_id: festival_id, etag: etag)
+                    let data = StoreData(store_id: store_id, name: name, img_url: img_url, start_time: start_time, end_time: end_time, latitude: latitude, longitude: longitude, desc: desc, festival_id: festival_id, etag: etag)                    
                     
                     self.storeCache.setCache(forKey: store_id, value: data)
                     self.storeData = data
@@ -127,7 +133,7 @@ class StoreTask: ObservableObject {
                 default:
                     print("error: \(String(describing: e.errorDescription))")
                 }
-            }
+            }                        
         }
     }
     

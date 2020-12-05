@@ -26,8 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environmentObject(LoginTask())
             .environmentObject(HomeTask())        
             .environmentObject(FestivalTask())
-            .environmentObject(SplashTask())
-            .environmentObject(MenuTask())
+            .environmentObject(SplashTask())        
             .environmentObject(SendMoneyTask())
             .environmentObject(ChargeTask())
         

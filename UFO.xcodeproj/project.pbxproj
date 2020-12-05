@@ -53,7 +53,6 @@
 		DC906A57257A2BE900F17063 /* ChargeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC906A56257A2BE900F17063 /* ChargeTask.swift */; };
 		DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94D25448D6500486610 /* FestivalIdCache.swift */; };
 		DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75E62576482D0018F68B /* StoreCache.swift */; };
-		DCBD75EC25765B9D0018F68B /* MenuTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75EB25765B9D0018F68B /* MenuTask.swift */; };
 		DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75F025765BAB0018F68B /* MenuCache.swift */; };
 		DCBD75F9257673090018F68B /* StoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75F8257673090018F68B /* StoreInfoView.swift */; };
 		DCCCE37A257A1CAA00205226 /* SendMoneyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */; };
@@ -132,7 +131,6 @@
 		DC906A56257A2BE900F17063 /* ChargeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeTask.swift; sourceTree = "<group>"; };
 		DCB4E94D25448D6500486610 /* FestivalIdCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIdCache.swift; sourceTree = "<group>"; };
 		DCBD75E62576482D0018F68B /* StoreCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCache.swift; sourceTree = "<group>"; };
-		DCBD75EB25765B9D0018F68B /* MenuTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTask.swift; sourceTree = "<group>"; };
 		DCBD75F025765BAB0018F68B /* MenuCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCache.swift; sourceTree = "<group>"; };
 		DCBD75F8257673090018F68B /* StoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoView.swift; sourceTree = "<group>"; };
 		DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyTask.swift; sourceTree = "<group>"; };
@@ -237,8 +235,8 @@
 				DCCD81172572B11900D586AA /* Data */,
 				DCCD81162572B11300D586AA /* Task */,
 				DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */,
-				DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */,
 				DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */,
+				DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */,
 			);
 			path = UFO;
 			sourceTree = "<group>";
@@ -318,7 +316,6 @@
 				DC197E09256F725E00988BA5 /* SplashTask.swift */,
 				DC197DFC256E968200988BA5 /* FestivalTask.swift */,
 				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
-				DCBD75EB25765B9D0018F68B /* MenuTask.swift */,
 				DC8C897C2558DD7500D524F8 /* LoginTask.swift */,
 				DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */,
 				DC906A56257A2BE900F17063 /* ChargeTask.swift */,
@@ -606,7 +603,6 @@
 				DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */,
 				DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */,
 				DC6BDB2B257A75B8005751C7 /* S3ImageTask.swift in Sources */,
-				DCBD75EC25765B9D0018F68B /* MenuTask.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
 				141B96212574FF340083C175 /* QRView.swift in Sources */,
 				DC195A59253DE62C00A9ECF0 /* FestivalView.swift in Sources */,
