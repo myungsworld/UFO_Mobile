@@ -37,16 +37,6 @@ struct FestivallnfoVIew: View {
                             width: UIScreen.main.bounds.width * 0.9,
                             height: UIScreen.main.bounds.height * 0.8)
                 
-//                Image(uiImage: self.festivalTask.festival_image ?? UIImage(systemName: "lock")!)
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.8)
-                
-//                Image("boothic1")
-//                    .renderingMode(.original)
-//                    .resizable()
-//                    .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.8)
-                
                 Divider()
                 
                 HStack {

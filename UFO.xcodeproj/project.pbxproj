@@ -15,7 +15,6 @@
 		C56B7B30D42BA848FFE4DFA3 /* Pods_UFOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */; };
 		DBA05FFAE3D3559783C26326 /* Pods_UFO_UFOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */; };
 		DC09114F257A4D2B000C5C86 /* S3 in Frameworks */ = {isa = PBXBuildFile; productRef = DC09114E257A4D2B000C5C86 /* S3 */; };
-		DC091154257A4D44000C5C86 /* AWSTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC091153257A4D44000C5C86 /* AWSTask.swift */; };
 		DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A22253DE53300A9ECF0 /* AppDelegate.swift */; };
 		DC195A25253DE53300A9ECF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A24253DE53300A9ECF0 /* SceneDelegate.swift */; };
 		DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A26253DE53300A9ECF0 /* ContentView.swift */; };
@@ -92,7 +91,6 @@
 		B0CA2F12606C0B753325FBCE /* Pods-UFO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO.debug.xcconfig"; path = "Target Support Files/Pods-UFO/Pods-UFO.debug.xcconfig"; sourceTree = "<group>"; };
 		BDB7A1AF2FCFA514C696C64B /* Pods-UFOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFOTests.release.xcconfig"; path = "Target Support Files/Pods-UFOTests/Pods-UFOTests.release.xcconfig"; sourceTree = "<group>"; };
 		C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC091153257A4D44000C5C86 /* AWSTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSTask.swift; sourceTree = "<group>"; };
 		DC195A1F253DE53300A9ECF0 /* UFO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UFO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC195A22253DE53300A9ECF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC195A24253DE53300A9ECF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -331,7 +329,6 @@
 				DCBD75EB25765B9D0018F68B /* MenuTask.swift */,
 				DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */,
 				DC906A56257A2BE900F17063 /* ChargeTask.swift */,
-				DC091153257A4D44000C5C86 /* AWSTask.swift */,
 				DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */,
 			);
 			path = Task;
@@ -608,7 +605,6 @@
 				DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */,
 				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
-				DC091154257A4D44000C5C86 /* AWSTask.swift in Sources */,
 				DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */,
 				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,

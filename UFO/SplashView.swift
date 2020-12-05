@@ -15,7 +15,6 @@ struct SplashView: View {
     @EnvironmentObject var splashTask: SplashTask
     let festivalIdCache = FestivalIdCache.getFestivalIdCache()
     let festivalCache = FestivalCache.getFesticalCache()
-    let aws = AWSTask()
     
     var body: some View {
         
