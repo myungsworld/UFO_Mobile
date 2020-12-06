@@ -32,26 +32,10 @@ struct KakaoLoginView: View {
                             .foregroundColor(Color.black)
                     }
                 }
-            } else {
-                
-                let username = self.loginTask.id
+            } else {                
                 
                 ProfileView()
-//                HStack(spacing: 20) {
-//                    Image("boothic1")
-//                        .renderingMode(.original)
-//                        .resizable()
-//                        .frame(width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)
-//                        .padding(.leading, 20)
-//
-//                    Text(username)
-//
-//                    Button(action: {
-//                        self.loginTask.logout()
-//                    }) {
-//                        Text("로그아웃")
-//                    }
-//                }
+                
                 HStack(spacing: 20) {
                     
                     URLImageView(url: self.userTask.user?.properties?["profile_image"] ?? "", width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)            
@@ -65,8 +49,6 @@ struct KakaoLoginView: View {
                     }
                 }
             }
-            
-//            Divider()
         }
         
     }

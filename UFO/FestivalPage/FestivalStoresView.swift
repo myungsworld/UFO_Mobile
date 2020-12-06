@@ -56,6 +56,7 @@ struct FestivalStoresView: View {
             }
             
         }.onAppear {
+            self.storeTask.showMap = false
             self.storeTask.getStoreList()
         }
     }
