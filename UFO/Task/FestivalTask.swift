@@ -62,6 +62,8 @@ class FestivalTask: ObservableObject {
     
     func getFestival() {
         
+        print("A")
+        
         let festival_id = self.festivalIdCache.getFestivalId()
         let data = self.festivalCache.getCache(forKey: String(festival_id))
         

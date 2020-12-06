@@ -13,6 +13,8 @@ struct SplashView: View {
     
     @EnvironmentObject var festivalTask: FestivalTask
     @EnvironmentObject var splashTask: SplashTask
+    @EnvironmentObject var userTask: UserTask
+    
     let festivalIdCache = FestivalIdCache.getFestivalIdCache()
     let festivalCache = FestivalCache.getFesticalCache()
     
@@ -46,11 +48,13 @@ struct SplashView: View {
                     return
                     
                 }
-            
-//                self.festivalTask.getFestival()
+                
+                // 카카오 로그인이 되어있는 상태인지 확인 하기 위해
+                self.userTask.me()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                    //Festival 정보 가져오기
-                    self.splashTask.isActive.toggle()
+                    withAnimation {
+                        self.splashTask.isActive.toggle()
+                    }
                 }
                 
             }

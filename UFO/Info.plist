@@ -37,6 +37,7 @@
 	<array>
 		<string>kakaokompassauth</string>
 		<string>kakaolink</string>
+		<string>kakaonavi-sdk</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -84,6 +85,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>BaseURL</key>
-	<string>http://192.168.10.12:3000</string>
+	<string>http://192.168.10.18:3000</string>
 </dict>
 </plist>

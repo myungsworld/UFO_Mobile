@@ -53,6 +53,7 @@ class S3ImageTask: ObservableObject {
     
     private func loadImageFromS3(forKey: String) {
         
+        // Load Credential First
         let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
         guard let url = URL(string: baseURL + "/awsCredential") else { return }
         

@@ -49,7 +49,9 @@
 		DC7B3E9F254935120094FD51 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DC7B3E9E254935120094FD51 /* CodeScanner */; };
 		DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */; };
 		DC86E3E8257BAC8400891549 /* StoreListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86E3E7257BAC8400891549 /* StoreListData.swift */; };
-		DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C897C2558DD7500D524F8 /* LoginTask.swift */; };
+		DC86E404257CC93A00891549 /* UserTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86E403257CC93A00891549 /* UserTask.swift */; };
+		DC86E417257CCFCD00891549 /* URLImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86E416257CCFCD00891549 /* URLImageTask.swift */; };
+		DC86E41C257CF9C100891549 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86E41B257CF9C100891549 /* URLImageView.swift */; };
 		DC906A57257A2BE900F17063 /* ChargeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC906A56257A2BE900F17063 /* ChargeTask.swift */; };
 		DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94D25448D6500486610 /* FestivalIdCache.swift */; };
 		DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75E62576482D0018F68B /* StoreCache.swift */; };
@@ -127,7 +129,9 @@
 		DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverView.swift; sourceTree = "<group>"; };
 		DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		DC86E3E7257BAC8400891549 /* StoreListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListData.swift; sourceTree = "<group>"; };
-		DC8C897C2558DD7500D524F8 /* LoginTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
+		DC86E403257CC93A00891549 /* UserTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTask.swift; sourceTree = "<group>"; };
+		DC86E416257CCFCD00891549 /* URLImageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageTask.swift; sourceTree = "<group>"; };
+		DC86E41B257CF9C100891549 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		DC906A56257A2BE900F17063 /* ChargeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeTask.swift; sourceTree = "<group>"; };
 		DCB4E94D25448D6500486610 /* FestivalIdCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIdCache.swift; sourceTree = "<group>"; };
 		DCBD75E62576482D0018F68B /* StoreCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCache.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 				DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */,
 				DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */,
 				DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */,
+				DC86E41B257CF9C100891549 /* URLImageView.swift */,
 			);
 			path = UFO;
 			sourceTree = "<group>";
@@ -314,12 +319,13 @@
 			children = (
 				141B96182574FC970083C175 /* HomeTask.swift */,
 				DC197E09256F725E00988BA5 /* SplashTask.swift */,
+				DC86E403257CC93A00891549 /* UserTask.swift */,
 				DC197DFC256E968200988BA5 /* FestivalTask.swift */,
 				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
-				DC8C897C2558DD7500D524F8 /* LoginTask.swift */,
 				DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */,
 				DC906A56257A2BE900F17063 /* ChargeTask.swift */,
 				DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */,
+				DC86E416257CCFCD00891549 /* URLImageTask.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -596,7 +602,6 @@
 				DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */,
 				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
-				DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */,
 				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
 				DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */,
@@ -611,6 +616,7 @@
 				DC197E272570ED3200988BA5 /* FestivallnfoVIew.swift in Sources */,
 				DC195A57253DE61300A9ECF0 /* HomeView.swift in Sources */,
 				DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */,
+				DC86E41C257CF9C100891549 /* URLImageView.swift in Sources */,
 				DC86E3E8257BAC8400891549 /* StoreListData.swift in Sources */,
 				DC197E1A256FEC5400988BA5 /* FestivalCache.swift in Sources */,
 				DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */,
@@ -618,9 +624,11 @@
 				DC6BDB26257A7537005751C7 /* S3ImageVIew.swift in Sources */,
 				DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */,
 				DC4DAE7D257A0BC200FD7C0C /* PasswordView.swift in Sources */,
+				DC86E404257CC93A00891549 /* UserTask.swift in Sources */,
 				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
 				DC197E02256E9B4C00988BA5 /* FestivalListData.swift in Sources */,
 				DC906A57257A2BE900F17063 /* ChargeTask.swift in Sources */,
+				DC86E417257CCFCD00891549 /* URLImageTask.swift in Sources */,
 				DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
