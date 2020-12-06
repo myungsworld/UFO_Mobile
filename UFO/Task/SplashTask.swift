@@ -19,7 +19,7 @@ class SplashTask: ObservableObject {
         }
     }
     
-    var show: Bool = false {
+    var showSelectFestivalModal: Bool = false {
         didSet {
             objectWillChange.send()
         }

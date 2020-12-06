@@ -10,12 +10,11 @@ import SwiftUI
 
 struct Store: View {
     
-    let storeData: StoreData
-    @EnvironmentObject var menuTask: MenuTask
+    let storeData: StoreListData
     
     var body: some View {
         
-        NavigationLink(destination: StoreInfoView()) {
+        NavigationLink(destination: StoreInfoView(storeId: self.storeData.store_id)) {
             
             HStack {
                 
@@ -40,9 +39,6 @@ struct Store: View {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.5), lineWidth: 1))
             .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.3)
-            .onAppear {
-                self.menuTask.getMenu(store_id: self.storeData.store_id)
-            }
         }
         
     }
@@ -55,9 +51,12 @@ struct FestivalStoresView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             
-            List(self.storeTask.store_data) { item in
+            List(self.storeTask.storeList) { item in
                 Store(storeData: item)
             }
+            
+        }.onAppear {
+            self.storeTask.getStoreList()
         }
     }
 }

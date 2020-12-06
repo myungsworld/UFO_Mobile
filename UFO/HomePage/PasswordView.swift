@@ -26,7 +26,7 @@ struct PasswordView: View {
                     .padding([.horizontal, .bottom])
                 
                 Button(action: {
-                    print(self.password)
+                    self.hideKeyboard()
                     self.sendMoneyTask.sendMoney()
                 }, label : {
                     Text("입력")

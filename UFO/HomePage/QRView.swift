@@ -9,7 +9,6 @@ import CoreImage.CIFilterBuiltins
 
 struct QRView: View {
     
-    @EnvironmentObject var http : HttpAuth
     @EnvironmentObject var task : HomeTask
     @State private var money = ""
     

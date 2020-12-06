@@ -7,11 +7,11 @@
 //
 
 import SwiftUI
+import KakaoSDKNavi
 
 struct FestivallnfoVIew: View {
     
     @EnvironmentObject var festivalTask: FestivalTask
-    @EnvironmentObject var storeTask: StoreTask
     
     let festivalCache = FestivalCache.getFesticalCache()
     
@@ -20,26 +20,24 @@ struct FestivallnfoVIew: View {
         ScrollView {
             VStack {
                 
-                Text("\(self.festivalTask.festivalData!.name)")
+                Text("\(self.festivalTask.festivalData?.name ?? "Loading")")
                     .font(.largeTitle)
                 
                 Divider()
                 
                 HStack {
-                    Text("\(self.festivalTask.festivalData!.start_date)")
+                    Text("\(self.festivalTask.festivalData?.start_date ?? "Loading")")
                     Text("-")
-                    Text("\(self.festivalTask.festivalData!.end_date)")
+                    Text("\(self.festivalTask.festivalData?.end_date ?? "Loading")")
                 }
                 
                 Divider()
                 
-                Image("boothic1")
-                    .renderingMode(.original)
-                    .resizable()
-                    .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.8)
+                S3ImageVIew(img_url: "5EFADC67-A4C8-43A8-BF19-CB621D8C8FF3.jpeg",
+                            width: UIScreen.main.bounds.width * 0.9,
+                            height: UIScreen.main.bounds.height * 0.8)
                 
                 Divider()
-                
                 
                 HStack {
                     
@@ -54,7 +52,13 @@ struct FestivallnfoVIew: View {
                     
                     Button(action: {
                         withAnimation {
-//                            self.festivalTask.festivalView_mode = 2
+                            let location = KakaoSDKNavi.NaviLocation(name: "target", x: "363792", y: "1281464")
+                            guard let navigateUrl = NaviApi.shared.navigateUrl(destination: location) else {
+                                return
+                            }
+                            UIApplication.shared.open(navigateUrl, options: [:], completionHandler: nil)
+                            
+                            //                            self.festivalTask.festivalView_mode = 2
                         }
                     }) {
                         Image("boothic1")
@@ -65,7 +69,8 @@ struct FestivallnfoVIew: View {
                     }
                 }
             }.onAppear {
-                self.storeTask.getStores()
+                print("B")
+                self.festivalTask.getFestival()
             }
         }
     }

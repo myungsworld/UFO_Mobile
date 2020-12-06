@@ -24,9 +24,10 @@ struct SendMoneyView: View {
                 .padding([.horizontal, .bottom])
             
             Button(action: {
+                self.hideKeyboard()
                 self.sendMoneyTask.amount = self.amount
                 self.sendMoneyTask.showPasswordModal.toggle()
-                
+
             }){
                 Text("송금")
             }

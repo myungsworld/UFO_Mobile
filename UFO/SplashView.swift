@@ -7,11 +7,14 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct SplashView: View {
     
     @EnvironmentObject var festivalTask: FestivalTask
     @EnvironmentObject var splashTask: SplashTask
+    @EnvironmentObject var userTask: UserTask
+    
     let festivalIdCache = FestivalIdCache.getFestivalIdCache()
     let festivalCache = FestivalCache.getFesticalCache()
     
@@ -33,34 +36,33 @@ struct SplashView: View {
 
 //                self.festivalIdCache.removeFile()
                 let festival_id = self.festivalIdCache.getFestivalId()
-//                self.festivalCache.removeFromFile(forKey: String(festival_id))
-
+                
                 if festival_id == -1 {
-
+                    
                     self.festivalTask.getFestivalList()
-
+                    
                     withAnimation {
-                        self.splashTask.show.toggle()
+                        self.splashTask.showSelectFestivalModal.toggle()
                     }
                     
                     return
                     
-                } else {
-                    
-                    // FestivalCache Task 합치기
-                    // http 통신 전 확인하기
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                        //Festival 정보 가져오기
-                        self.festivalTask.getFestival()
+                }
+                
+                // 카카오 로그인이 되어있는 상태인지 확인 하기 위해
+                self.userTask.me()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    withAnimation {
                         self.splashTask.isActive.toggle()
                     }
                 }
+                
             }
             
-            if self.splashTask.show {
-
+            if self.splashTask.showSelectFestivalModal {
+                
                 GeometryReader{ gp in
-
+                    
                     FestivalListPopUpView()
                 }
                 .padding()
@@ -71,6 +73,14 @@ struct SplashView: View {
         }
     }
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
 
 //struct SplashView_Previews: PreviewProvider {
 //    static var previews: some View {

@@ -12,52 +12,50 @@ struct HomeView: View {
     @EnvironmentObject var hometask: HomeTask
     @EnvironmentObject var sendMoneyTask: SendMoneyTask
     @EnvironmentObject var chargeTask: ChargeTask
+    @EnvironmentObject var userTask: UserTask
     
-    @State private var sender : String = "myung"
-    @State private var receiver : String = "min"
-    @State private var amount : String = "100"
-    @State private var org : String = "CustomerOrg"
     @State private var name  = "송동명"
-    @State private var email = "myungsworld@gmail.com"
     @State private var money = ""
-    @State private var password = ""
-    
-    @State private var isPresentingScanner = false
-    @State private var scannedCode: String?
     
     var body: some View {
         
-        ZStack(alignment: .top) {
-            
-            CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
-            
-            NavigationLink(destination: SendMoneyView(), isActive: self.$hometask.showTransferModal) {
-                Spacer().fixedSize()
-            }
-            
-            SlideOverView {
-                VStack {
-                    
-                    Image(uiImage: generateQRcode(from: "\(name)\n\(money)"))
-                        .interpolation(.none)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                    
-                    Spacer()
+        // Login 상태일때,
+        if self.userTask.isLogin {
+            ZStack(alignment: .top) {
+                
+                CodeScannerView(codeTypes: [.qr], completion: self.handleScan)
+                
+                NavigationLink(destination: SendMoneyView(), isActive: self.$hometask.showTransferModal) {
+                    Spacer().fixedSize()
+                }
+                
+                SlideOverView {
+                    VStack {
+                        
+                        Image(uiImage: generateQRcode(from: "\(name)\n\(money)"))
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                        
+                        Spacer()
+                    }
+                }
+                
+                .sheet(isPresented: self.$chargeTask.showChargeModal) {
+                    ChargeView()
+                        .environmentObject(self.chargeTask)
                 }
             }
-            
-            .sheet(isPresented: self.$chargeTask.showChargeModal) {
-                ChargeView()
-                    .environmentObject(self.chargeTask)
-            }
+            .navigationBarItems(trailing: Button(action : {
+                self.chargeTask.showChargeModal.toggle()
+            }, label: {
+                Text("충전")
+            }))
+        } else {
+            // Logout일 때,
+            Text("need to log in")
         }
-        .navigationBarItems(trailing: Button(action : {
-            self.chargeTask.showChargeModal.toggle()
-        }, label: {
-            Text("충전")
-        }))
     }
     
     func generateQRcode(from string: String) ->UIImage {

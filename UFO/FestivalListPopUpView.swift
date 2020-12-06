@@ -20,41 +20,28 @@ struct FestivalList: View {
     var body: some View {
     
         Button(action: {
-            test()
+            setFestivalId()
         }) {
-            HStack {
+            VStack {
+                
                 Text(festivalListData.name)
-                Image("boothic1")
-                    .resizable()
-                    .renderingMode(.original)
-                    .frame(width: 100, height: 100)
+                
             }.padding()
         }
     }
     
-    func test() {
+    func setFestivalId() {
         
         let selected_festival_id = Int(festivalListData.festival_id)!
-        
         self.festivalIdCache.setFetivalId(festival_id: selected_festival_id)
         
         withAnimation {
-            self.splashTask.show.toggle()
+            self.splashTask.showSelectFestivalModal.toggle()
         }
-        
+
+        self.festivalTask.getFestival()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-        
-            var festival_id = self.festivalIdCache.getFestivalId()
-            
-            //Festival 정보 가져오기
-            // 먼저 Cache와 File에 있는지 확인
-            let festival = self.festivalCache.getFestival(forKey: String(festival_id))
-            
-            if festival == nil {
-                // Cache 및 File에 없을때
-                self.festivalTask.getFestival()
-            }
-            
+
             self.splashTask.isActive.toggle()
         }
     }
@@ -67,7 +54,7 @@ struct FestivalListPopUpView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             
-            List(self.festivalTask.festival_list) { item in
+            List(self.festivalTask.festivalList) { item in
                 FestivalList(festivalListData: item)
             }
         }
