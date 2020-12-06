@@ -20,7 +20,7 @@ struct ChargeRecordView : View {
             Text(record.title)
         }
         .onAppear {
-            ChargeRecordData().getData { (k) in
+            ChargeRecordTask().getData { (k) in
                 self.chargeRecords = k
             }
         }

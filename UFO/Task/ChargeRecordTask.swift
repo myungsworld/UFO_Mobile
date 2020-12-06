@@ -10,7 +10,7 @@ import Foundation
 import Combine
 
 
-class ChargeRecordData  {
+class ChargeRecordTask  {
     func getData(completion : @escaping ([ChargeRecord]) -> ()) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         
