@@ -6,7 +6,7 @@ struct ProfileView : View {
     @EnvironmentObject var profileTask : ProfileTask
     
     var body : some View {
-        //        NavigationView{
+
         VStack{
             NavigationLink(destination: ChargeRecordView()){
                 Text("충전 내역")
@@ -18,12 +18,7 @@ struct ProfileView : View {
                 Text("비밀 번호 변경")
             }
         }
-        //        }
-        //        List(chargeRecord){ item in
-        //            HStack{
-        //                Text(item.time)
-        //                Text(item.amountMoney)
-        //            }
+
         
         
     }

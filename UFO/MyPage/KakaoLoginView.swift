@@ -33,21 +33,39 @@ struct KakaoLoginView: View {
                     }
                 }
             } else {                
-                
-                ProfileView()
-                
-                HStack(spacing: 20) {
-                    
-                    URLImageView(url: self.userTask.user?.properties?["profile_image"] ?? "", width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)            
-                    
-                    Text(self.userTask.user?.kakaoAccount?.profile?.nickname ?? "loading")
-                    
-                    Button(action: {
-                        self.userTask.logout()
-                    }) {
-                        Text("로그아웃")
+                Form {
+                    Section {
+                        HStack(spacing: 20) {
+
+                            URLImageView(url: self.userTask.user?.properties?["profile_image"] ?? "", width: (UIScreen.main.bounds.width - 200) / 2, height: (UIScreen.main.bounds.height - 500) / 2)
+
+                            Text(self.userTask.user?.kakaoAccount?.profile?.nickname ?? "loading")
+
+                            Button(action: {
+                                self.userTask.logout()
+                            }) {
+                                Text("로그아웃")
+                            }
+                        }
                     }
-                }
+                    Section {
+                        NavigationLink(destination: ChargeRecordView()){
+                            Text("충전 내역")
+                        }
+                    }
+                    Section {
+                        NavigationLink(destination: PayRecordView()){
+                            Text("결제 내역")
+                        }
+                    }
+                    Section {
+                        NavigationLink(destination: PasswordChangeView()){
+                            Text("비밀 번호 변경")
+                        }
+                    }
+                        
+                }//Form
+                
             }
         }
         

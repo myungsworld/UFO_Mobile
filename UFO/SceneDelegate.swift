@@ -30,6 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environmentObject(SendMoneyTask())
             .environmentObject(ChargeTask())
             .environmentObject(ProfileTask())
+            
 //            .environmentObject(ChargeRecordData())
         
         // Use a UIHostingController as window root view controller.

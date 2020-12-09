@@ -10,7 +10,8 @@
 		141B96192574FC970083C175 /* HomeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B96182574FC970083C175 /* HomeTask.swift */; };
 		141B96212574FF340083C175 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B96202574FF340083C175 /* QRView.swift */; };
 		143C993E257A430B001BF272 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C993D257A430B001BF272 /* ProfileView.swift */; };
-		143C9943257A4395001BF272 /* ChargeRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C9942257A4395001BF272 /* ChargeRecordView.swift */; };		
+		143C9943257A4395001BF272 /* ChargeRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C9942257A4395001BF272 /* ChargeRecordView.swift */; };
+		144DFA2125808F83003A3D9C /* HomeViewBeforeLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144DFA2025808F83003A3D9C /* HomeViewBeforeLogin.swift */; };
 		14768110256BC56E006129FA /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476810F256BC56E006129FA /* ChargeView.swift */; };
 		14AA8B3F257A46B100D8787A /* ProfileTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B3E257A46B100D8787A /* ProfileTask.swift */; };
 		14AA8B44257A4B0800D8787A /* PayRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B43257A4B0800D8787A /* PayRecordView.swift */; };
@@ -91,6 +92,7 @@
 		141B96202574FF340083C175 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		143C993D257A430B001BF272 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		143C9942257A4395001BF272 /* ChargeRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeRecordView.swift; sourceTree = "<group>"; };
+		144DFA2025808F83003A3D9C /* HomeViewBeforeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBeforeLogin.swift; sourceTree = "<group>"; };
 		1476810F256BC56E006129FA /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
 		14AA8B3E257A46B100D8787A /* ProfileTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTask.swift; sourceTree = "<group>"; };
 		14AA8B43257A4B0800D8787A /* PayRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayRecordView.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 		DC4DAE6B257A01F900FD7C0C /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				144DFA2025808F83003A3D9C /* HomeViewBeforeLogin.swift */,
 				141B96202574FF340083C175 /* QRView.swift */,
 				1476810F256BC56E006129FA /* ChargeView.swift */,
 				DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */,
@@ -617,6 +620,7 @@
 				DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */,
 				141B96192574FC970083C175 /* HomeTask.swift in Sources */,
 				DC4DAE75257A09D000FD7C0C /* SendMoneyView.swift in Sources */,
+				144DFA2125808F83003A3D9C /* HomeViewBeforeLogin.swift in Sources */,
 				14768110256BC56E006129FA /* ChargeView.swift in Sources */,
 				DCBD75F9257673090018F68B /* StoreInfoView.swift in Sources */,
 				DC197E0A256F725E00988BA5 /* SplashTask.swift in Sources */,
@@ -628,7 +632,6 @@
 				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
 				143C993E257A430B001BF272 /* ProfileView.swift in Sources */,
-				DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */,
 				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
 				14AC02A9257A670300EFC409 /* ChargeRecordTask.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
@@ -636,12 +639,10 @@
 				DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */,
 				DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */,
 				14AA8B3F257A46B100D8787A /* ProfileTask.swift in Sources */,
-				DCBD75EC25765B9D0018F68B /* MenuTask.swift in Sources */,
 				DC6BDB2B257A75B8005751C7 /* S3ImageTask.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
 				141B96212574FF340083C175 /* QRView.swift in Sources */,
-				14AA8B56257A566100D8787A /* ChargeRecordData.swift in Sources */,			
-				DC195A60253DE69B00A9ECF0 /* StoreListItem.swift in Sources */,
+				14AA8B56257A566100D8787A /* ChargeRecordData.swift in Sources */,
 				143C9943257A4395001BF272 /* ChargeRecordView.swift in Sources */,
 				DC195A59253DE62C00A9ECF0 /* FestivalView.swift in Sources */,
 				DC195A53253DE5D200A9ECF0 /* SplashView.swift in Sources */,
@@ -662,7 +663,6 @@
 				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
 				DC197E02256E9B4C00988BA5 /* FestivalListData.swift in Sources */,
 				14AA8B49257A4B6300D8787A /* PasswordChangeView.swift in Sources */,
-				DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */,
 				DC906A57257A2BE900F17063 /* ChargeTask.swift in Sources */,
 				DC86E417257CCFCD00891549 /* URLImageTask.swift in Sources */,
 				DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */,

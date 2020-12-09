@@ -17,6 +17,7 @@ struct HomeView: View {
     @State private var name  = "송동명"
     @State private var money = ""
     
+    @Binding var selected : Int
     var body: some View {
         
         // Login 상태일때,
@@ -54,7 +55,7 @@ struct HomeView: View {
             }))
         } else {
             // Logout일 때,
-            Text("need to log in")
+            HomeViewBeforeLogin(selected : $selected)
         }
     }
     
@@ -87,8 +88,4 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+

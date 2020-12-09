@@ -28,14 +28,16 @@ struct MainView: View {
             // Home
             ZStack  {
                 NavigationView {
-                    HomeView()
+                    HomeView(selected : $selected)
                         .navigationBarTitle("Home", displayMode: .inline)
                     
                 }
             }
             .tabItem({
                 Text("Home")
-            }).tag(0)
+                    })
+            .tag(0)
+
             
             // Festival
             NavigationView {

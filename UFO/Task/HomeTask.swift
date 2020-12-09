@@ -15,5 +15,11 @@ class HomeTask : ObservableObject {
         didSet {
             objectWillChange.send()
         }
-    }        
+    }
+    
+    var HomeToLogin : Bool = false {
+        didSet {
+            objectWillChange.send()
+        }
+    }
 }
