@@ -17,11 +17,11 @@ struct Store: View {
         NavigationLink(destination: StoreInfoView(storeId: self.storeData.store_id)) {
             
             HStack {
-                
-                Image("boothic1")
-                    .resizable()
-                    .renderingMode(.original)
-                    .aspectRatio(contentMode: .fit)
+                                
+                S3ImageVIew(img_url: self.storeData.img_url)
+                    .frame(width: UIScreen.main.bounds.width * 0.3, height: UIScreen.main.bounds.height * 0.15)
+                    .cornerRadius(10)
+                    .padding()
                 
                 Divider()
                 
@@ -31,14 +31,13 @@ struct Store: View {
                     Text(storeData.desc)
                         .font(.title)
                 }
-                
+                .frame(width: UIScreen.main.bounds.width * 0.35, height: UIScreen.main.bounds.height * 0.15)
                 .padding()
             }
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.5), lineWidth: 1))
-            .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.3)
         }
         
     }

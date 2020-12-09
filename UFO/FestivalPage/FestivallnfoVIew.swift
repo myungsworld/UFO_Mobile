@@ -33,9 +33,7 @@ struct FestivallnfoVIew: View {
                 
                 Divider()
                 
-                S3ImageVIew(img_url: "5EFADC67-A4C8-43A8-BF19-CB621D8C8FF3.jpeg",
-                            width: UIScreen.main.bounds.width * 0.9,
-                            height: UIScreen.main.bounds.height * 0.8)
+                S3ImageVIew(img_url: self.festivalTask.festivalData?.img_url ?? "Loading")
                 
                 Divider()
                 
@@ -69,7 +67,6 @@ struct FestivallnfoVIew: View {
                     }
                 }
             }.onAppear {
-                print("B")
                 self.festivalTask.getFestival()
             }
         }

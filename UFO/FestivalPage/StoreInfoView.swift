@@ -15,10 +15,11 @@ struct Menu: View {
     var body: some View {
         HStack {
             
-            Image("boothic1")
-                .resizable()
-                .renderingMode(.original)
-                .aspectRatio(contentMode: .fit)
+            
+            S3ImageVIew(img_url: self.menuData.img_url)
+                .frame(width: UIScreen.main.bounds.width * 0.3, height: UIScreen.main.bounds.height * 0.15)
+                .cornerRadius(10)
+                .padding()        
             
             Divider()
             
@@ -35,7 +36,6 @@ struct Menu: View {
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.5), lineWidth: 1))
-        .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.3)
     }
 }
 

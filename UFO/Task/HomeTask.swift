@@ -15,9 +15,5 @@ class HomeTask : ObservableObject {
         didSet {
             objectWillChange.send()
         }
-    }
-    
-    
-    
-    
+    }        
 }

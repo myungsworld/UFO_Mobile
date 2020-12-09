@@ -39,7 +39,7 @@ struct SplashView: View {
                 
                 if festival_id == -1 {
                     
-                    self.festivalTask.getFestivalList()
+//                    self.festivalTask.getFestivalList()
                     
                     withAnimation {
                         self.splashTask.showSelectFestivalModal.toggle()

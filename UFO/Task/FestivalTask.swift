@@ -28,6 +28,7 @@ class FestivalTask: ObservableObject {
     }
     
     func getFestivalList() {
+                
         let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
         guard let url = URL(string: baseURL + "/festival") else { return }
         
@@ -38,21 +39,22 @@ class FestivalTask: ObservableObject {
             
             switch response.result {
             case .success(let value):
-                if let festivals = value as? [Dictionary<String, String>] {
-                    
+                
+                if let festivals = value as? [Dictionary<String, Any>] {
+
                     var tmpArr: [FestivalListData] = []
-                    
+
                     for festival in festivals {
+
+                        let id = festival["id"] as? Int
+                        let name = festival["name"] as? String
                         
-                        let id = festival["id"]!
-                        let name = festival["name"]!
-                        
-                        tmpArr.append(FestivalListData(festival_id: id, name: name))
+                        tmpArr.append(FestivalListData(festival_id: String(id!), name: name!))
                     }
-                    
+
                     self.festivalList = tmpArr
                 }
-                
+
             case .failure(let error):
                 print("error: \(String(describing: error.errorDescription))")
             }
@@ -61,8 +63,6 @@ class FestivalTask: ObservableObject {
     }
     
     func getFestival() {
-        
-        print("A")
         
         let festival_id = self.festivalIdCache.getFestivalId()
         let data = self.festivalCache.getCache(forKey: String(festival_id))
@@ -83,37 +83,38 @@ class FestivalTask: ObservableObject {
         
         AF.request(request).responseJSON { response in
             
-            let res = response.response
-            let etag = res!.headers["Etag"]! as String
-        
+            let res = response.response!
+            print(res.headers)
+            let etag = res.headers["Etag"]! as String
+    
             switch response.result {
             case .success(let value):
                 
-                if let festival = value as? Dictionary<String, String> {
-                    
-                    let id = festival["id"]!
-                    let name = festival["name"]!
-                    let img_url = festival["img_url"]!
-                    let start_time = festival["start_time"]!
-                    let end_time = festival["end_time"]!
-                    let latitude = festival["latitude"]!
-                    let longitude = festival["longitude"]!
-                    let desc = festival["desc"]!
-                    
-                    let data = FestivalData(festival_id: id, name: name, img_url: img_url, start_date: start_time, end_date: end_time, latitude: latitude, longitude: longitude, desc: desc, etag: etag)
-                    
+                if let festival = value as? Dictionary<String, Any> {
+
+                    let id = festival["id"] as? Int
+                    let name = festival["name"] as? String
+                    let img_url = festival["img_url"] as? String
+                    let start_time = festival["start_time"] as? String
+                    let end_time = festival["end_time"] as? String
+                    let latitude = festival["latitude"] as? Double
+                    let longitude = festival["longitude"] as? Double
+                    let desc = festival["desc"] as? String
+                                
+                    let data = FestivalData(festival_id: String(id!), name: name!, img_url: img_url!, start_date: start_time!, end_date: end_time!, latitude: String(latitude!), longitude: String(longitude!), desc: desc!, etag: etag)
+
                     self.festivalCache.setCache(forKey: String(festival_id), value: data)
                     self.festivalData = data
                 }
                 
             case .failure(let error):
-                
-                switch res!.statusCode {
+
+                switch res.statusCode {
                 case 304:
-                    
+
                     let data = self.festivalCache.getCache(forKey: String(festival_id))
                     self.festivalData = data
-                    
+
                     print("Not Modified")
                 default:
                     print("error: \(String(describing: error.errorDescription))")

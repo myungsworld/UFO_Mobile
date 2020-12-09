@@ -39,7 +39,7 @@ struct FestivalList: View {
             self.splashTask.showSelectFestivalModal.toggle()
         }
 
-        self.festivalTask.getFestival()
+//        self.festivalTask.getFestival()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
 
             self.splashTask.isActive.toggle()
@@ -57,6 +57,8 @@ struct FestivalListPopUpView: View {
             List(self.festivalTask.festivalList) { item in
                 FestivalList(festivalListData: item)
             }
+        }.onAppear {
+            self.festivalTask.getFestivalList()
         }
     }
 }
