@@ -47,10 +47,11 @@
 		DC197E1A256FEC5400988BA5 /* FestivalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E19256FEC5400988BA5 /* FestivalCache.swift */; };
 		DC197E272570ED3200988BA5 /* FestivallnfoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E262570ED3200988BA5 /* FestivallnfoVIew.swift */; };
 		DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */; };
+		DC3575952581E68600A5C9DB /* NotLogedinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3575942581E68600A5C9DB /* NotLogedinView.swift */; };
+		DC35759A2581E6C300A5C9DB /* LogedinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3575992581E6C300A5C9DB /* LogedinView.swift */; };
 		DC4DAE75257A09D000FD7C0C /* SendMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */; };
 		DC4DAE7D257A0BC200FD7C0C /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */; };
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
-		DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78725433A8300B35E56 /* KakaoLoginView.swift */; };
 		DC6BDB26257A7537005751C7 /* S3ImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */; };
 		DC6BDB2B257A75B8005751C7 /* S3ImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */; };
 		DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */; };
@@ -137,10 +138,11 @@
 		DC197E19256FEC5400988BA5 /* FestivalCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalCache.swift; sourceTree = "<group>"; };
 		DC197E262570ED3200988BA5 /* FestivallnfoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivallnfoVIew.swift; sourceTree = "<group>"; };
 		DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalStoresView.swift; sourceTree = "<group>"; };
+		DC3575942581E68600A5C9DB /* NotLogedinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLogedinView.swift; sourceTree = "<group>"; };
+		DC3575992581E6C300A5C9DB /* LogedinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogedinView.swift; sourceTree = "<group>"; };
 		DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyView.swift; sourceTree = "<group>"; };
 		DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		DC68D78725433A8300B35E56 /* KakaoLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginView.swift; sourceTree = "<group>"; };
 		DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3ImageVIew.swift; sourceTree = "<group>"; };
 		DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3ImageTask.swift; sourceTree = "<group>"; };
 		DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalListPopUpView.swift; sourceTree = "<group>"; };
@@ -304,7 +306,8 @@
 		DC195A69253DE75F00A9ECF0 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				DC68D78725433A8300B35E56 /* KakaoLoginView.swift */,
+				DC3575942581E68600A5C9DB /* NotLogedinView.swift */,
+				DC3575992581E6C300A5C9DB /* LogedinView.swift */,
 				143C993D257A430B001BF272 /* ProfileView.swift */,
 				143C9942257A4395001BF272 /* ChargeRecordView.swift */,
 				14AA8B43257A4B0800D8787A /* PayRecordView.swift */,
@@ -631,8 +634,9 @@
 				DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */,
 				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
+				DC3575952581E68600A5C9DB /* NotLogedinView.swift in Sources */,
 				143C993E257A430B001BF272 /* ProfileView.swift in Sources */,
-				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
+				DC35759A2581E6C300A5C9DB /* LogedinView.swift in Sources */,
 				14AC02A9257A670300EFC409 /* ChargeRecordTask.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
 				DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */,

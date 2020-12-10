@@ -15,6 +15,12 @@ class SendMoneyTask: ObservableObject {
     
     let publisher: PassthroughSubject<Int, Never> = PassthroughSubject()
     
+    var sender: String = "" {
+        didSet{
+            objectWillChange.send()
+        }
+    }
+    
     var receiver: String = "" {
         didSet {
             objectWillChange.send()
@@ -35,33 +41,27 @@ class SendMoneyTask: ObservableObject {
     
     func sendMoney() {
         
-        let sender = "asd"
-        let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
-        guard let url = URL(string: baseURL + "/transferMoney") else { return }
-        
-        let body = ["sender": sender, "receiver" : self.receiver, "amount" : self.amount]
+        let fabricURL = Bundle.main.infoDictionary!["FabricURL"] as! String
+        guard let url = URL(string: fabricURL + "/money/transferMoney") else { return }
+                        
+        let body = ["sender": self.sender, "receiver" : self.receiver, "amount" : self.amount]
         let finalBody = try! JSONSerialization.data(withJSONObject: body, options: [])
         
         var request = URLRequest(url:url)
         request.httpMethod = "POST"
         request.httpBody = finalBody
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
+
         AF.request(request).responseJSON { response in
-            
+
             switch response.result {
-            case .success(let value):
+            case .success(_):
                 
-                if let jsonObj = value as? Dictionary<String, String> {
-                    print(jsonObj)
-                }
-                
+                self.showPasswordModal = false
+                self.publisher.send(Array(1...10).randomElement()!)
             case .failure(let error):
                 print("error: \(String(describing: error.errorDescription))")
             }
-            
-            self.showPasswordModal = false
-            self.publisher.send(Array(1...10).randomElement()!)
         }
         
     }

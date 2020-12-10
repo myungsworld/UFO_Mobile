@@ -11,6 +11,7 @@ import SwiftUI
 struct SendMoneyView: View {
     
     @EnvironmentObject var sendMoneyTask: SendMoneyTask
+    @EnvironmentObject var userTask: UserTask
     @State var amount: String = ""
     
     @Environment(\.presentationMode) var mode
@@ -26,7 +27,9 @@ struct SendMoneyView: View {
             Button(action: {
                 self.hideKeyboard()
                 self.sendMoneyTask.amount = self.amount
-                self.sendMoneyTask.showPasswordModal.toggle()
+                self.sendMoneyTask.sender = String(self.userTask.user!.id)
+                self.sendMoneyTask.sendMoney()
+//                self.sendMoneyTask.showPasswordModal.toggle()
 
             }){
                 Text("송금")

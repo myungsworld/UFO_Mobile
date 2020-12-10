@@ -26,8 +26,8 @@ class ChargeTask: ObservableObject {
     
     func chargeMoney(user_id: String) {
         
-        let baseURL = Bundle.main.infoDictionary!["FabricURL"] as! String
-        guard let url = URL(string: baseURL + "/money/chargeMoney") else { return }
+        let fabricURL = Bundle.main.infoDictionary!["FabricURL"] as! String
+        guard let url = URL(string: fabricURL + "/money/chargeMoney") else { return }
 
         let body = ["id" : user_id, "amount" : self.amount]
         let finalBody = try! JSONSerialization.data(withJSONObject: body, options: [])

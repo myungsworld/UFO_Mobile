@@ -33,7 +33,7 @@ struct HomeView: View {
                 SlideOverView {
                     VStack {
                         
-                        Image(uiImage: generateQRcode(from: "\(name)\n\(money)"))
+                        Image(uiImage: generateQRcode(from: String(self.userTask.user!.id)))
                             .interpolation(.none)
                             .resizable()
                             .scaledToFit()
@@ -79,7 +79,7 @@ struct HomeView: View {
         
         switch result {
         case .success(let code):
-            
+            print(code)
             self.sendMoneyTask.receiver = code
             self.hometask.showTransferModal.toggle()
             

@@ -10,8 +10,16 @@ import SwiftUI
 
 struct MyPageView: View {
     
+    @EnvironmentObject var userTask: UserTask
+    
     var body: some View {
         
-        KakaoLoginView()
+        if (!self.userTask.isLogin) {
+            
+            NotLogedinView()
+        } else {
+            
+            LogedinView()
+        }    
     }
 }
