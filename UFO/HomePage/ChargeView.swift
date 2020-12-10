@@ -9,6 +9,7 @@ import CoreImage.CIFilterBuiltins
 struct ChargeView: View {
     
     @EnvironmentObject var chargeTask: ChargeTask
+    @EnvironmentObject var userTask: UserTask
     @State private var money = ""
     
     var body: some View {
@@ -18,9 +19,10 @@ struct ChargeView: View {
                 
                 TextField("충전 금액", text : $money)
                 Button("충전하기") {
-                    
+                    let user_id = self.userTask.user?.id
+
                     self.chargeTask.amount = self.money
-                    self.chargeTask.chargeMoney()
+                    self.chargeTask.chargeMoney(user_id: String(user_id!))
                 }
             }
         }

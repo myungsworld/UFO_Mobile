@@ -46,6 +46,7 @@ struct HomeView: View {
                 .sheet(isPresented: self.$chargeTask.showChargeModal) {
                     ChargeView()
                         .environmentObject(self.chargeTask)
+                        .environmentObject(self.userTask)
                 }
             }
             .navigationBarItems(trailing: Button(action : {

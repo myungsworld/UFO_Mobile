@@ -86,5 +86,7 @@
 	</array>
 	<key>BaseURL</key>
 	<string>http://210.204.40.93:5000</string>
+	<key>FabricURL</key>
+	<string>http://210.204.40.93:8001</string>
 </dict>
 </plist>

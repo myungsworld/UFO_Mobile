@@ -24,33 +24,32 @@ class ChargeTask: ObservableObject {
         }
     }
     
-    func chargeMoney() {
+    func chargeMoney(user_id: String) {
         
-        let id = "asd"
-        let baseURL = Bundle.main.infoDictionary!["BaseURL"] as! String
-        guard let url = URL(string: baseURL + "/chargeMoney") else { return }
-        
-        let body = ["id" : id, "amount" : self.amount]
+        let baseURL = Bundle.main.infoDictionary!["FabricURL"] as! String
+        guard let url = URL(string: baseURL + "/money/chargeMoney") else { return }
+
+        let body = ["id" : user_id, "amount" : self.amount]
         let finalBody = try! JSONSerialization.data(withJSONObject: body, options: [])
-        
+
         var request = URLRequest(url:url)
         request.httpMethod = "POST"
         request.httpBody = finalBody
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
+
         AF.request(request).responseJSON { response in
-            
+
             switch response.result {
             case .success(let value):
-                
+
                 if let jsonObj = value as? Dictionary<String, String> {
                     print(jsonObj)
                 }
-                
+
             case .failure(let error):
                 print("error: \(String(describing: error.errorDescription))")
             }
-            
+
             self.showChargeModal = false
         }
     }
