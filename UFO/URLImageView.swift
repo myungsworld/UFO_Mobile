@@ -2,7 +2,7 @@
 //  URLImageView.swift
 //  UFO
 //
-//  Created by Sanghyun Byun on 2020/10/21.
+//  Created by Sanghyun Byun on 2020/12/06.
 //  Copyright © 2020 Sanghyun Byun. All rights reserved.
 //
 
@@ -10,27 +10,24 @@ import SwiftUI
 
 struct URLImageView: View {
     
-    @ObservedObject var urlImageModel: URLImageModel
-
-    init(urlString: String?) {
-        urlImageModel = URLImageModel(urlString: urlString)
-        urlImageModel.loadImage()
+    @ObservedObject var urlImageTask: URLImageTask
+    var width: CGFloat
+    var height: CGFloat
+    
+    init(url: String, width: CGFloat, height: CGFloat) {
+        self.urlImageTask = URLImageTask()
+        self.width = width
+        self.height = height
+        
+        self.urlImageTask.loadImage(url: url)
     }
     
     var body: some View {
-        
-        Image(uiImage: urlImageModel.image ?? URLImageView.defaultImage!)
+        Image(uiImage: self.urlImageTask.image ?? URLImageView.defaultImage!)
             .resizable()
             .scaledToFit()
-            .frame(width: 100, height: 100)
-        
+            .frame(width: self.width, height: self.height)
     }
     
     static var defaultImage = UIImage(systemName: "lock")
-}
-
-struct URLImageView_Previews: PreviewProvider {
-    static var previews: some View {
-        URLImageView(urlString: "")
-    }
 }

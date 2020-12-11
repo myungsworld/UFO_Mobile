@@ -26,13 +26,9 @@ class FestivalIdCache {
         // When can't hit by "festival_id"
         guard let festival_id = self.getCache(forKey: "festival_id") else {
             
-            print("festival_id: getCache() Cache Miss")
-            
             // Check if exist "festival_id" in file
             // file doesn't exist
             if !self.fileExist() {
-                print("festival_id: fileExist() no festival_id file")
-                
                 // show pop up menu
                 return -1
             } else {
@@ -44,7 +40,7 @@ class FestivalIdCache {
         }
         // When success to hit
         // type: NSNumber
-        return Int(festival_id)
+        return Int(truncating: festival_id)
     }
     
     func setFetivalId(festival_id: Int) {
@@ -54,15 +50,26 @@ class FestivalIdCache {
         
     }
     
-    func getCache(forKey: String) -> NSNumber? {
-        return cache.object(forKey: NSString(string:forKey))
+    private func getCache(forKey: String) -> NSNumber? {
+        
+        let value =  cache.object(forKey: NSString(string:forKey))
+        
+        if value == nil {
+            let log = String(describing: self) + "." + #function + " : Cache Miss"
+            NSLog(log)
+        } else {
+            let log = String(describing: self) + "." + #function + " : Cache Hit"
+            NSLog(log)
+        }
+        
+        return value
     }
     
-    func setCache(forKey: String, value: Int) {
+    private func setCache(forKey: String, value: Int) {
         cache.setObject(NSNumber(value: value), forKey: NSString(string: forKey))
     }
     
-    func getFile() -> Int {
+    private func getFile() -> Int {
         
         do {
             let result = try String(contentsOf: self.filePath, encoding: .utf8)
@@ -75,7 +82,7 @@ class FestivalIdCache {
         }
     }
     
-    func setFile(value: String) {
+    private func setFile(value: String) {
         
         do {
             let text = NSString(string: value)
@@ -95,7 +102,19 @@ class FestivalIdCache {
     }
     
     func fileExist() -> Bool {
-        return self.fileManager.fileExists(atPath: self.filePath.path)
+        
+        let isExisted = self.fileManager.fileExists(atPath: self.filePath.path)
+        
+        if isExisted {
+            let log = String(describing: self) + "." + #function + " : FileCache Exists"
+            NSLog(log)
+        } else {
+            let log = String(describing: self) + "." + #function + " : FileCache doesn't exists"
+            NSLog(log)
+        }
+        
+        
+        return isExisted
     }
 }
 

@@ -7,9 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141B96192574FC970083C175 /* HomeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B96182574FC970083C175 /* HomeTask.swift */; };
+		141B96212574FF340083C175 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B96202574FF340083C175 /* QRView.swift */; };
+		143C993E257A430B001BF272 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C993D257A430B001BF272 /* ProfileView.swift */; };
+		143C9943257A4395001BF272 /* ChargeRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143C9942257A4395001BF272 /* ChargeRecordView.swift */; };
+		144DFA2125808F83003A3D9C /* HomeViewBeforeLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144DFA2025808F83003A3D9C /* HomeViewBeforeLogin.swift */; };
+		14768110256BC56E006129FA /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1476810F256BC56E006129FA /* ChargeView.swift */; };
+		14AA8B3F257A46B100D8787A /* ProfileTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B3E257A46B100D8787A /* ProfileTask.swift */; };
+		14AA8B44257A4B0800D8787A /* PayRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B43257A4B0800D8787A /* PayRecordView.swift */; };
+		14AA8B49257A4B6300D8787A /* PasswordChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B48257A4B6300D8787A /* PasswordChangeView.swift */; };
+		14AA8B51257A545C00D8787A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B50257A545C00D8787A /* Data.swift */; };
+		14AA8B56257A566100D8787A /* ChargeRecordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA8B55257A566100D8787A /* ChargeRecordData.swift */; };
+		14AC02A9257A670300EFC409 /* ChargeRecordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC02A8257A670300EFC409 /* ChargeRecordTask.swift */; };
 		5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */; };
 		C56B7B30D42BA848FFE4DFA3 /* Pods_UFOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33A5FB73C12222E1C3D0E5F /* Pods_UFOTests.framework */; };
 		DBA05FFAE3D3559783C26326 /* Pods_UFO_UFOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */; };
+		DC09114F257A4D2B000C5C86 /* S3 in Frameworks */ = {isa = PBXBuildFile; productRef = DC09114E257A4D2B000C5C86 /* S3 */; };
 		DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A22253DE53300A9ECF0 /* AppDelegate.swift */; };
 		DC195A25253DE53300A9ECF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A24253DE53300A9ECF0 /* SceneDelegate.swift */; };
 		DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A26253DE53300A9ECF0 /* ContentView.swift */; };
@@ -22,24 +35,39 @@
 		DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A54253DE5F900A9ECF0 /* MainView.swift */; };
 		DC195A57253DE61300A9ECF0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A56253DE61300A9ECF0 /* HomeView.swift */; };
 		DC195A59253DE62C00A9ECF0 /* FestivalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A58253DE62C00A9ECF0 /* FestivalView.swift */; };
-		DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A5D253DE67F00A9ECF0 /* StoreListView.swift */; };
-		DC195A60253DE69B00A9ECF0 /* StoreListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A5F253DE69B00A9ECF0 /* StoreListItem.swift */; };
 		DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */; };
 		DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A63253DE6D300A9ECF0 /* StoreData.swift */; };
 		DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A65253DE6F900A9ECF0 /* MapView.swift */; };
 		DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC195A67253DE73900A9ECF0 /* MyPageView.swift */; };
-		DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77B253F3B4800B35E56 /* URLImageView.swift */; };
-		DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */; };
+		DC197DF3256E953F00988BA5 /* FestivalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197DF2256E953F00988BA5 /* FestivalData.swift */; };
+		DC197DF8256E961200988BA5 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197DF7256E961200988BA5 /* MenuData.swift */; };
+		DC197DFD256E968200988BA5 /* FestivalTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197DFC256E968200988BA5 /* FestivalTask.swift */; };
+		DC197E02256E9B4C00988BA5 /* FestivalListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E01256E9B4C00988BA5 /* FestivalListData.swift */; };
+		DC197E0A256F725E00988BA5 /* SplashTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E09256F725E00988BA5 /* SplashTask.swift */; };
+		DC197E1A256FEC5400988BA5 /* FestivalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E19256FEC5400988BA5 /* FestivalCache.swift */; };
+		DC197E272570ED3200988BA5 /* FestivallnfoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E262570ED3200988BA5 /* FestivallnfoVIew.swift */; };
+		DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */; };
+		DC3575952581E68600A5C9DB /* NotLogedinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3575942581E68600A5C9DB /* NotLogedinView.swift */; };
+		DC35759A2581E6C300A5C9DB /* LogedinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3575992581E6C300A5C9DB /* LogedinView.swift */; };
+		DC4DAE75257A09D000FD7C0C /* SendMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */; };
+		DC4DAE7D257A0BC200FD7C0C /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */; };
 		DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D77F253F42A800B35E56 /* ImageCache.swift */; };
-		DC68D78625407FB100B35E56 /* StoreMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78525407FB100B35E56 /* StoreMenuData.swift */; };
-		DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC68D78725433A8300B35E56 /* KakaoLoginView.swift */; };
+		DC6BDB26257A7537005751C7 /* S3ImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */; };
+		DC6BDB2B257A75B8005751C7 /* S3ImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */; };
 		DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */; };
 		DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */; };
 		DC7B3E9F254935120094FD51 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DC7B3E9E254935120094FD51 /* CodeScanner */; };
 		DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */; };
-		DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8C897C2558DD7500D524F8 /* LoginTask.swift */; };
+		DC86E3E8257BAC8400891549 /* StoreListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86E3E7257BAC8400891549 /* StoreListData.swift */; };
+		DC86E404257CC93A00891549 /* UserTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86E403257CC93A00891549 /* UserTask.swift */; };
+		DC86E417257CCFCD00891549 /* URLImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86E416257CCFCD00891549 /* URLImageTask.swift */; };
+		DC86E41C257CF9C100891549 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86E41B257CF9C100891549 /* URLImageView.swift */; };
+		DC906A57257A2BE900F17063 /* ChargeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC906A56257A2BE900F17063 /* ChargeTask.swift */; };
 		DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94D25448D6500486610 /* FestivalIdCache.swift */; };
-		DCB4E950254532BB00486610 /* FileManagerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB4E94F254532BB00486610 /* FileManagerHandler.swift */; };
+		DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75E62576482D0018F68B /* StoreCache.swift */; };
+		DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75F025765BAB0018F68B /* MenuCache.swift */; };
+		DCBD75F9257673090018F68B /* StoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBD75F8257673090018F68B /* StoreInfoView.swift */; };
+		DCCCE37A257A1CAA00205226 /* SendMoneyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +89,18 @@
 
 /* Begin PBXFileReference section */
 		050A0A658F43735F3F58F0EC /* Pods-UFOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFOTests.debug.xcconfig"; path = "Target Support Files/Pods-UFOTests/Pods-UFOTests.debug.xcconfig"; sourceTree = "<group>"; };
+		141B96182574FC970083C175 /* HomeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTask.swift; sourceTree = "<group>"; };
+		141B96202574FF340083C175 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		143C993D257A430B001BF272 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		143C9942257A4395001BF272 /* ChargeRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeRecordView.swift; sourceTree = "<group>"; };
+		144DFA2025808F83003A3D9C /* HomeViewBeforeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBeforeLogin.swift; sourceTree = "<group>"; };
+		1476810F256BC56E006129FA /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
+		14AA8B3E257A46B100D8787A /* ProfileTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTask.swift; sourceTree = "<group>"; };
+		14AA8B43257A4B0800D8787A /* PayRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayRecordView.swift; sourceTree = "<group>"; };
+		14AA8B48257A4B6300D8787A /* PasswordChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeView.swift; sourceTree = "<group>"; };
+		14AA8B50257A545C00D8787A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		14AA8B55257A566100D8787A /* ChargeRecordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeRecordData.swift; sourceTree = "<group>"; };
+		14AC02A8257A670300EFC409 /* ChargeRecordTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeRecordTask.swift; sourceTree = "<group>"; };
 		37E42B3A8FCBF8F804821DD5 /* Pods_UFO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F8492D964045D920133F78 /* Pods-UFO-UFOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO-UFOUITests.release.xcconfig"; path = "Target Support Files/Pods-UFO-UFOUITests/Pods-UFO-UFOUITests.release.xcconfig"; sourceTree = "<group>"; };
 		817245CE098FEF074E713224 /* Pods-UFO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFO.release.xcconfig"; path = "Target Support Files/Pods-UFO/Pods-UFO.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,23 +126,38 @@
 		DC195A54253DE5F900A9ECF0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DC195A56253DE61300A9ECF0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DC195A58253DE62C00A9ECF0 /* FestivalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalView.swift; sourceTree = "<group>"; };
-		DC195A5D253DE67F00A9ECF0 /* StoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListView.swift; sourceTree = "<group>"; };
-		DC195A5F253DE69B00A9ECF0 /* StoreListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListItem.swift; sourceTree = "<group>"; };
 		DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTask.swift; sourceTree = "<group>"; };
 		DC195A63253DE6D300A9ECF0 /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
 		DC195A65253DE6F900A9ECF0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DC195A67253DE73900A9ECF0 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
-		DC68D77B253F3B4800B35E56 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
-		DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
+		DC197DF2256E953F00988BA5 /* FestivalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalData.swift; sourceTree = "<group>"; };
+		DC197DF7256E961200988BA5 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		DC197DFC256E968200988BA5 /* FestivalTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalTask.swift; sourceTree = "<group>"; };
+		DC197E01256E9B4C00988BA5 /* FestivalListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalListData.swift; sourceTree = "<group>"; };
+		DC197E09256F725E00988BA5 /* SplashTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTask.swift; sourceTree = "<group>"; };
+		DC197E19256FEC5400988BA5 /* FestivalCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalCache.swift; sourceTree = "<group>"; };
+		DC197E262570ED3200988BA5 /* FestivallnfoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivallnfoVIew.swift; sourceTree = "<group>"; };
+		DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalStoresView.swift; sourceTree = "<group>"; };
+		DC3575942581E68600A5C9DB /* NotLogedinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLogedinView.swift; sourceTree = "<group>"; };
+		DC3575992581E6C300A5C9DB /* LogedinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogedinView.swift; sourceTree = "<group>"; };
+		DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyView.swift; sourceTree = "<group>"; };
+		DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		DC68D77F253F42A800B35E56 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		DC68D78525407FB100B35E56 /* StoreMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenuData.swift; sourceTree = "<group>"; };
-		DC68D78725433A8300B35E56 /* KakaoLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginView.swift; sourceTree = "<group>"; };
+		DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3ImageVIew.swift; sourceTree = "<group>"; };
+		DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3ImageTask.swift; sourceTree = "<group>"; };
 		DC7B3E8D25490ACF0094FD51 /* FestivalListPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalListPopUpView.swift; sourceTree = "<group>"; };
 		DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverView.swift; sourceTree = "<group>"; };
 		DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
-		DC8C897C2558DD7500D524F8 /* LoginTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTask.swift; sourceTree = "<group>"; };
+		DC86E3E7257BAC8400891549 /* StoreListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListData.swift; sourceTree = "<group>"; };
+		DC86E403257CC93A00891549 /* UserTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTask.swift; sourceTree = "<group>"; };
+		DC86E416257CCFCD00891549 /* URLImageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageTask.swift; sourceTree = "<group>"; };
+		DC86E41B257CF9C100891549 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
+		DC906A56257A2BE900F17063 /* ChargeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeTask.swift; sourceTree = "<group>"; };
 		DCB4E94D25448D6500486610 /* FestivalIdCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivalIdCache.swift; sourceTree = "<group>"; };
-		DCB4E94F254532BB00486610 /* FileManagerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHandler.swift; sourceTree = "<group>"; };
+		DCBD75E62576482D0018F68B /* StoreCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCache.swift; sourceTree = "<group>"; };
+		DCBD75F025765BAB0018F68B /* MenuCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCache.swift; sourceTree = "<group>"; };
+		DCBD75F8257673090018F68B /* StoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoView.swift; sourceTree = "<group>"; };
+		DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyTask.swift; sourceTree = "<group>"; };
 		EA80F856C11011924B33A2C0 /* Pods_UFO_UFOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFO_UFOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC09114F257A4D2B000C5C86 /* S3 in Frameworks */,
 				DC7B3E9F254935120094FD51 /* CodeScanner in Frameworks */,
 				5748768CA8BC6E1E31F68423 /* Pods_UFO.framework in Frameworks */,
 			);
@@ -195,16 +251,17 @@
 				DC195A54253DE5F900A9ECF0 /* MainView.swift */,
 				DC195A56253DE61300A9ECF0 /* HomeView.swift */,
 				DC195A58253DE62C00A9ECF0 /* FestivalView.swift */,
-				DC195A5A253DE64C00A9ECF0 /* FestivalPage */,
 				DC195A67253DE73900A9ECF0 /* MyPageView.swift */,
+				DC4DAE6B257A01F900FD7C0C /* HomePage */,
+				DC195A5A253DE64C00A9ECF0 /* FestivalPage */,
 				DC195A69253DE75F00A9ECF0 /* MyPage */,
-				DC68D77B253F3B4800B35E56 /* URLImageView.swift */,
-				DC68D77D253F3B5E00B35E56 /* URLImageModel.swift */,
-				DC68D77F253F42A800B35E56 /* ImageCache.swift */,
-				DCB4E94D25448D6500486610 /* FestivalIdCache.swift */,
-				DCB4E94F254532BB00486610 /* FileManagerHandler.swift */,
+				DCCD81042572B04800D586AA /* Cache */,
+				DCCD81172572B11900D586AA /* Data */,
+				DCCD81162572B11300D586AA /* Task */,
 				DC7B3E9B25492E1F0094FD51 /* SlideOverView.swift */,
+				DC6BDB25257A7537005751C7 /* S3ImageVIew.swift */,
 				DC7B3EA025493F6D0094FD51 /* CodeScanner.swift */,
+				DC86E41B257CF9C100891549 /* URLImageView.swift */,
 			);
 			path = UFO;
 			sourceTree = "<group>";
@@ -238,12 +295,10 @@
 		DC195A5A253DE64C00A9ECF0 /* FestivalPage */ = {
 			isa = PBXGroup;
 			children = (
-				DC195A5D253DE67F00A9ECF0 /* StoreListView.swift */,
+				DC197E262570ED3200988BA5 /* FestivallnfoVIew.swift */,
+				DC197E2B2570FDFF00988BA5 /* FestivalStoresView.swift */,
+				DCBD75F8257673090018F68B /* StoreInfoView.swift */,
 				DC195A65253DE6F900A9ECF0 /* MapView.swift */,
-				DC195A5F253DE69B00A9ECF0 /* StoreListItem.swift */,
-				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
-				DC195A63253DE6D300A9ECF0 /* StoreData.swift */,
-				DC68D78525407FB100B35E56 /* StoreMenuData.swift */,
 			);
 			path = FestivalPage;
 			sourceTree = "<group>";
@@ -251,10 +306,70 @@
 		DC195A69253DE75F00A9ECF0 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				DC68D78725433A8300B35E56 /* KakaoLoginView.swift */,
-				DC8C897C2558DD7500D524F8 /* LoginTask.swift */,
+				DC3575942581E68600A5C9DB /* NotLogedinView.swift */,
+				DC3575992581E6C300A5C9DB /* LogedinView.swift */,
+				143C993D257A430B001BF272 /* ProfileView.swift */,
+				143C9942257A4395001BF272 /* ChargeRecordView.swift */,
+				14AA8B43257A4B0800D8787A /* PayRecordView.swift */,
+				14AA8B48257A4B6300D8787A /* PasswordChangeView.swift */,
+				14AA8B50257A545C00D8787A /* Data.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		DC4DAE6B257A01F900FD7C0C /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				144DFA2025808F83003A3D9C /* HomeViewBeforeLogin.swift */,
+				141B96202574FF340083C175 /* QRView.swift */,
+				1476810F256BC56E006129FA /* ChargeView.swift */,
+				DC4DAE74257A09D000FD7C0C /* SendMoneyView.swift */,
+				DC4DAE7C257A0BC200FD7C0C /* PasswordView.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		DCCD81042572B04800D586AA /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				DCB4E94D25448D6500486610 /* FestivalIdCache.swift */,
+				DC197E19256FEC5400988BA5 /* FestivalCache.swift */,
+				DCBD75E62576482D0018F68B /* StoreCache.swift */,
+				DCBD75F025765BAB0018F68B /* MenuCache.swift */,
+				DC68D77F253F42A800B35E56 /* ImageCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		DCCD81162572B11300D586AA /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				141B96182574FC970083C175 /* HomeTask.swift */,
+				DC197E09256F725E00988BA5 /* SplashTask.swift */,
+				DC86E403257CC93A00891549 /* UserTask.swift */,
+				DC197DFC256E968200988BA5 /* FestivalTask.swift */,
+				DC195A61253DE6BA00A9ECF0 /* StoreTask.swift */,
+				DCCCE379257A1CAA00205226 /* SendMoneyTask.swift */,
+				DC906A56257A2BE900F17063 /* ChargeTask.swift */,
+				14AA8B3E257A46B100D8787A /* ProfileTask.swift */,
+				14AC02A8257A670300EFC409 /* ChargeRecordTask.swift */,
+				DC6BDB2A257A75B8005751C7 /* S3ImageTask.swift */,
+				DC86E416257CCFCD00891549 /* URLImageTask.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		DCCD81172572B11900D586AA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DC197E01256E9B4C00988BA5 /* FestivalListData.swift */,
+				DC197DF2256E953F00988BA5 /* FestivalData.swift */,
+				DC86E3E7257BAC8400891549 /* StoreListData.swift */,
+				DC195A63253DE6D300A9ECF0 /* StoreData.swift */,
+				DC197DF7256E961200988BA5 /* MenuData.swift */,
+				14AA8B55257A566100D8787A /* ChargeRecordData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +392,7 @@
 			name = UFO;
 			packageProductDependencies = (
 				DC7B3E9E254935120094FD51 /* CodeScanner */,
+				DC09114E257A4D2B000C5C86 /* S3 */,
 			);
 			productName = UFO;
 			productReference = DC195A1F253DE53300A9ECF0 /* UFO.app */;
@@ -355,6 +471,7 @@
 			mainGroup = DC195A16253DE53300A9ECF0;
 			packageReferences = (
 				DC7B3E9D254935120094FD51 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				DC09114D257A4D2B000C5C86 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */,
 			);
 			productRefGroup = DC195A20253DE53300A9ECF0 /* Products */;
 			projectDirPath = "";
@@ -502,29 +619,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC197DF8256E961200988BA5 /* MenuData.swift in Sources */,
 				DC68D780253F42A800B35E56 /* ImageCache.swift in Sources */,
+				141B96192574FC970083C175 /* HomeTask.swift in Sources */,
+				DC4DAE75257A09D000FD7C0C /* SendMoneyView.swift in Sources */,
+				144DFA2125808F83003A3D9C /* HomeViewBeforeLogin.swift in Sources */,
+				14768110256BC56E006129FA /* ChargeView.swift in Sources */,
+				DCBD75F9257673090018F68B /* StoreInfoView.swift in Sources */,
+				DC197E0A256F725E00988BA5 /* SplashTask.swift in Sources */,
+				DC197DFD256E968200988BA5 /* FestivalTask.swift in Sources */,
+				14AA8B44257A4B0800D8787A /* PayRecordView.swift in Sources */,
 				DC7B3E8E25490ACF0094FD51 /* FestivalListPopUpView.swift in Sources */,
+				DCCCE37A257A1CAA00205226 /* SendMoneyTask.swift in Sources */,
 				DC7B3E9C25492E1F0094FD51 /* SlideOverView.swift in Sources */,
 				DC7B3EA125493F6D0094FD51 /* CodeScanner.swift in Sources */,
 				DC195A23253DE53300A9ECF0 /* AppDelegate.swift in Sources */,
-				DCB4E950254532BB00486610 /* FileManagerHandler.swift in Sources */,
-				DC8C897D2558DD7500D524F8 /* LoginTask.swift in Sources */,
-				DC68D78825433A8300B35E56 /* KakaoLoginView.swift in Sources */,
+				DC3575952581E68600A5C9DB /* NotLogedinView.swift in Sources */,
+				143C993E257A430B001BF272 /* ProfileView.swift in Sources */,
+				DC35759A2581E6C300A5C9DB /* LogedinView.swift in Sources */,
+				14AC02A9257A670300EFC409 /* ChargeRecordTask.swift in Sources */,
 				DC195A66253DE6F900A9ECF0 /* MapView.swift in Sources */,
+				DCBD75F125765BAB0018F68B /* MenuCache.swift in Sources */,
+				DC197E2C2570FDFF00988BA5 /* FestivalStoresView.swift in Sources */,
+				DCBD75E72576482D0018F68B /* StoreCache.swift in Sources */,
+				14AA8B3F257A46B100D8787A /* ProfileTask.swift in Sources */,
+				DC6BDB2B257A75B8005751C7 /* S3ImageTask.swift in Sources */,
 				DC195A68253DE73900A9ECF0 /* MyPageView.swift in Sources */,
-				DC195A5E253DE67F00A9ECF0 /* StoreListView.swift in Sources */,
-				DC195A60253DE69B00A9ECF0 /* StoreListItem.swift in Sources */,
+				141B96212574FF340083C175 /* QRView.swift in Sources */,
+				14AA8B56257A566100D8787A /* ChargeRecordData.swift in Sources */,
+				143C9943257A4395001BF272 /* ChargeRecordView.swift in Sources */,
 				DC195A59253DE62C00A9ECF0 /* FestivalView.swift in Sources */,
 				DC195A53253DE5D200A9ECF0 /* SplashView.swift in Sources */,
-				DC68D78625407FB100B35E56 /* StoreMenuData.swift in Sources */,
+				14AA8B51257A545C00D8787A /* Data.swift in Sources */,
 				DC195A25253DE53300A9ECF0 /* SceneDelegate.swift in Sources */,
-				DC68D77E253F3B5E00B35E56 /* URLImageModel.swift in Sources */,
+				DC197E272570ED3200988BA5 /* FestivallnfoVIew.swift in Sources */,
 				DC195A57253DE61300A9ECF0 /* HomeView.swift in Sources */,
 				DC195A55253DE5F900A9ECF0 /* MainView.swift in Sources */,
+				DC86E41C257CF9C100891549 /* URLImageView.swift in Sources */,
+				DC86E3E8257BAC8400891549 /* StoreListData.swift in Sources */,
+				DC197E1A256FEC5400988BA5 /* FestivalCache.swift in Sources */,
 				DC195A27253DE53300A9ECF0 /* ContentView.swift in Sources */,
+				DC197DF3256E953F00988BA5 /* FestivalData.swift in Sources */,
+				DC6BDB26257A7537005751C7 /* S3ImageVIew.swift in Sources */,
 				DCB4E94E25448D6500486610 /* FestivalIdCache.swift in Sources */,
+				DC4DAE7D257A0BC200FD7C0C /* PasswordView.swift in Sources */,
+				DC86E404257CC93A00891549 /* UserTask.swift in Sources */,
 				DC195A62253DE6BA00A9ECF0 /* StoreTask.swift in Sources */,
-				DC68D77C253F3B4800B35E56 /* URLImageView.swift in Sources */,
+				DC197E02256E9B4C00988BA5 /* FestivalListData.swift in Sources */,
+				14AA8B49257A4B6300D8787A /* PasswordChangeView.swift in Sources */,
+				DC906A57257A2BE900F17063 /* ChargeTask.swift in Sources */,
+				DC86E417257CCFCD00891549 /* URLImageTask.swift in Sources */,
 				DC195A64253DE6D300A9ECF0 /* StoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,6 +823,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -858,6 +1003,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DC09114D257A4D2B000C5C86 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-aws/aws-sdk-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.0;
+			};
+		};
 		DC7B3E9D254935120094FD51 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -869,6 +1022,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC09114E257A4D2B000C5C86 /* S3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC09114D257A4D2B000C5C86 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = S3;
+		};
 		DC7B3E9E254935120094FD51 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DC7B3E9D254935120094FD51 /* XCRemoteSwiftPackageReference "CodeScanner" */;

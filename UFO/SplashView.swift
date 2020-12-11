@@ -7,20 +7,22 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct SplashView: View {
     
-    @State var isActice:Bool = false
-    @State var show = false
-    @EnvironmentObject var storeTask: StoreTask
+    @EnvironmentObject var festivalTask: FestivalTask
+    @EnvironmentObject var splashTask: SplashTask
+    @EnvironmentObject var userTask: UserTask
     
-    var festivalIdCache = FestivalIdCache.getFestivalIdCache()
+    let festivalIdCache = FestivalIdCache.getFestivalIdCache()
+    let festivalCache = FestivalCache.getFesticalCache()
     
     var body: some View {
         
         ZStack {
             VStack {
-                if self.isActice {
+                if self.splashTask.isActive {
                     MainView()
                     
                 } else {
@@ -31,42 +33,54 @@ struct SplashView: View {
                 }
                 
             }.onAppear {
-                
+
 //                self.festivalIdCache.removeFile()
                 let festival_id = self.festivalIdCache.getFestivalId()
                 
                 if festival_id == -1 {
+                    
+//                    self.festivalTask.getFestivalList()
+                    
                     withAnimation {
-                        self.show = true
+                        self.splashTask.showSelectFestivalModal.toggle()
                     }
                     
                     return
+                    
                 }
                 
+                // 카카오 로그인이 되어있는 상태인지 확인 하기 위해
+                self.userTask.me()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                     withAnimation {
-                        // Load Stores info
-                        self.storeTask.getStoreInfo(festival_id: festival_id)
-                        
-                        self.isActice.toggle()
+                        self.splashTask.isActive.toggle()
                     }
                 }
+                
             }
             
-            if self.show {
+            if self.splashTask.showSelectFestivalModal {
                 
-                GeometryReader{ _ in
+                GeometryReader{ gp in
                     
-                    FestivalListPopUpView(isActive: self.$isActice, show: self.$show)
-                }.background(
-                    Color.black.opacity(0.65)
-                        .edgesIgnoringSafeArea(.all)
-                    
-                )
+                    FestivalListPopUpView()
+                }
+                .padding()
+                .background(Color.gray)
+                .cornerRadius(15)
+                .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.9)
             }
         }
     }
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
 
 //struct SplashView_Previews: PreviewProvider {
 //    static var previews: some View {
