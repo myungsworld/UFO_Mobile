@@ -34,7 +34,7 @@ struct SplashView: View {
                 
             }.onAppear {
 
-//                self.festivalIdCache.removeFile()
+                self.festivalIdCache.removeFile()
                 let festival_id = self.festivalIdCache.getFestivalId()
                 
                 if festival_id == -1 {
